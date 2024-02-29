@@ -1618,25 +1618,34 @@
 <h4 id="constructor">Constructor(构造函数)<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h4>
 <ul>
 <li>构造函数虽然没有返回值，但是没有被声明为<code>void</code>，实际上，构造函数没有声明类型。</li>
-<li>隐式调用构造函数</li>
+<li>隐式调用构造函数<ul>
 <li><code>Stock garment("Furry Mason", 50, 2.5);</code></li>
-<li>显式调用构造函数</li>
+</ul>
+</li>
+<li>显式调用构造函数<ul>
 <li><code>Stock gaement = Stock("Furry Mason", 50, 2.5);</code></li>
-<li>使用<code>new</code>动态分配内存</li>
+</ul>
+</li>
+<li>使用<code>new</code>动态分配内存<ul>
 <li><code>Stock *pstock = new Stock("Furry Mason", 50, 2.5);</code></li>
 </ul>
-<p>!!! Info default constructor(隐式构造函数)
-    - 如果没有提供任何构造函数，则<code>C++</code>将自动提供默认构造函数，它是默认构造函数的隐式版本，不做任何工作
-    - 默认构造函数没有任何参数，因为声明中不包含
-    - 如果为类提供了非默认构造函数，而没有提供默认构造函数，则类似下面的声明将出错(禁止创建未初始化的对象)
-        - <code>Stock stock1;</code>
-    - 定义默认构造函数有两种方法
-      - 给已有构造函数提供所有参数默认值
-      - 函数重载来定义一个没有参数的构造函数 </p>
+</li>
+</ul>
+<p>!!! Info default constructor(隐式构造函数)</p>
+<div class="highlight"><pre><span></span><code>- 如果没有提供任何构造函数，则`C++`将自动提供默认构造函数，它是默认构造函数的隐式版本，不做任何工作
+- 默认构造函数没有任何参数，因为声明中不包含
+- 如果为类提供了非默认构造函数，而没有提供默认构造函数，则类似下面的声明将出错(禁止创建未初始化的对象)
+    - `Stock stock1;`
+- 定义默认构造函数有两种方法
+    - 给已有构造函数提供所有参数默认值
+    - 函数重载来定义一个没有参数的构造函数
+</code></pre></div>
 <ul>
-<li><code>C++11</code>列表初始化(提供一个构造函数参数列表匹配的内容)：</li>
+<li><code>C++11</code>列表初始化(提供一个构造函数参数列表匹配的内容)：<ul>
 <li><code>Stock stock1 = {"name", 2, 2.0};</code>  </li>
 <li><code>Stock stock1 {"name", 2, 2.0};</code></li>
+</ul>
+</li>
 </ul>
 <h4 id="destructor">Destructor(析构函数)<a class="headerlink" href="#destructor" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1646,12 +1655,14 @@
 </li>
 <li>
 <p><code>C++</code>中对象<code>new</code>出来和直接声明的区别(类似malloc)</p>
-</li>
+<ul>
 <li>首先，最直观的，new出来的对象需要使用指针接收，而直接声明的不用。例如 A* a=new A() 与A a（）。</li>
 <li><code>new</code>出来的对象是直接使用堆空间，而局部声明一个对象是放在栈中。</li>
 <li><code>new</code>出来的对象类似于申请空间，因此需要delete销毁，而直接声明的对象则在使用完直接销毁。</li>
 <li><code>new</code>出来的对象的生命周期是具有全局性，譬如在一个函数块里new一个对象，可以将该对象的指针返回回去，该对象依旧存在。而声明的对象的生命周期只存在于声明了该对象的函数块中，如果返回该声明的对象，将会返回一个已经被销毁的对象。</li>
 <li><code>new</code>对象指针用途广泛，比如作为函数返回值、函数参数等</li>
+</ul>
+</li>
 </ul>
 <h4 id="this-pointerthis">This Pointer(this 指针)<a class="headerlink" href="#this-pointerthis" title="Permanent link">&para;</a></h4>
 <p><code>this</code>指针指向用来调用成员函数的对象(this被作为隐藏参数传递给方法)
@@ -1662,8 +1673,10 @@
 </details>
 <h2 id="_4">对象数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>在没有显式构造函数的情况下(或显式构造函数有默认值)的情况下，可以直接如下定义</li>
+<li>在没有显式构造函数的情况下(或显式构造函数有默认值)的情况下，可以直接如下定义<ul>
 <li><code>Stock mystuff[4];</code>或者可以寄希望于自动补足未初始化的对象</li>
+</ul>
+</li>
 <li>否则要为每个元素调用构造函数</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
@@ -1739,11 +1752,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:55:01</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:55:01</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
       
     
   </small>

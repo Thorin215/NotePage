@@ -1526,8 +1526,8 @@
 </details>
 <h2 id="database-systems">Database Systems<a class="headerlink" href="#database-systems" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/3381734a9f68b21a3d0e663604d0aed.png" /></p>
-<details class="info dbms">
-<summary>Info</summary>
+<details class="info">
+<summary>DBMS</summary>
 <ul>
 <li>Database is a collection of interrelated data about a enterprise, which is managed by a DBMS(Database Management System).</li>
 <li>The primary goal of a DBMS is to provide a way to store and retrieve database information that is both convenient and efficient. </li>
@@ -1536,8 +1536,8 @@
 <li>If data are to be shared among several users, the system must provide concurrency control mechanisms to avoid possible anomalous results. </li>
 </ul>
 </details>
-<details class="question difference between file processor and dbms">
-<summary>Question</summary>
+<div class="admonition question">
+<p class="admonition-title">Difference Between File processor and DBMS</p>
 <ul>
 <li>A file-processing system can only coordinate physical access of data, while a DBMS can coordinate both phisical and logical access.</li>
 <li>A file-processing system only allow accessing data through the way determined in advance, while a DBMS allow doing this flexibly.</li>
@@ -1545,22 +1545,24 @@
 <li>In a file-processing system, a file written by one program may be unreadable for another program. But in a DBMS, data duplications are reduced by make the data physically available 
 to all the programs possessing access to it.</li>
 </ul>
-</details>
+</div>
 <h2 id="purpose-of-database-systems">Purpose of Database Systems<a class="headerlink" href="#purpose-of-database-systems" title="Permanent link">&para;</a></h2>
 <p><em>In the early days, database applications were built directly on top of </em><em>file systems</em><em>，which leads to:</em></p>
 <ul>
-<li>Data redundancy（<strong>数据冗余</strong>）and inconsistency（<strong>不一致</strong>）</li>
 <li>
-<p>Multiple file formats, duplication of information in different files</p>
+<p>Data redundancy（<strong>数据冗余</strong>）and inconsistency（<strong>不一致</strong>）</p>
+<ul>
+<li>Multiple file formats, duplication of information in different files</li>
+</ul>
 </li>
 <li>
 <p>Data isolation（<strong>数据孤立，数据孤岛</strong>） — multiple files and formats</p>
 </li>
 <li>
 <p>Difficulty in accessing data (<strong>存取数据困难</strong>）</p>
-</li>
-<li>
-<p>Need to write a new program to carry out each new task</p>
+<ul>
+<li>Need to write a new program to carry out each new task</li>
+</ul>
 </li>
 <li>
 <p>Integrity Problem(<strong>完整性问题</strong>）</p>
@@ -1619,39 +1621,45 @@ to all the programs possessing access to it.</li>
 </details>
 <h2 id="data-models">Data Models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A collection of tools for describing </li>
+<li>
+<p>A collection of tools for describing </p>
+<ul>
 <li>Data (数据)</li>
 <li>Data relationships(联系)</li>
 <li>Data semantics(语义)</li>
-<li>
-<p>Data constraints(约束)</p>
+<li>Data constraints(约束)</li>
+</ul>
 </li>
 <li>
 <p><strong>Relational Model(关系模型)</strong></p>
 </li>
-<li>Object-based data models </li>
+<li>Object-based data models <ul>
 <li>Object-oriented  (面向对象数据模型)</li>
 <li>Object-relational(对象-关系模型模型)</li>
+</ul>
+</li>
 <li>Semistructured data model  (XML)(半结构化数据模型)</li>
-<li>Other older models:</li>
+<li>Other older models:<ul>
 <li>Network model  (网状模型)</li>
 <li>Hierarchical model(层次模型)</li>
+</ul>
+</li>
 <li>Entity-Relationship Model(实体联系模型)</li>
 </ul>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240226143439.png" /></p>
 <p>这里ID可以确定一行，称之为key</p>
 <h2 id="view-of-data">View of data<a class="headerlink" href="#view-of-data" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/b19a02f33dee02df92f59884ac23b2b.png" /></p>
-<div class="admonition info view of data">
-<p class="admonition-title">Info</p>
+<div class="admonition info">
+<p class="admonition-title">View of data</p>
 <ul>
 <li>物理模式:描述数据如何存储</li>
 <li>逻辑模式:描述了存储的数据以及之间关系</li>
 <li>视图模式:应用程序出于安全等目的隐藏了大量细节，且是多样的</li>
 </ul>
 </div>
-<div class="admonition note 目的">
-<p class="admonition-title">Note</p>
+<div class="admonition note">
+<p class="admonition-title">目的</p>
 <ul>
 <li>Hide the complexities(隐藏复杂性)</li>
 <li>Enhance the adaptation to changes(增强适应性)</li>
@@ -1660,18 +1668,22 @@ to all the programs possessing access to it.</li>
 <h2 id="schema-and-instance">Schema and Instance<a class="headerlink" href="#schema-and-instance" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Similar to types and variables in programming languages</li>
-<li>Logical Schema（<strong>逻辑模式</strong>）– the logical structure of the database </li>
+<li>Logical Schema（<strong>逻辑模式</strong>）– the logical structure of the database <ul>
 <li>Example: The database consists of information about a set of customers and accounts and the relationship between them</li>
 <li>Analogous to type information of a variable in a program</li>
+</ul>
+</li>
 <li>Physical schema （<strong>物理模式</strong>） – the overall physical  structure of the database </li>
 <li>Instance（<strong>实例</strong>） – the actual content of the database at a particular point in time Analogous to the value of a variable</li>
 </ul>
 <h2 id="data-independence">Data Independence<a class="headerlink" href="#data-independence" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Physical Data Independence（物理数据独立性）– the ability to modify the physical schema without changing the logical schema</li>
-<li>Applications depend on the logical schema</li>
 <li>
-<p>In general, the interfaces between the various levels and components should be well defined so that changes in some parts do not seriously influence others.</p>
+<p>Physical Data Independence（物理数据独立性）– the ability to modify the physical schema without changing the logical schema</p>
+<ul>
+<li>Applications depend on the logical schema</li>
+<li>In general, the interfaces between the various levels and components should be well defined so that changes in some parts do not seriously influence others.</li>
+</ul>
 </li>
 <li>
 <p>Logical Data Independence(逻辑数据独立性) – the ability to modify the logical schema without changing the user view schema</p>
@@ -1699,15 +1711,19 @@ Example:    </p>
 </code></pre></div>
 <ul>
 <li>DDL compiler generates a set of table templates stored in a data dictionary（数据字典）</li>
-<li>Data dictionary contains metadata (元数据， i.e., data about data)</li>
+<li>Data dictionary contains metadata (元数据， i.e., data about data)<ul>
 <li>Database schema </li>
 <li>Integrity constraints（完整性约束）<ul>
 <li>Primary key (ID uniquely identifies instructors)（主健）</li>
-<li>Referential integrity (references constraint in SQL)（参照完整性）</li>
+<li>Referential integrity (references constraint in SQL)（参照完整性）<ul>
 <li><strong>e.g.</strong> dept_name value in any instructor tuple must appear in department relation</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>Authorization（权限）</li>
+</ul>
+</li>
 <li>常用的语句关键字有 CREATE、DROP、ALTER 等</li>
 </ul>
 <div class="admonition example">
@@ -1732,9 +1748,11 @@ Example:    </p>
 <ul>
 <li>Language for accessing and manipulating the data organized by the appropriate data model</li>
 <li>DML also known as <strong>query</strong> language</li>
-<li>Two classes of languages </li>
+<li>Two classes of languages <ul>
 <li>Procedural（过程式） – user specifies what data is required and how to get those data </li>
 <li>Declarative (nonprocedural， 陈述式，非过程式) – user specifies what data is required without specifying how to get those data</li>
+</ul>
+</li>
 <li><strong>SQL</strong> is the most widely used query language</li>
 </ul>
 <div class="admonition example">
@@ -1767,30 +1785,36 @@ Example:    </p>
 <h3 id="storage-manager">Storage Manager<a class="headerlink" href="#storage-manager" title="Permanent link">&para;</a></h3>
 <ul>
 <li>A program module that provides the interface between the low-level data stored in the database and the application programs and queries submitted to the system.</li>
-<li>The storage manager is responsible to the following tasks: </li>
+<li>The storage manager is responsible to the following tasks: <ul>
 <li>Interaction with the OS file manager </li>
 <li>Efficient storing, retrieving and updating of data</li>
-<li>The storage manager components include:</li>
+</ul>
+</li>
+<li>The storage manager components include:<ul>
 <li>File manager</li>
 <li>Buffer manager</li>
 <li>Authorization and integrity manager</li>
 <li>Transaction manager</li>
+</ul>
+</li>
 <li>Covered in Part five - Chapters 12 , 13, 14 </li>
-<li>The storage manager implements several data structures as part of the physical system implementation:</li>
+<li>The storage manager implements several data structures as part of the physical system implementation:<ul>
 <li><strong>Data files</strong> -- store the database itself</li>
 <li><strong>Data dictionary</strong> --  stores metadata about the structure of the database, in particular the schema of the database.</li>
 <li><strong>Indices</strong> --  can provide fast access to data items.  A database index provides pointers to those data items that hold a particular value.  </li>
 <li><strong>Statistical data</strong></li>
 </ul>
+</li>
+</ul>
 <h3 id="query-processor">Query Processor<a class="headerlink" href="#query-processor" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The query processor components include:</li>
+<li>The query processor components include:<ul>
 <li><strong>DDL interpreter</strong> --  interprets DDL statements and records the definitions in the data dictionary.</li>
-<li><strong>DML compiler</strong> -- translates DML statements in a query language into an evaluation plan consisting of low-level instructions that the query evaluation engine understands.<ul>
+<li><strong>DML compiler</strong> -- translates DML statements in a query language into an evaluation plan consisting of low-level instructions that the query evaluation engine understands.</li>
 <li><strong>The DML compiler</strong> performs query optimization; that is, it picks the lowest cost evaluation plan from among the various alternatives.</li>
+<li><strong>Query evaluation engine</strong> -- executes low-level instructions generated by the DML compiler.</li>
 </ul>
 </li>
-<li><strong>Query evaluation engine</strong> -- executes low-level instructions generated by the DML compiler.</li>
 </ul>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240229214329.png" /></p>
 <h3 id="transaction-management">Transaction Management(事务管理)<a class="headerlink" href="#transaction-management" title="Permanent link">&para;</a></h3>
@@ -1802,21 +1826,23 @@ Example:    </p>
 <h2 id="database-users">Database Users<a class="headerlink" href="#database-users" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/b4f3b75b041f663149f542652a287bb.png" /></p>
 <h2 id="turing-award">Turing Award<a class="headerlink" href="#turing-award" title="Permanent link">&para;</a></h2>
-<p>Charles W. Bachman(1924-2017)
-Edgar F. Codd (1923-2003)
-Jim Gray(1944-2007)
-Michael Stonebraker (1943~ )</p>
+<ul>
+<li>Charles W. Bachman(1924-2017)</li>
+<li>Edgar F. Codd (1923-2003)</li>
+<li>Jim Gray(1944-2007)</li>
+<li>Michael Stonebraker (1943~ )</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:54:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:54:59</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
       
     
   </small>
