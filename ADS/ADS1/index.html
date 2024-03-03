@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.thorin215-wang.com/ODE/ode1/">
+        <link rel="canonical" href="https://note.thorin215-wang.com/ADS/ADS1/">
       
       
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../ode2/">
+        <link rel="next" href="../../CO/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>基本定义 - Thorin's Notebook</title>
+        <title>AVL Trees, Splay Trees, and Amortized Analysis - Thorin's Notebook</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#chapter-1-avl-treesplay-tree-and-amortized-analysis" class="md-skip">
           跳转至
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              基本定义
+              AVL Trees, Splay Trees, and Amortized Analysis
             
           </span>
         </div>
@@ -253,16 +253,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../OOP/" class="md-tabs__link">
           
   
@@ -311,21 +315,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ODE/" class="md-tabs__link">
           
   
     
@@ -446,8 +446,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -462,17 +464,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -483,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -841,6 +846,8 @@
                 
   
   
+    
+  
   
   
     
@@ -858,16 +865,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -884,7 +891,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Advanced Data Structure and Algorithm
@@ -897,10 +904,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ADS/ADS1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    AVL Trees, Splay Trees, and Amortized Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -909,6 +936,137 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avl-treespeed-up-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL Tree(speed up searching)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree Rotation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tree Rotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rightor-leftrotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right(or Left)Rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Rotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-number-of-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Number of Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splay-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amortized-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amortized Analysis(摊还分析)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amortized Analysis(摊还分析)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate analysis(聚合分析)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting method(核算法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potential-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential method(势能法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay树的摊还分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1126,10 +1284,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1138,20 +1294,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1162,7 +1315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Mathematics and Physics
@@ -1173,8 +1326,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1194,16 +1345,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ODE/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1220,7 +1371,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Ordinary Differential Equations
@@ -1233,30 +1384,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    基本定义
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ODE/ode1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,68 +1396,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      阶
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      解的存在性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      通解
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1339,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ode2/" class="md-nav__link">
+      <a href="../../ODE/ode2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,37 +1464,106 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#avl-treespeed-up-searching" class="md-nav__link">
     <span class="md-ellipsis">
-      阶
+      AVL Tree(speed up searching)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#tree-rotation" class="md-nav__link">
     <span class="md-ellipsis">
-      解
+      Tree Rotation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="解">
+    <nav class="md-nav" aria-label="Tree Rotation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#rightor-leftrotation" class="md-nav__link">
     <span class="md-ellipsis">
-      解的存在性
+      Right(or Left)Rotation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#double-rotation" class="md-nav__link">
     <span class="md-ellipsis">
-      通解
+      Double Rotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-number-of-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Number of Nodes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splay-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amortized-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amortized Analysis(摊还分析)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amortized Analysis(摊还分析)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate analysis(聚合分析)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accounting method(核算法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#potential-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential method(势能法)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay树的摊还分析
     </span>
   </a>
   
@@ -1454,41 +1592,120 @@
   
 
 
-<h1 id="_1">基本概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>一般的，在一个方程或者方程组中，如果未知量是一个函数(组)，而且该方程中含有此未知函数的导数(组)，则称这种方程为<strong>微分方程(组)</strong>。
-- 如果在微分方程里，出现的未知函数是单个自变量的函数，我们称这一类微分方程为<strong>常微分方程</strong>
-- 如果未知函数有两个或以上的自变量，则称为<strong>偏微分方程</strong></p>
+<h1 id="chapter-1-avl-treesplay-tree-and-amortized-analysis">chapter 1 AVL Tree、Splay Tree and Amortized Analysis<a class="headerlink" href="#chapter-1-avl-treesplay-tree-and-amortized-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="avl-treespeed-up-searching">AVL Tree(speed up searching)<a class="headerlink" href="#avl-treespeed-up-searching" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>An empty binary tree is height balanced.  If <span class="arithmatex">\(T\)</span> is a nonempty binary tree with <span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> as its left and right subtrees, then <span class="arithmatex">\(T\)</span> is height balanced iff
+    (1)  <span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> are height balanced, and
+    (2)  <span class="arithmatex">\(| h_L - h_R | \leq 1\)</span> where  <span class="arithmatex">\(h_L\)</span> and <span class="arithmatex">\(h_R\)</span> are the heights of <span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> , respectively.</p>
 </div>
-<h2 id="_2">阶<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在微分方程中出现的未知函数的导数的最高阶数，称为微分方程的<strong>阶</strong></p>
+<p>这里定义Balance Factor(BF) = <span class="arithmatex">\(h_L - h_R\)</span>来判断树的平衡性，在一个AVL Tree中，<span class="arithmatex">\(BF = -1, 0, 1\)</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>对于空节点，其BF默认为-1</li>
+<li>对于单节点，其BF默认为0</li>
+</ul>
+</div>
+<h2 id="tree-rotation">Tree Rotation<a class="headerlink" href="#tree-rotation" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>通过Rotation处理非平衡的情况依照从叶子节点向上，先解决最低的</p>
+</div>
+<h3 id="rightor-leftrotation">Right(or Left)Rotation<a class="headerlink" href="#rightor-leftrotation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tree rotation is an operation on a binary tree that changes the structure without interfering with the order of the elements.</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/bbfed516ca88dbe296476b0170abd80.png" /></p>
+<ul>
+<li>
+<p>After a rotation, the side of the rotation increases its height by 1 whilst the side opposite the rotation decreases its height similarly.</p>
+</li>
+<li>
+<p>Time complexity: <span class="arithmatex">\(O(1)\)</span></p>
+</li>
+</ul>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
+<p>The trouble maker Nov is in the right subtree’s right subtree of the trouble finder Mar.  Hence it is called an RR rotation.
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/86ede1739494d4f5745bd66256c9713.png" /></p>
+</div>
+<h3 id="double-rotation">Double Rotation<a class="headerlink" href="#double-rotation" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/287fb411686eeda5b2f6495c1723ae22.png" /></p>
+<h2 id="minimum-number-of-nodes">Minimum Number of Nodes<a class="headerlink" href="#minimum-number-of-nodes" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(n_h\)</span> be the minimum number of nodes in a height balanced tree of height <span class="arithmatex">\(h\)</span>. Then the tree must look like</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/a433dada0a102e1c933026d1e57c2f4c.png" /></p>
+<p><span class="arithmatex">\(F_0 = 0,  F_1 = 1,  F_i = F_{i-1} + F_{i-2}\)</span>  <span class="arithmatex">\(for\)</span>  <span class="arithmatex">\(i &gt; 1\)</span></p>
+<p><span class="arithmatex">\(n_h = F_{h+3} - 1, for \quad h \leq -1\)</span></p>
+<h2 id="splay-tree">Splay Tree<a class="headerlink" href="#splay-tree" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
 <ul>
-<li>一阶微分方程的一般形式为<span class="arithmatex">\(F(x,y,\frac{dy}{dx}) = 0\)</span></li>
-<li><span class="arithmatex">\(F(x,y,\frac{\mathrm{d}y}{\mathrm{d}x},\cdots,\frac{\mathrm{d}^ny}{\mathrm{d}x^n})=0\)</span>为<span class="arithmatex">\(n\)</span>阶方程</li>
-<li>eg. <span class="arithmatex">\(\frac{d^2y}{dx^2} = \frac{1}{a}\sqrt{1+(\frac{dy}{dx})^2}\)</span>为二阶微分方程</li>
+<li>Target: Any <span class="arithmatex">\(M\)</span> consecutive tree operations starting from an empty tree take at most <span class="arithmatex">\(O(M log N)\)</span> time.</li>
+<li>Idea: After a node is accessed, it is pushed to the root by a series of AVL tree rotations</li>
 </ul>
 </div>
-<h2 id="_3">解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>为了避免出现冗余的循环后回到原点，对Splay Tree的处理采用zig-zig和zig-zag两种方式。</p>
+<details class="tip">
+<summary>Tip</summary>
+<p>Splay 树的想法一方面来源于希望可以不像 AVL 那样保持严格的平衡约束，但也能保证某种层面（均摊）的对数时间复杂度，另一方面 Splay 树在访问（特别注意访问包括搜索、插入和删除）时都需要将元素移动到根结点，这非常符合程序局部性的要求，即刚刚访问的数据很有可能再次被访问，因此在实现缓存和垃圾收集算法中有一定的应用。</p>
+</details>
 <ul>
-<li>如果<span class="arithmatex">\(y = \varphi(x)\)</span>满足<span class="arithmatex">\(F(x,y,\frac{\mathrm{d}y}{\mathrm{d}x},\cdots,\frac{\mathrm{d}^ny}{\mathrm{d}x^n})=0\)</span>，则该函数称为ODE的<strong>解</strong></li>
-<li>隐式解：若<span class="arithmatex">\(\Phi(x,y) = 0\)</span>决定的<span class="arithmatex">\(y = \varphi(x)\)</span>,则称<span class="arithmatex">\(\Phi(x,y) = 0\)</span>为<strong>隐式解</strong></li>
-<li>通解：如<span class="arithmatex">\(y = \varphi(x,c_1,c_2,\cdots,c_n)\)</span></li>
-<li>方程的解或积分在<span class="arithmatex">\((x, y)\)</span>平面上的图形称为该方程的<strong>积分曲线</strong></li>
+<li>搜索：使用普通二叉搜索树的方法找到结点，然后通过 splay 操作经过一系列旋转将搜索的结点移动到根结点的位置</li>
+<li>插入：使用普通二叉搜索树的方法找到要插入的位置进行插入，然后把刚刚插入的结点通过splay操作经过一系列旋转移动到根结点的位置</li>
+<li>删除：使用普通二叉搜索树的方法找到要删除的结点，然后通过 splay 操作经过一系列旋转将要删除的结点移动到根结点的位置，然后删除根结点（现在根结点就是要删除的点），然后和普通二叉搜索树的删除一样进行合理的merge即可。</li>
 </ul>
-<h3 id="_4">解的存在性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>例：<span class="arithmatex">\(\frac{dy}{dx} = f(x, y)\)</span></p>
-<ul>
-<li><strong>初值条件</strong>为：<span class="arithmatex">\(y|_{x = x_0} = y_0\)</span></li>
-</ul>
-<p>设<span class="arithmatex">\(f(x, y)\)</span>在区域<span class="arithmatex">\(D: |x - x_0| \leq a, |y - y_0| \leq b\)</span>内连续，且有对于<span class="arithmatex">\(y\)</span>的偏导数,则在区间<span class="arithmatex">\(|x - x_0| &lt; h \quad (h = min(a,\frac{b}{M}), M = \max\limits_{(x, y) \in D}|f(x, y)|)\)</span>内存在唯一的<span class="arithmatex">\(y = \varphi(x)\)</span></p>
-<ul>
-<li>满足初始条件的解称为<strong>特解</strong></li>
-</ul>
-<h3 id="_5">通解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>一般的，如果含有一个任意常数<span class="arithmatex">\(c\)</span>的函数<span class="arithmatex">\(y = \varphi(x, c)\)</span>满足<span class="arithmatex">\(\frac{d \varphi(x, c)}{dx} \equiv f(x, \varphi(x, c))\)</span>,则称<span class="arithmatex">\(\varphi(x, c)\)</span>为<strong>通解</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Zig-zig</p>
+<p>zig-zig虽然写作single rotation，但是其实际上旋转了两次，先是G与P交换位置(G变为P的右子树)，再交换P与X的关系(P变为X的右子树)
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/bed4a537e5c7944ab15fc34bf405990.png" /></p>
+</div>
+<h2 id="amortized-analysis">Amortized Analysis(摊还分析)<a class="headerlink" href="#amortized-analysis" title="Permanent link">&para;</a></h2>
+<details class="abstract">
+<summary>Abstract</summary>
+<p>摊还分析的想法来源于我们希望估计一种数据结构经过一系列操作的平均花费时间。然而，平均时间非常难计算，因为每一步都有非常多的选择，连续m个操作，可能的操作路径是指数级别的。并且有时候平均涉及概率分布等，但我们并不知道确切的分布，因此比较难以计算。一种最简单的估计方法就是用最差情况分析作为平均情况的上界，例如Splay树，每个操作最差都是<span class="arithmatex">\(O(n)\)</span>（<span class="arithmatex">\(n\)</span>为树中结点个数）的，因此平均不会比最差情况差，所以也是<span class="arithmatex">\(O(n)\)</span>的。然而这样的估计显然是放得太宽了，我们对这个复杂度是非常不满意的，因此我们需要进行摊还分析。事实上，在最差情况的分析中，我们忽略了一件事情，就是有的序列是不可能出现的，例如直接在空的树上用$ O(n)$时间删除，摊还分析则是希望排除掉最差情况分析中把所有不管可能不可能的情况，最差的路径挑出来的这种无脑行为，转而分析所有可能的从空结构开始的操作路径中，最差的平均时间，那么这一时间一定比最差情况分析好，因为排除掉了一些不可能出现的所谓最差序列，但又会大于等于平均时间，因为取的是所有可能序列中最差的那一种。因此当我们算出摊还分析的时间复杂度，那么它也一定是平均时间的上界，同时这个上界会比最差情况分析好，这也是不等式worst-case bound  $ \geq $ amortized bound $ \geq $ average-case bound的内在含义。</p>
+</details>
+<div class="admonition danger">
+<p>接下来我们介绍三种方法：聚合分析、核算法以及势能法。聚合分析直接使用了我们上面提到的思想：“摊还分析是考虑可能出现的操作序列中的最差序列”（再次强调，这里的最差不是最差情况分析的最差，最差情况分析的最差会包括不可能出现的序列，但摊还分析要排除不可能的序列）</p>
+</div>
+<h3 id="aggregate-analysis">Aggregate analysis(聚合分析)<a class="headerlink" href="#aggregate-analysis" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p>思考这一支持 MultiPop 操作的栈，在从空栈开始的连续 n 次操作中，最差的情况是什么：实际上就是先 Push n−1个然后最后一次操作一次性 Multipop 出所有元素。为什么这样是最差的呢？事实上简单想想就能理解，无法理解或者希望严谨一些可以看下面的解释：因为 n 次操作是固定的，所以我们的目标是，固定 n 的情况使得下总的代价最大，普通的 Push 和 Pop 都是 1 次操作对应1 个单位代价，所以我们必须寄希望于序列中 MultiPop 代价最大，那代价最大的情况就是只 MultiPop一次，且就在最后一次，因为如果只 MultiPop 一次，不在最后一次，显然这次 MultiPop 代价比 n − 1小；如果 MultiPop 多次，那么 Push 操作的个数少了，所以 MultiPop 能弹出的比 n − 1 少，所以代价也少。
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240303135623.png" /></p>
+</details>
+<h3 id="accounting-method">Accounting method(核算法)<a class="headerlink" href="#accounting-method" title="Permanent link">&para;</a></h3>
+<p>核算法就是传统意义上的取长补短</p>
+<div class="arithmatex">\[\sum\limits_{i=1}^{n}\hat{c_i} \geq \sum\limits_{i=1}^{n}{c_i}\]</div>
+<p><span class="arithmatex">\(\hat{c_i}\)</span>是预测的期望(<strong>摊还代价</strong>)，<span class="arithmatex">\(c_i\)</span>是实际的开销，他们满足<span class="arithmatex">\(\hat{c_i} = c_i + \Delta_i\)</span>，<span class="arithmatex">\(\Delta_i\)</span>是截取的长或者是补足的短。(可正可负)</p>
+<div class="admonition bug">
+<p class="admonition-title">一个悲伤的例子</p>
+<p>当然你也可以说，你希望你的平均绩点保持在4.0以上，你知道ADS这门课你可能会挂科，所以你之前的微积分、线性代数、FDS等就需要为这次挂科存下足够高的均绩。</p>
+</div>
+<h3 id="potential-method">Potential method(势能法)<a class="headerlink" href="#potential-method" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">势函数</p>
+<p>比如思考 Splay 树这种复杂的结构，所以我们希望有一个更统一的方法解决这个问题：我们不再把目光局限于每个操作，而是给整个结构定义一个势函数，这个势函数描述了这个结构不同状态，其实就是借用了物理里面的势能的思想，比如重力势能是高度的函数，但树的势能可能是树高的函数，也可能是树的结点总数的函数甚至更复杂等等。</p>
+</div>
+<div class="arithmatex">\[
+\sum\limits_{i=1}^{n}\hat{c_i} = \sum\limits_{i=1}^{n}({c_i}+\Phi(D_i)-\Phi(D_{i-1})) = \sum\limits_{i=1}^{n}{c_i} + \Phi(D_n) - \Phi(D_0) \]</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>注意这里的<span class="arithmatex">\(i\)</span>不再是核算法中表示第<span class="arithmatex">\(i\)</span>种操作，而是<span class="arithmatex">\(n\)</span>个操作组成的序列中的第<span class="arithmatex">\(i\)</span>个！因此这里的含义是，每一步的摊还代价等于真实操作的代价加上势函数的变化</p>
+</div>
+<details class="seealso">
+<summary>如何设计势函数</summary>
+<p>为了使得摊还成本是平均成本的上界，我们仍然需要满足<span class="arithmatex">\(\sum\limits_{i=1}^{n}\hat{c_i} \geq \sum\limits_{i=1}^{n}{c_i}\)</span>因此只需要满足<span class="arithmatex">\(\Phi(D_n) \leq \Phi(D_0)\)</span>即可，这一点在设计函数的时候很容易满足，因为我们可以通过调整使得 <span class="arithmatex">\(Φ(D_0) = 0\)</span>，即初始状态势能为0，其它任何状态的势能都不会小于0就可以了，这比考虑核算法中对任何可能的序列都成立更加简单直接，因此更多时候我们采用势能法进行分析。</p>
+</details>
+<h3 id="splay">Splay树的摊还分析<a class="headerlink" href="#splay" title="Permanent link">&para;</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Rank of SubTree</p>
+<p>节点数目的对数，为什么不用Height,Height不能很好的反应数量，且不会严格增加</p>
+</div>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240303151808.png" /></p>
+<div class="arithmatex">\[
+\sum\limits_{i=1}^{n}\hat{c_i} \leq 1 + 3(R_{k+1}(X)-R_{k}(X)) + \sum\limits_{i=1}^{k}3(R_i(X)-R_{i-1}(X)) = 1 + 3(R_{k+1}(X) - R_0(X)) = O(logN) \]</div>
 
 
 
@@ -1511,7 +1728,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月3日 16:05:06</span>
   </span>
 
     
@@ -1521,7 +1738,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月3日 16:05:06</span>
   </span>
 
     
