@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://note.thorin215-wang.com/ODE/ode1/">
+        <link rel="canonical" href="https://note.thorin215-wang.com/Paper/DDPM/">
       
       
         <link rel="prev" href="../">
       
-      
-        <link rel="next" href="../ode2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>基本定义 - Thorin's Notebook</title>
+        <title>DDPM - Thorin's Notebook</title>
       
     
     
@@ -94,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#denoising-diffusion-probabilistic-models" class="md-skip">
           跳转至
         </a>
       
@@ -128,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              基本定义
+              DDPM
             
           </span>
         </div>
@@ -311,21 +309,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../ODE/" class="md-tabs__link">
           
   
     
@@ -344,11 +338,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Paper/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -1169,10 +1165,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1181,20 +1175,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1205,7 +1196,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Mathematics and Physics
@@ -1216,8 +1207,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1237,16 +1226,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../ODE/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1263,7 +1252,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Ordinary Differential Equations
@@ -1276,30 +1265,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    基本定义
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ODE/ode1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,68 +1277,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      阶
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      解的存在性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      通解
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1382,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ode2/" class="md-nav__link">
+      <a href="../../ODE/ode2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1415,6 +1322,8 @@
       
   
   
+    
+  
   
   
     
@@ -1429,19 +1338,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Paper/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1452,13 +1364,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Paper Reading
@@ -1471,10 +1383,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Paper/DDPM/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DDPM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1483,6 +1415,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forward-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forward Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      reverse process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Characteristic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reparameterization-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      重参数（reparameterization trick）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      TBD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1522,37 +1549,70 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      阶
+      Reference
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#definition" class="md-nav__link">
     <span class="md-ellipsis">
-      解
+      Definition
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="解">
+    <nav class="md-nav" aria-label="Definition">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#forward-process" class="md-nav__link">
     <span class="md-ellipsis">
-      解的存在性
+      Forward Process
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#reverse-process" class="md-nav__link">
     <span class="md-ellipsis">
-      通解
+      reverse process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Characteristic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reparameterization-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      重参数（reparameterization trick）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      TBD
     </span>
   </a>
   
@@ -1581,41 +1641,46 @@
   
 
 
-<h1 id="_1">基本概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>一般的，在一个方程或者方程组中，如果未知量是一个函数(组)，而且该方程中含有此未知函数的导数(组)，则称这种方程为<strong>微分方程(组)</strong>。
-- 如果在微分方程里，出现的未知函数是单个自变量的函数，我们称这一类微分方程为<strong>常微分方程</strong>
-- 如果未知函数有两个或以上的自变量，则称为<strong>偏微分方程</strong></p>
-</div>
-<h2 id="_2">阶<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在微分方程中出现的未知函数的导数的最高阶数，称为微分方程的<strong>阶</strong></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<ul>
-<li>一阶微分方程的一般形式为<span class="arithmatex">\(F(x,y,\frac{dy}{dx}) = 0\)</span></li>
-<li><span class="arithmatex">\(F(x,y,\frac{\mathrm{d}y}{\mathrm{d}x},\cdots,\frac{\mathrm{d}^ny}{\mathrm{d}x^n})=0\)</span>为<span class="arithmatex">\(n\)</span>阶方程</li>
-<li>eg. <span class="arithmatex">\(\frac{d^2y}{dx^2} = \frac{1}{a}\sqrt{1+(\frac{dy}{dx})^2}\)</span>为二阶微分方程</li>
-</ul>
-</div>
-<h2 id="_3">解<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li>如果<span class="arithmatex">\(y = \varphi(x)\)</span>满足<span class="arithmatex">\(F(x,y,\frac{\mathrm{d}y}{\mathrm{d}x},\cdots,\frac{\mathrm{d}^ny}{\mathrm{d}x^n})=0\)</span>，则该函数称为ODE的<strong>解</strong></li>
-<li>隐式解：若<span class="arithmatex">\(\Phi(x,y) = 0\)</span>决定的<span class="arithmatex">\(y = \varphi(x)\)</span>,则称<span class="arithmatex">\(\Phi(x,y) = 0\)</span>为<strong>隐式解</strong></li>
-<li>通解：如<span class="arithmatex">\(y = \varphi(x,c_1,c_2,\cdots,c_n)\)</span></li>
-<li>方程的解或积分在<span class="arithmatex">\((x, y)\)</span>平面上的图形称为该方程的<strong>积分曲线</strong></li>
-</ul>
-<h3 id="_4">解的存在性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>例：<span class="arithmatex">\(\frac{dy}{dx} = f(x, y)\)</span></p>
-<ul>
-<li><strong>初值条件</strong>为：<span class="arithmatex">\(y|_{x = x_0} = y_0\)</span></li>
-</ul>
-<p>设<span class="arithmatex">\(f(x, y)\)</span>在区域<span class="arithmatex">\(D: |x - x_0| \leq a, |y - y_0| \leq b\)</span>内连续，且有对于<span class="arithmatex">\(y\)</span>的偏导数,则在区间<span class="arithmatex">\(|x - x_0| &lt; h \quad (h = min(a,\frac{b}{M}), M = \max\limits_{(x, y) \in D}|f(x, y)|)\)</span>内存在唯一的<span class="arithmatex">\(y = \varphi(x)\)</span></p>
-<ul>
-<li>满足初始条件的解称为<strong>特解</strong></li>
-</ul>
-<h3 id="_5">通解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>一般的，如果含有一个任意常数<span class="arithmatex">\(c\)</span>的函数<span class="arithmatex">\(y = \varphi(x, c)\)</span>满足<span class="arithmatex">\(\frac{d \varphi(x, c)}{dx} \equiv f(x, \varphi(x, c))\)</span>,则称<span class="arithmatex">\(\varphi(x, c)\)</span>为<strong>通解</strong></p>
+<h1 id="denoising-diffusion-probabilistic-models">Denoising Diffusion Probabilistic Models<a class="headerlink" href="#denoising-diffusion-probabilistic-models" title="Permanent link">&para;</a></h1>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<p><a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/#forward-diffusion-process">Lil's blog</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/525106459">由浅入深了解Diffusion Model </a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/575935333">去噪扩散概率模型（Denoising Diffusion Probabilistic Models）</a></p>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
+<p>Diffusion Model有两个过程：前向过程（forward process）和反向过程（reverse process），其中前向过程又称为扩散过程（diffusion process）。无论是前向过程还是反向过程都是一个参数化的马尔可夫链（<code>Markov chain</code>），其中反向过程可用于生成数据样本（它的作用类似GAN中的生成器，只不过GAN生成器会有维度变化，而<code>DDPM</code>的反向过程没有维度变化）。</p>
+<p><img src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/DDPM.png" style="zoom: 20%;" /></p>
+<p>- <span class="arithmatex">\(X_0\)</span> 到<span class="arithmatex">\(X_t\)</span>为逐步加噪过的前向程，噪声是已知的，该过程从原始图片逐步加噪至一组纯噪声。</p>
+<p>- <span class="arithmatex">\(X_t\)</span>到<span class="arithmatex">\(X_0\)</span>​为将一组随机噪声还原为输入的过程。该过程需要学习一个去噪过程，直到还原一张图片。</p>
+<h3 id="forward-process">Forward Process<a class="headerlink" href="#forward-process" title="Permanent link">&para;</a></h3>
+<p>前向过程是加噪的过程，前向过程中图像<span class="arithmatex">\(\mathbf{x}_t\)</span>只和上一时刻的<span class="arithmatex">\(\mathbf{x}_{t-1}\)</span>有关, 该过程可以视为马尔科夫过程, 满足:</p>
+<div class="arithmatex">\[
+q(\mathbf{x}_t \vert \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t\mathbf{I}) \quad q(\mathbf{x}_{1:T} \vert \mathbf{x}_0) = \prod^T_{t=1} q(\mathbf{x}_t \vert \mathbf{x}_{t-1})
+\]</div>
+<p>可以推出<span class="arithmatex">\(\mathbf{x}_0\)</span>与<span class="arithmatex">\(\mathbf{x}_{t}\)</span>的关系如下</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf{x}_t &amp;= \sqrt{\alpha_t}\mathbf{x}_{t-1} + \sqrt{1 - \alpha_t}\boldsymbol{\epsilon}_{t-1} &amp; \text{ ;where } \boldsymbol{\epsilon}_{t-1}, \boldsymbol{\epsilon}_{t-2}, \dots \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) \\ &amp;= \sqrt{\alpha_t \alpha_{t-1}} \mathbf{x}_{t-2} + \sqrt{1 - \alpha_t \alpha_{t-1}} \bar{\boldsymbol{\epsilon}}_{t-2} &amp; \text{ ;where } \bar{\boldsymbol{\epsilon}}_{t-2} \text{ merges two Gaussians (*).} \\ &amp; = \dots \\ &amp;= \sqrt{\bar{\alpha}_t}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\boldsymbol{\epsilon} \\ q(\mathbf{x}_t \vert \mathbf{x}_0) &amp;= \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I})
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\alpha_t = 1 - \beta_t  \quad \bar{\alpha}_t = \prod_{i=1}^t \alpha_i
+\]</div>
+<p>注：<span class="arithmatex">\(\beta_t\)</span>由对应时刻<span class="arithmatex">\(t\)</span>​决定,</p>
+<p>这个过程中，随着<span class="arithmatex">\(t\)</span>的增大， <span class="arithmatex">\(\mathbf{x}_t\)</span>越来越接近纯噪声。当<span class="arithmatex">\(t\)</span>→∞ ， <span class="arithmatex">\(\mathbf{x}_t\)</span>是完全的高斯噪声</p>
+<h3 id="reverse-process">reverse process<a class="headerlink" href="#reverse-process" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) \quad p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))
+\]</div>
+<h2 id="characteristic">Characteristic<a class="headerlink" href="#characteristic" title="Permanent link">&para;</a></h2>
+<p><img src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/generative-overview.png" style="zoom: 18%;" /></p>
+<p>diffusion model和其他模型最大的区别是它的latent code(z)和原图是同尺寸大小的</p>
+<h3 id="reparameterization-trick">重参数（reparameterization trick）<a class="headerlink" href="#reparameterization-trick" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\mathbf{x}_t = \mathbf{x}_{t-1} + \frac{\delta}{2} \nabla_\mathbf{x} \log p(\mathbf{x}_{t-1}) + \sqrt{\delta} \boldsymbol{\epsilon}_t
+,\quad\text{where }
+\boldsymbol{\epsilon}_t \sim \mathcal{N}(\mathbf{0}, \mathbf{I})
+\]</div>
+<h3 id="tbd">TBD<a class="headerlink" href="#tbd" title="Permanent link">&para;</a></h3>
 
 
 
@@ -1638,7 +1703,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月4日 23:29:10</span>
   </span>
 
     
@@ -1648,7 +1713,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年2月29日 21:57:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月4日 23:29:11</span>
   </span>
 
     
