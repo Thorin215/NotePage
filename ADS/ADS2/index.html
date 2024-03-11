@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.thorin215-wang.com/DB/DB2/">
+        <link rel="canonical" href="https://note.thorin215-wang.com/ADS/ADS2/">
       
       
-        <link rel="prev" href="../DB1/">
+        <link rel="prev" href="../ADS1/">
       
       
-        <link rel="next" href="../../ODE/">
+        <link rel="next" href="../../CO/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Relational Model - Thorin's Notebook</title>
+        <title>Red-Black Trees and B+ Trees - Thorin's Notebook</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-2-relational-model" class="md-skip">
+        <a href="#chapter-2-red-black-trees-and-b-trees" class="md-skip">
           跳转至
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Relational Model
+              Red-Black Trees and B+ Trees
             
           </span>
         </div>
@@ -253,16 +253,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../OOP/" class="md-tabs__link">
           
   
@@ -282,20 +286,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../CO/" class="md-tabs__link">
           
   
@@ -466,8 +466,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -482,17 +484,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -503,7 +508,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -884,6 +889,8 @@
                 
   
   
+    
+  
   
   
     
@@ -903,16 +910,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ADS/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -929,7 +936,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Advanced Data Structure and Algorithm
@@ -945,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ADS/ADS1/" class="md-nav__link">
+      <a href="../ADS1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,10 +970,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ADS/ADS2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Red-Black Trees and B+ Trees
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -975,6 +1002,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#red-black-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Red-Black Trees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -999,10 +1073,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1013,20 +1085,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1037,7 +1106,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             System
@@ -1156,8 +1225,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1177,16 +1244,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../DB/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1203,7 +1270,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Database System
@@ -1219,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DB1/" class="md-nav__link">
+      <a href="../../DB/DB1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1237,30 +1304,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Relational Model
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../DB/DB2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,248 +1316,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relation-schema-and-instance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relation Schema and Instance
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Relation Schema and Instance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attributes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key(码\键)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-diagram-for-university-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schema Diagram for University Database
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relational-query-languages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relational Query Languages(关系查询语言)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Relational Query Languages(关系查询语言)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#select" class="md-nav__link">
-    <span class="md-ellipsis">
-      Select
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union" class="md-nav__link">
-    <span class="md-ellipsis">
-      Union
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Difference
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cartesian-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cartesian-Product
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rename" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rename
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Operations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#natural-join-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Natural-Join Operation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theta-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theta Join(连接)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outer-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      Outer Join
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semijoin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Semijoin(半连接)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assignment(赋值)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#division" class="md-nav__link">
-    <span class="md-ellipsis">
-      Division
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extended-relational-algebra-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extended Relational-Algebra-Operations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extended Relational-Algebra-Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generalized-projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generalized Projection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions-and-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregate Functions and Operations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1799,224 +1604,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-structure" class="md-nav__link">
+  <a href="#red-black-trees" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Structure
+      Red-Black Trees
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#relation-schema-and-instance" class="md-nav__link">
+  <a href="#insertion" class="md-nav__link">
     <span class="md-ellipsis">
-      Relation Schema and Instance
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Relation Schema and Instance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attributes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key(码\键)
+      Insertion
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#schema-diagram-for-university-database" class="md-nav__link">
+  <a href="#deletion" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema Diagram for University Database
+      Deletion
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relational-query-languages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Relational Query Languages(关系查询语言)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Relational Query Languages(关系查询语言)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#select" class="md-nav__link">
-    <span class="md-ellipsis">
-      Select
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union" class="md-nav__link">
-    <span class="md-ellipsis">
-      Union
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Difference
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cartesian-product" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cartesian-Product
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rename" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rename
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Operations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#natural-join-operation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Natural-Join Operation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#theta-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      Theta Join(连接)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#outer-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      Outer Join
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semijoin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Semijoin(半连接)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assignment(赋值)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#division" class="md-nav__link">
-    <span class="md-ellipsis">
-      Division
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extended-relational-algebra-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extended Relational-Algebra-Operations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extended Relational-Algebra-Operations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generalized-projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generalized Projection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregate-functions-and-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregate Functions and Operations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2038,349 +1648,90 @@
   
 
 
-<h1 id="chapter-2-relational-model">Chapter 2 Relational Model<a class="headerlink" href="#chapter-2-relational-model" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-2-red-black-trees-and-b-trees">chapter 2 Red-Black Trees and B+ Trees<a class="headerlink" href="#chapter-2-red-black-trees-and-b-trees" title="Permanent link">&para;</a></h1>
+<h2 id="red-black-trees">Red-Black Trees<a class="headerlink" href="#red-black-trees" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<ul>
-<li>Structure of Relational Databases</li>
-<li>Database Schema</li>
-<li>Keys</li>
-<li>Schema Diagrams</li>
-<li>Relational Query Languages</li>
-<li>The Relational Algebra</li>
-</ul>
+<p class="admonition-title">Definition of red-black tree</p>
+<p>A red-black tree is a binary search tree that satisfies the following red-black properties:
+1. Every node is either red or black.
+2. The root is black.
+3. Every leaf (NIL) is black.
+4. If a node is red, then both its children are black.
+5. For each node, all simple paths from the node to descendant leaves contain the same number of black nodes.(黑高相同)</p>
 </div>
-<h2 id="basic-structure">Basic Structure<a class="headerlink" href="#basic-structure" title="Permanent link">&para;</a></h2>
-<p>Formally, given sets <span class="arithmatex">\(D_1, D_2, … D_n\)</span> a relation <span class="arithmatex">\(r\)</span> is a subset of  <span class="arithmatex">\(D_1 \times  D_2  \times … D_n\)</span>.Thus, a relation is a set of n-tuples <span class="arithmatex">\((a_1, a_2, …, a_n)\)</span> where each <span class="arithmatex">\(a_i \in D_i\)</span></p>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<ul>
-<li>relation(关系) : 表</li>
-<li>tuple(元组) ：行</li>
-<li>Attribute(属性) : 列 </li>
-</ul>
-</div>
-<h2 id="relation-schema-and-instance">Relation Schema and Instance<a class="headerlink" href="#relation-schema-and-instance" title="Permanent link">&para;</a></h2>
-<p>A1, A2, …, An are <strong>attributes</strong>
-R = (A1, A2, …, An ) is a <strong>relation schema</strong></p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>instructor  = (ID,  name, dept_name, salary)</p>
-</div>
-<p>A relation instance r defined over schema <span class="arithmatex">\(R\)</span> is denoted by <span class="arithmatex">\(r(R)\)</span>.
-The current values a relation are specified by a table
-An element <span class="arithmatex">\(t\)</span> of relation <span class="arithmatex">\(r\)</span> is called a tuple and is represented by a row in a table</p>
-<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The set of allowed values for each <strong>attribute</strong> is called the <strong>domain（域）</strong> of the attribute</li>
-<li>Attribute values are (normally) required to be <strong>atomic（原子的）</strong>; that is, indivisible</li>
-<li>The special value <strong>null（空值）</strong> is a member of every domain</li>
-<li>The null value causes complications in the definition of many operations</li>
-</ul>
-<h2 id="key">Key(码\键)<a class="headerlink" href="#key" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Let <span class="arithmatex">\(K \subseteq R\)</span></li>
-<li>K is a <strong>superkey(超健)</strong> of R if values for K are sufficient to identify a unique tuple of each possible relation <span class="arithmatex">\(r(R)\)</span></li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>{ID}</code> and <code>{ID,name}</code> are both superkeys of instructor.</p>
-</div>
-<p>S- uperkey K is a <strong>candidate key(候选健)</strong> if K is minimal </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><code>{ID}</code> is a candidate key for Instructor</p>
-</div>
-<ul>
-<li>One of the candidate keys is selected to be the <strong>primary key（主键）</strong>.</li>
-</ul>
-<p><strong>Foreign key（外键）</strong> constraint  from attribute(s) A of relation <span class="arithmatex">\(r_1\)</span> to the primary  key  B  of  relation r2 states that on any database instance, the value of A for each tuple in <span class="arithmatex">\(r_1\)</span> must also be the value of B for some tuple in <span class="arithmatex">\(r_2\)</span>. </p>
-<div class="admonition example">
-<p class="admonition-title">Foreign key Example</p>
-<ul>
-<li>foreign key <span class="arithmatex">\((A_{j1},A_{j2}, \ldots A_{jm})\)</span> references <span class="arithmatex">\(s\)</span>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">foreign</span><span class="w"> </span><span class="k">key</span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="k">references</span><span class="w"> </span><span class="n">department</span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-</div>
-<details class="tip">
-<summary>Summary</summary>
-<ul>
-<li>superkey(超健) ：可以确定一个元组的一个或多个属性的集合(可能包含无关紧要的)</li>
-<li>candidate key(候选健) ：最小的超码，任意真子集都不是超码</li>
-<li>primary key(主码)：区分元组的主要方式的候选码</li>
-<li>Foreign key（外码）：表明引用与被引用关系</li>
-</ul>
-</details>
-<h2 id="schema-diagram-for-university-database">Schema Diagram for University Database<a class="headerlink" href="#schema-diagram-for-university-database" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/bbe9065ec3b5d31278fda8e0084f589.png" /></p>
-<ul>
-<li>实体完整性（Entity Integrity）</li>
-<li>参照完整性（Referential Integrity）</li>
-<li>用户定义的完整性（User-defined Integrity）</li>
-</ul>
-<h2 id="relational-query-languages">Relational Query Languages(关系查询语言)<a class="headerlink" href="#relational-query-languages" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Procedural vs.non-procedural, or declarative</li>
-<li>“Pure” languages:</li>
-<li>Relational algebra(关系代数)(对关系进行操作，结果仍是关系)</li>
-<li>Tuple relational calculus（元组关系演算）</li>
-<li>Domain relational calculus（域关系演算）</li>
-<li>The above 3 pure languages are equivalent in computing power</li>
-<li>We will concentrate on relational algebra</li>
-<li>Not Turing-machine equivalent</li>
-<li>Consists of 6 basic operations</li>
-</ul>
-<div class="admonition abstract">
-<p class="admonition-title">Relational algebra(关系代数)</p>
-<ul>
-<li>select(选择): <span class="arithmatex">\(\sigma\)</span></li>
-<li>project(投影): <span class="arithmatex">\(\Pi\)</span></li>
-<li>union(并集): <span class="arithmatex">\(\cup\)</span></li>
-<li>set difference(集差): <span class="arithmatex">\(-\)</span></li>
-<li>Cartesian product(笛卡尔积): <span class="arithmatex">\(x\)</span></li>
-<li>rename(更名): <span class="arithmatex">\(\rho\)</span></li>
-</ul>
-</div>
-<div class="admonition question">
-<p class="admonition-title">Question</p>
-<p>孙老师上课提到了思考为什么没有<strong>交集</strong></p>
-<details class="tip">
-<summary>Answer</summary>
-<p>交集可以通过并集和集差来实现</p>
-</details>
-</div>
-<h3 id="select">Select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h3>
-<ul>
-<li><span class="arithmatex">\(\sigma_p(r)=\{t|t\in r\ and\ p(t)\}\)</span>  , where <span class="arithmatex">\(p\)</span> is called <strong>selection predicate</strong>.  </li>
-</ul>
-<details class="example">
-<summary>Select Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/974cf289cbfd868acd9c049e5bd0161.png" /></p>
-</details>
-<h3 id="project">Project<a class="headerlink" href="#project" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The <strong>project</strong> operation is a unary operation that returns its argument relation, with certain attributes left out.(可以过滤特定的属性)    </li>
-<li><span class="arithmatex">\(\prod_{A_1,A_2,\ldots, A_k}(r)\)</span> where <span class="arithmatex">\(A_i\)</span> are attribute names and <span class="arithmatex">\(r\)</span> is a relation name.   </li>
-<li>The result is defined as the relation of k columns obtained by erasing the columns that are not listed. 会对结果进行去重。  </li>
-</ul>
-<details class="example">
-<summary>Projection Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240304204951.png" /></p>
-</details>
-<h3 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The <strong>union</strong> operation allows us to combine two relations.  <span class="arithmatex">\(r\cup s = \{t| t\in r \ or \ t\in s\}\)</span>  </li>
-<li><span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(s\)</span> must have the same <strong>arity (元数)</strong> (same number f attributes)  </li>
-<li>The attribute domains must be <strong>compatible（相容）</strong></li>
-<li>当属性有关联类型时，对于每个输入 <span class="arithmatex">\(i\)</span>, 两个输入关系的第 <span class="arithmatex">\(i\)</span> 个属性的类型必须相同。  </li>
-</ul>
-<details class="example">
-<summary>Projection Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/3c0d1d695271df0aa254e9691514ba8.png" /> </p>
-</details>
-<h3 id="set-difference">Set Difference<a class="headerlink" href="#set-difference" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>The <strong>set-difference</strong> operation allows us to find tuples that are in one relation but are not in another. (r里面有而s里面没有)<span class="arithmatex">\(r-s=\{t|t\in r\ and\ t\notin s\}\)</span>  </p>
-</li>
-<li>
-<p>Set differences must be taken between <strong>compatible</strong> relations.</p>
-</li>
-</ul>
-<details class="example">
-<summary>Projection Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/18a62cbf481f40da92560d1add64c79.png" /></p>
-</details>
-<h3 id="cartesian-product">Cartesian-Product<a class="headerlink" href="#cartesian-product" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The <strong>Cartesian-product</strong> operation (denoted by <span class="arithmatex">\(\times\)</span>)  allows us to combine information from any two relations. (两个表里的元组各自相乘) <span class="arithmatex">\(r\times s  =\{t\ q|t\in r\ and\ q\in s\}\)</span>  </li>
-</ul>
-<details class="example">
-<summary>Projection Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/1edc7cb036b9774fe11d9f70eb7dfa5.png" /></p>
-</details>
-<div class="admonition warning">
-<p class="admonition-title">与自身做笛卡尔积的时候</p>
-<p>当作两个不同的表处理</p>
-</div>
-<h3 id="rename">Rename<a class="headerlink" href="#rename" title="Permanent link">&para;</a></h3>
-<p>Allows us to refer to a relation by more than one name.  <span class="arithmatex">\(\rho_X(E)\)</span></p>
-<details class="example">
-<summary>Composition of Operations 1</summary>
-<p>Find the names of all instructors in the Physics department, along with the course_id of all courses they have taught.  </p>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/5e8103062a948c9b24e21d7abea4960.png" /></p>
-<p>这两条语句含义一样，但第二条我们先进行了一次 select, 条目少了更高效.</p>
-</details>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>一般DBMS都能够自己进行优化</p>
-</div>
-<details class="example">
-<summary>Composition of Operations 2</summary>
-<p>Find the largest salary in the university.  </p>
-<ul>
-<li>find instructor salaries that are less than some other instructor salary (<strong>i.e.</strong> not maximum)<br />
-using a copy of instructor under a new name <span class="arithmatex">\(d\)</span>. <br />
-<span class="arithmatex">\(\prod_{instructor.salary}(\sigma_{instructor.salary&lt;d.salary}(instructor \times \rho_d(instructor)))\)</span>  </li>
-<li>find the largest salary<br />
-<span class="arithmatex">\(\prod_{instructor}-\prod_{instructor.salary}(\sigma_{instructor.salary}&lt;d.salary(instructor\times \rho_d(instructor)))\)</span>  </li>
-</ul>
-<p>我们第一步将两个关系拼起来之后，限定 instructor 的工资小于 d, 随后投影我们就可以获得所有不是最大值的薪水。（因为任何不是最大值的薪水都会在笛卡尔积 select 后至少存在一个元组，这样投影之后仍会存在。但最大值就不会有元组存在），最后用全集减掉即可。</p>
-</details>
-<h2 id="additional-operations">Additional Operations<a class="headerlink" href="#additional-operations" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>额外操作符并不能增强查询能力,只能简化表达</p>
+<ul>
+<li>除了常规的父子以及键值信息之外，红黑树还有一个颜色的属性，并且当左右子结点为空时，必须是黑色的NIL结点（它没有键值），这与一般的NULL不一样。</li>
+<li>黑高是绝对严格的平衡要求，而红色结点则是少量不平衡的因素，并且定义控制了红色结点的个数，也就控制了不平衡因素的影响</li>
+</ul>
 </div>
+<h2 id="insertion">Insertion<a class="headerlink" href="#insertion" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>为什么默认插入红色节点</summary>
+<p>假设我们每次都插入黑色结点，那么定义第五条一定会被破坏，因此每次插入都必须调整（除了从空树插入的那次）；但是如果插入红色结点，定义第二条（仅在插入空树时）和定义第四条仅仅是有可能被破坏，因此直观来看插入红色结点会比插入黑色结点需要的调整更少。除此之外，在学完红黑树删除后，红黑树删除黑色结点时的复杂情况也暗示了插入红色应当是更好的选择。</p>
+</details>
+<ul>
+<li>情况 1：<span class="arithmatex">\(X\)</span> 的叔叔（即父亲的兄弟）是红色的，<span class="arithmatex">\(X\)</span> 无论左右孩子都是该情况</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309151416.png" /></p>
+<ul>
+<li>
+<p>情况 2：<span class="arithmatex">\(X\)</span> 的叔叔（即父亲的兄弟）是黑色的，且 <span class="arithmatex">\(X\)</span> 是右孩子</p>
+</li>
+<li>
+<p>情况 3：<span class="arithmatex">\(X\)</span> 的叔叔（即父亲的兄弟）是黑色的，且 <span class="arithmatex">\(X\)</span> 是左孩子</p>
+</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309151537.png" /></p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>对于插入产生的冲突问题，核心的处理思想是将锅不断向上甩
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/f0d08129e015af3ada1c7be7ae3f38a.png" />
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309152747.png" /></p>
+</div>
+<h2 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
+<p class="admonition-title">基础删除操作</p>
 <ul>
-<li>Set intersection(交集): <span class="arithmatex">\(r \cap s\)</span> </li>
-<li>Natural join(自然连接):  <span class="arithmatex">\(r \Join s\)</span></li>
-<li>Semijoin(半连接): $\ltimes_\theta $</li>
-<li>Assignment(赋值): $ \leftarrow $</li>
-<li>Outer join(外连接): <span class="arithmatex">\(r \ltimes s,r \rtimes s, r ⟗ s\)</span></li>
-<li>Division Operator(分部编号): $r \div s $</li>
+<li>如果<span class="arithmatex">\(X\)</span>没有孩子，直接删除就好，没有任何后顾之忧；</li>
+<li>如果<span class="arithmatex">\(X\)</span>只有一个孩子，那就让孩子接替<span class="arithmatex">\(X\)</span>的位置；</li>
+<li>如果<span class="arithmatex">\(X\)</span>有两个孩子，那就让<span class="arithmatex">\(X\)</span>与其左子树的最大结点（或右子树最小结点）交换，然后删除 <span class="arithmatex">\(X\)</span>（这时 <span class="arithmatex">\(X\)</span> 所在的位置一定只有一个子节点，因为左子树最大结点不可能有右孩子，右子树最小结点不可能有左孩子）</li>
 </ul>
 </div>
-<h3 id="natural-join-operation">Natural-Join Operation<a class="headerlink" href="#natural-join-operation" title="Permanent link">&para;</a></h3>
-<p>Let r and s be relations on schemas R and S respectively.  Then,  <span class="arithmatex">\(r\bowtie s\)</span> is a relation on schema <span class="arithmatex">\(R \cup S\)</span> obtained as follows:</p>
-<ul>
-<li>Consider each pair of tuples <span class="arithmatex">\(t_r\)</span> from <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\(t_s\)</span> from <span class="arithmatex">\(s\)</span>.  </li>
-<li>
-<p>If <span class="arithmatex">\(t_r\)</span> and <span class="arithmatex">\(t_s\)</span> have the same value on each of the attributes in <span class="arithmatex">\(R \cap S\)</span>, add a tuple $t $ to the result, where</p>
-<ul>
-<li><span class="arithmatex">\(t\)</span> has the same value as <span class="arithmatex">\(t_r\)</span> on <span class="arithmatex">\(r\)</span></li>
-<li><span class="arithmatex">\(t\)</span> has the same value as <span class="arithmatex">\(t_s\)</span> on <span class="arithmatex">\(s\)</span></li>
-</ul>
-</li>
-<li>
-<p>即共同属性要有相同的值，才能在拼接后的结果中保留。  </p>
-</li>
-<li>对乘法的扩展，相当于先 <span class="arithmatex">\(\times\)</span> 再 select, 最后 project.  </li>
-<li>先笛卡尔积，完了进行选择，最后投影</li>
-</ul>
-<details class="example">
-<summary>Natural Join Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/dc3a0a9619b4287814748a1739feb7e.png" /></p>
-</details>
-<h3 id="theta-join">Theta Join(连接)<a class="headerlink" href="#theta-join" title="Permanent link">&para;</a></h3>
-<ul>
-<li><span class="arithmatex">\(r\bowtie_\theta s=\sigma_\theta (r\times s)\)</span>可以理解为条件连接，但是也可以理解为自然连接是用隐式谓词取代了<span class="arithmatex">\(\theta\)</span>的连接</li>
-</ul>
-<h3 id="outer-join">Outer Join<a class="headerlink" href="#outer-join" title="Permanent link">&para;</a></h3>
-<p><strong>特点</strong>：保留未匹配元组</p>
-<p>Computes the join and then adds tuples form one relation that does not match tuples in the other relation to the result of the join.   </p>
-<p>Uses <em>null values</em>:  </p>
-<ul>
-<li><strong>null</strong> signifies that the value is unknown or does not exist </li>
-<li>All comparisons involving null are (roughly speaking) false by definition</li>
-</ul>
-<p>Outer join can be expressed using basic operations.  </p>
-<ul>
-<li><span class="arithmatex">\(r\rtimes s=(r\bowtie s)\cup (r-\cap_R(r\bowtie s)\times \{null,\ldots,null\})\)</span></li>
-<li><span class="arithmatex">\(r\ltimes s=(r\bowtie s)\cup \{null,\ldots,null\}\times (s-\cap_R(r\bowtie s))\)</span></li>
-<li>
-<p><span class="arithmatex">\(r\)</span>⟗<span class="arithmatex">\(s\)</span> <span class="arithmatex">\(=(r\bowtie s)\cup (r-\cap_R(r\bowtie  s))\times \{(null, \ldots)\}\cup\{(null,\ldots,null)\}\times (s-\cap_s(r\bowtie s))\)</span></p>
-</li>
-<li>
-<p>Left outer join(左外连接)：只保留出现在<strong>左外连接符</strong>之前的关系中的元组</p>
-</li>
-<li>Right outer join(右外连接)：只保留出现在<strong>右外连接符</strong>之后的关系中的元组</li>
-<li>Full outer join(全外连接)：保留两个关系中的元组</li>
-</ul>
-<details class="example">
-<summary>Outer Join Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/4ffb74acdc37a7633e5bf400332eb2f.png" />
-<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/a3ff26750e4d1e9d9b84e1c6cf3c50a.png" /></p>
-</details>
-<h3 id="semijoin">Semijoin(半连接)<a class="headerlink" href="#semijoin" title="Permanent link">&para;</a></h3>
-<p><span class="arithmatex">\(r\ltimes_\theta s\)</span> 保留 <span class="arithmatex">\(r\)</span> 中能与 <span class="arithmatex">\(s\)</span> 相连的元组(在给定条件下)的集合(最大子集),相当于筛选。</p>
-<p><span class="arithmatex">\(r\ltimes_\theta s = \sigma()\)</span> </p>
-<details class="example">
-<summary>Semijoin Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/da067cc6aed327d13958933e5815c05.png" /></p>
-</details>
-<h3 id="assignment">Assignment(赋值)<a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h3>
-<p>将一个关系代数表达式用一个临时变量来替代</p>
-<h3 id="division">Division<a class="headerlink" href="#division" title="Permanent link">&para;</a></h3>
-<ul>
-<li>查询包含另外一个表中所有信息的元组集合的共同元素</li>
-<li>
-<p>Given relations <span class="arithmatex">\(r(R)\)</span> and <span class="arithmatex">\(s(S)\)</span>, such that <span class="arithmatex">\(S \subset R\)</span>, <span class="arithmatex">\(r\div s\)</span> is the largest relation <span class="arithmatex">\(t(R-S)\)</span> such that <span class="arithmatex">\(t\times s \subsetneqq  r\)</span>  </p>
-</li>
-<li>
-<p>We can write <span class="arithmatex">\(r\div s\)</span> as  </p>
-</li>
-</ul>
-<div class="arithmatex">\[
-\begin{align*}
-    temp1 &amp; \leftarrow \Pi_{R-S}(r)\\
-    temp2 &amp; \leftarrow \Pi_{R-S}((temp1 \times s)- \Pi_{R-S,S}(r))\\
-    result &amp; = temp1 - temp2
-\end{align*}
-\]</div>
-<details class="example">
-<summary>Division Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/5dd58d501e5510992bdd7f5a2598ad3.png" />
-<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/a36a3bd308df96f94c1983d59fdceac.png" /></p>
-</details>
-<h2 id="extended-relational-algebra-operations">Extended Relational-Algebra-Operations<a class="headerlink" href="#extended-relational-algebra-operations" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<ul>
-<li>Generalized Projection</li>
-<li>Aggregate Functions</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Red-Black Tree删除特点</p>
+<p>事实上红黑树的删除是基于这些操作的，需要注意的是第三种情况，<strong><span class="arithmatex">\(X\)</span> 和与其交换的结点只交换键值，不交换颜色</strong>，否则如果两者颜色不同，在交换的时候就可能破坏第五条性质，这是很难令人满意的。总而言之，第三种情况可以通过一步交换直接转化为第一或第二种情况，因此我们只需要关心第一和第二种情况。</p>
 </div>
-<h3 id="generalized-projection">Generalized Projection<a class="headerlink" href="#generalized-projection" title="Permanent link">&para;</a></h3>
-<ul>
-<li>一般化投影generalized projection是投影projection的扩展，是带上了算术运算的</li>
-<li><span class="arithmatex">\(E\)</span> is any relational-algebra expression</li>
-<li>Each of $F_1, F_2, …, F_n $are arithmetic expressions involving constants and attributes in the schema of <span class="arithmatex">\(E\)</span>.</li>
-<li>Given relation instructor(ID, name, dept_name, salary) where salary is annual salary, get the same information but with monthly salary </li>
-</ul>
-<div class="arithmatex">\[\Pi_{F_1,F_2 \ldots F_n}(E)\]</div>
-<details class="example">
-<summary>Generalized Projection Example</summary>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/98bda52da2e909b76479f007450b794.png" /></p>
-</details>
-<h3 id="aggregate-functions-and-operations">Aggregate Functions and Operations<a class="headerlink" href="#aggregate-functions-and-operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>Aggregation function</strong>（聚合函数）takes a collection of values and returns a single value as a result.  </p>
-<ul>
-<li><em>avg</em>: average value</li>
-<li><em>min</em>: minimum value</li>
-<li><em>max</em>: maximum value</li>
-<li><em>sum</em>: sum of values</li>
-<li><em>count</em>: number of values</li>
-</ul>
-</li>
-<li>
-<p><strong>Aggregate operation</strong> in relational algebra <span class="arithmatex">\(G_1,G_2,\ldots,G_n \mathcal{G}_{F_1(A_1),\ldots F_n(A_n)}(E)\)</span>  </p>
-</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Aggregate Operation Example</p>
-<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/f413714ed3fbf78e068fc3a5076b9f4.png" />
-<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/81c946c7cfddf796058f6bffca34174.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">双黑节点</p>
+<p>如果接替被删除的是NIL或是黑色结点应该怎么办？我们直接给黑色结点或者 NIL（其实也是黑色结点）再加一重黑色，于是它的颜色变成了<strong>双黑</strong>。此时第五条性质没有被破坏，但是，第一条性质被破坏了！这里出现了非红也非黑的颜色！于是我们的想法就是：把这个黑色的 debuff 扔给一个红色结点，或者一步一步往上扔给根结点，<strong>事实上根结点把双黑直接变成黑色完全不影响其它性质</strong>。我们可以将删除的情况分成以下四类（与插入相同，这里用子树表示更一般的情况，<span class="arithmatex">\(X\)</span> 在此处则表示双黑结点，图中用黑色圆圈和圆旁边的加号表示双黑，蓝色表示颜色无所谓，可红可黑。注意这里 <span class="arithmatex">\(X\)</span> 都是父亲的左孩子，右孩子情况对称）</p>
 </div>
-<p>分组结果没有名字，可以用 rename 或者 as 进行改名。<br />
-<strong><em>e.g.</em></strong> <code>dept_name G avg(salary) as avg_sal (instructor)</code></p>
-<h1 id="multiset-relational-algebra">Multiset Relational Algebra<a class="headerlink" href="#multiset-relational-algebra" title="Permanent link">&para;</a></h1>
 <ul>
-<li>关系代数中，我们要求关系要是一个严格的集合。  </li>
-<li>但实际数据库中并不是，而是一个多重集，允许有重复元素存在。  </li>
-<li>因为一些操作的中间结果会带来重复元素，要保持集合特性开销很大，因此实际操作中不会去重 。 </li>
+<li>情况 1：<span class="arithmatex">\(X\)</span> 的兄弟是红色的</li>
 </ul>
-<h2 id="sql-and-relational-algebra">SQL and Relational Algebra<a class="headerlink" href="#sql-and-relational-algebra" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309213427.png" /></p>
+<p>由于原先的树满足红黑树定义第四条，因此此时父结点一定是黑色。这种情况我们将兄弟节点拎起来</p>
 <ul>
-<li><code>select A1, A2, ... An from r1, r2, ... rm where P</code> is equivalent to <span class="arithmatex">\(\Pi_{A_1,\ldots, A_n}(\sigma_P(r_1\times r_2\ldots r_m))\)</span> </li>
-<li><code>select A1, A2, sum(A3) from r1, r2, ... rm where P group by A1, A2</code> is equivalent to <span class="arithmatex">\(A_1, A_2 \mathcal{G} sum(A_3)(\sigma_P(r_1\times r_2\times\ldots r_m))\)</span><br />
-这里按 <span class="arithmatex">\(A_1,A_2\)</span> 分组，那么结果的表中会有 <span class="arithmatex">\(A_1,A_2,sum(A_3)\)</span> 三列（分组依据+分组后的聚合结果），这里我们需要的就是这三列，所以分组即可。但是假设我们只需要 <span class="arithmatex">\(A_1, sumA3\)</span> 那么最后还需要投影。</li>
+<li>情况 2：<span class="arithmatex">\(X\)</span> 的兄弟是黑色的，且兄弟的两个孩子（根据距离划分为近、远侄子，用远近而不用左右是为
+了对称情况不混淆左右）都是黑色的</li>
 </ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309213455.png" /></p>
+<p>这时候没人是红色可以救了，那就想起根结点再怎么样都能救，所以把双黑往上推给父亲，为了保证红黑树性质，兄弟也要从黑变红，总而言之就是 <span class="arithmatex">\(X\)</span> 这一层的黑色全部往上推。如果父亲原本是红色，那就染黑，问题解决；如果父亲原本是黑色，那父亲就变成双黑，让问题向根结点靠近。<strong>需要特别注意的是，如果是从情况1变成情况2的，父亲一定是红色，所以如果是1变为2，则问题会马上解决</strong>。</p>
+<ul>
+<li>情况 3：<span class="arithmatex">\(X\)</span> 的兄弟是黑色的，且近侄子是红色的，远侄子是黑色的</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309213513.png" /></p>
+<p>这时我们借用 AVL 树的想法，红色在父亲 P 的 RL 位置，因此做 double rotation：single rotation 后会变成情况4的RR的情况（也就意味着红色要给到RR的位置，这里有一个颜色的变化，用RR记忆很方便）。</p>
+<ul>
+<li>情况 4：<span class="arithmatex">\(X\)</span> 的兄弟是黑色的，且远侄子是红色的，近侄子颜色任意</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240309213532.png" /></p>
+<p>此时对应AVL树的RR，于是再一次single rotation即可把双黑的一重黑丢给红色远侄子（即<span class="arithmatex">\(X\)</span>和 <span class="arithmatex">\(N_2\)</span> 都变成黑色），但要注意为了保证红黑树性质的颜色变化，即P和S还要交换颜色，此时问题解决。</p>
+<details class="note">
+<summary>时间复杂度</summary>
+<p>此时我们可以总结并计算出删除操作的时间复杂度。首先我们最多用<span class="arithmatex">\(O(\log n)\)</span>的时间找到删除结点，最多 1 次交换和 1 个删除的操作。接下来如果删除后没有问题则到此结束；否则根据分析，情况 1、3 和 4 在问题解决前最多进去一次，因为 4 可以直接解决，3 直接进入 4 然后解决，1 如果进入 3 和 4 也可以马上解决，进入 2 后也因为父结点是红色可以马上解决。因此关键在于情况 2 可能出现很多次，但最多也只是树高<span class="arithmatex">\(O(\log n)\)</span>次，因为每次都会上推 1 格。总而言之，因为情况 1、3 和 4 在问题解决前最多进去一次，所以最多 3 次旋转加上<span class="arithmatex">\(O(\log n)\)</span>次颜色调整可以解决问题，<strong>因此我们有如下结论：一棵有 <span class="arithmatex">\(n\)</span>个内部结点的红黑树删除一个结点的时间复杂度为<span class="arithmatex">\(O(\log n)\)</span></strong></p>
+</details>
 
 
 
@@ -2403,7 +1754,7 @@ using a copy of instructor under a new name <span class="arithmatex">\(d\)</span
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月4日 23:34:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月10日 20:54:12</span>
   </span>
 
     
@@ -2413,7 +1764,7 @@ using a copy of instructor under a new name <span class="arithmatex">\(d\)</span
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月4日 23:34:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月10日 20:54:13</span>
   </span>
 
     
