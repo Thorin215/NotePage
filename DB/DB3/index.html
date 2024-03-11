@@ -1,0 +1,2996 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Thorin's Notebook">
+      
+      
+      
+        <link rel="canonical" href="https://note.thorin215-wang.com/DB/DB3/">
+      
+      
+        <link rel="prev" href="../DB2/">
+      
+      
+        <link rel="next" href="../../ODE/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
+    
+    
+      
+        <title>SQL介绍 - Thorin's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Screen";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeline.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../css/card.css">
+    
+      <link rel="stylesheet" href="../../css/tasklist.css">
+    
+      <link rel="stylesheet" href="../../css/flink.css">
+    
+      <link rel="stylesheet" href="../../css/more_changelog.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-sql-introducction" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Thorin&#39;s Notebook" class="md-header__button md-logo" aria-label="Thorin's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Thorin's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL介绍
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Throin215/note/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Thorin215/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OOP/" class="md-tabs__link">
+          
+  
+    
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../CO/" class="md-tabs__link">
+          
+  
+    
+  
+  System
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ODE/" class="md-tabs__link">
+          
+  
+    
+  
+  Mathematics and Physics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Paper/" class="md-tabs__link">
+          
+  
+    
+  
+  Paper Reading
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Thorin&#39;s Notebook" class="md-nav__button md-logo" aria-label="Thorin's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Thorin's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Throin215/note/" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Thorin215/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../OOP/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Oriented Object Programming
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Oriented Object Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/oop2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS61A/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    CS61A
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS61A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/61a1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure and Interpretation of Computer Programs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/61a2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Abstraction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS61A/61a3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Oriented Object Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Python/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    作业易错题整理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Py1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Py2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Data Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ADS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Advanced Data Structure and Algorithm
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Data Structure and Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ADS/ADS1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVL Trees, Splay Trees, and Amortized Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ADS/ADS2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Red-Black Trees and B+ Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CO/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Computer Organization
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Organization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/CO1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer Abstraction and Technology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CO/CO2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arithmetic for Computer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Database System
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Database System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DB1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DB2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relational Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQL介绍
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SQL介绍
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-definition-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Definition Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Types in SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-data-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Data Types in SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-table-construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Table Construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop-and-alter-table-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop and Alter Table Constructs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-and-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL and Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-for-absence-of-duplicate-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Absence of Duplicate Tuples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-query-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Query Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Query Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-select-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The select Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The where Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-from-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The from clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rename-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rename Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-the-display-of-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordering the Display of Tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-limit-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The limit Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aggregate Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#having-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      Having Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values-and-aggregates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Values and Aggregates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-subqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Subqueries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Subqueries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalar-subquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar Subquery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-for-empty-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Empty Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-for-absence-of-duplicate-tuples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Absence of Duplicate Tuples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Clause
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of the Database(数据库的修改)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modification of the Database(数据库的修改)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics and Physics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics and Physics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ODE/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ordinary Differential Equations
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Ordinary Differential Equations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ODE/ode1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ODE/ode2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    变量分离
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Paper/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Paper Reading
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Paper Reading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper/DDPM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DDPM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-definition-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Definition Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#domain-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Domain Types in SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-data-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Data Types in SQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-table-construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Table Construct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drop-and-alter-table-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop and Alter Table Constructs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-and-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL and Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-for-absence-of-duplicate-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Absence of Duplicate Tuples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-query-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Query Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Query Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-select-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The select Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The where Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-from-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The from clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rename-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Rename Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordering-the-display-of-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordering the Display of Tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-limit-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The limit Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aggregate Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#having-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      Having Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values-and-aggregates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Values and Aggregates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-subqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nested Subqueries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nested Subqueries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalar-subquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar Subquery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-for-empty-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Empty Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-for-absence-of-duplicate-tuples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test for Absence of Duplicate Tuples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Clause
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of the Database(数据库的修改)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modification of the Database(数据库的修改)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="chapter-3-sql-introducction">Chapter 3 SQL Introducction<a class="headerlink" href="#chapter-3-sql-introducction" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>Overview of the SQL Query Language</li>
+<li>Data Definition</li>
+<li>Basic Query Structure</li>
+<li>Additional Basic Operations</li>
+<li>Set Operations</li>
+<li>Null Values</li>
+<li>Aggregate Functions</li>
+<li>Nested Subqueries</li>
+<li>Modification of the Database </li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">SQL与关系代数的关系</p>
+<ul>
+<li>SQL与关系代数并不是一一对应的</li>
+<li>但SQL语句都可以写成关系代数表达式</li>
+</ul>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>本次课孙老师语速感人，部分笔记后期对照<a href="http://note.hobbitqia.cc">HobbitQia的笔记本</a>进行补全。</p>
+</div>
+<h2 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
+<ul>
+<li>IBM Sequel language developed as part of System R project at the IBM San Jose Research Laboratory (Sequel: A structured English query language, 1974)</li>
+<li>Renamed SQL(Structured Query Language )</li>
+<li>ANSI and ISO standard SQL:<ul>
+<li>SQL-86, SQL-89, SQL-92 </li>
+<li>SQL:1999, SQL:2003, SQL:2006, SQL:2008, SQL:2011, SQL:2016，SQL:2019 </li>
+</ul>
+</li>
+<li>The benefits of the standards:<ul>
+<li><strong>Points out which language extensions are important and useful.</strong></li>
+<li><strong>Guides the development of SQL implementations in databases.</strong> </li>
+<li><strong>Provides the common syntax and semantics that most databases will implement.</strong></li>
+</ul>
+</li>
+<li>Commercial systems offer most, if not all, SQL-92 features, plus varying feature sets from later standards and special proprietary features.  </li>
+</ul>
+<h2 id="data-definition-language">Data Definition Language<a class="headerlink" href="#data-definition-language" title="Permanent link">&para;</a></h2>
+<p>The <strong>SQL data-definition language (DDL)</strong> allows the specification of information about relations, including:</p>
+<p>The schema for each relation.</p>
+<ul>
+<li>The domain of values associated with each attribute.</li>
+<li>Integrity constraints</li>
+<li>And as we will see later, also other information such as <ul>
+<li>The set of indices to be maintained for each relations.</li>
+<li>Security and authorization information for each relation.</li>
+<li>The physical storage structure of each relation on disk.</li>
+</ul>
+</li>
+</ul>
+<h2 id="domain-types-in-sql">Domain Types in SQL<a class="headerlink" href="#domain-types-in-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>char(n).</code> Fixed length character string, with user-specified length n. <br />
+定长字符串. C 语言里字符串结尾有 <code>\0</code>, 但数据库里没有，长度由定义而得。  </li>
+<li><code>varchar(n).</code> Variable length character strings, with user-specified maximum length n.<br />
+不定长字符串。不同的数据类型比较可能有问题（比如定长和不定长的字符串）</li>
+<li><code>int.</code> Integer (a finite subset of the integers that is machine-dependent).</li>
+<li><code>smallint.</code> Small integer (a machine-dependent subset of the integer domain type).</li>
+<li><code>numeric(p,d).</code> Fixed point number, with user-specified precision of p digits, with d digits to the right of decimal point.   <br />
+p 表示有效数字位数, d 表示小数点后多少位。
+<strong><em>e.g.</em></strong> <code>number(3,1)</code> allows 44.5 to be store exactly,  but neither 444.5 or 0.32</li>
+<li>real, double precision.  Floating point and double-precision floating point numbers, with machine-dependent precision.</li>
+<li><code>float(n).</code> Floating point number, with user-specified precision of at least n digits.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">difference between char and varchar</p>
+<ul>
+<li>对于char(10),输入avi,会自动在后面补上空格</li>
+<li>对于varchar(10),输入avi，不会追加空格</li>
+</ul>
+</div>
+<h2 id="built-in-data-types-in-sql">Built-in Data Types in SQL<a class="headerlink" href="#built-in-data-types-in-sql" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>date</strong> Dates, containing a (4 digit) year, month and date<ul>
+<li>Example: <strong>date</strong> ‘2005-7-27’</li>
+</ul>
+</li>
+<li><strong>time</strong>* Time of day, in hours, minutes and seconds.<ul>
+<li>Example: <strong>time</strong> ‘09:00:30’     <strong>time</strong> ‘09:00:30.75’</li>
+</ul>
+</li>
+<li><strong>timestamp</strong>: date plus time of day<ul>
+<li>Example: <strong>timestamp</strong> ‘2005-7-27 09:00:30.75’</li>
+</ul>
+</li>
+<li><strong>interval</strong> period of time<ul>
+<li>Example:  interval ‘1’ day</li>
+<li>Subtracting a date/time/timestamp value from another gives an interval value</li>
+<li>Interval values can be added to date/time/timestamp values</li>
+<li><strong>date, time functions:</strong> <ul>
+<li><code>current_date(), current_time()</code></li>
+<li><code>year(x), month(x), day(x), hour(x), minute(x), second(x)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="create-table-construct">Create Table Construct<a class="headerlink" href="#create-table-construct" title="Permanent link">&para;</a></h2>
+<p>An SQL relation is defined using the create table command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">(</span><span class="n">A1</span><span class="w"> </span><span class="n">D1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span><span class="w"> </span><span class="n">D2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">Dn</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">(</span><span class="n">integrity</span><span class="o">-</span><span class="n">constraint1</span><span class="p">),</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">...,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">(</span><span class="n">integrity</span><span class="o">-</span><span class="n">constraintk</span><span class="p">))</span>
+</code></pre></div>
+<ul>
+<li><span class="arithmatex">\(r\)</span> is the name of the relation</li>
+<li>each <span class="arithmatex">\(A_i\)</span> is an <em>attribute name</em> in the schema of relation <span class="arithmatex">\(r\)</span></li>
+<li><span class="arithmatex">\(D_i\)</span> is the <em>data type</em> of values in the domain of attribute <span class="arithmatex">\(Ai\)</span></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ID</span><span class="w">        </span><span class="nb">char</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">name</span><span class="w">    </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">salary</span><span class="w">     </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<p><strong>Integrity Constraints in Create Table</strong></p>
+<ul>
+<li><code>not null</code></li>
+<li>primary key <span class="arithmatex">\((A_1,\ldots,A_n)\)</span><br />
+不能为空; 表内不能有相同的 keys. 否则这样的数据是插入不进去的。</li>
+<li>foreign key <span class="arithmatex">\((A_m,\ldots,A_n)\)</span> references r<br />
+隐含：引用对应表的主键。</li>
+</ul>
+<p>如果不符合完整性约束条件，插入可能会失败。</p>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">ID</span><span class="w">             </span><span class="nb">char</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">name</span><span class="w">           </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">dept_name</span><span class="w">      </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">salary</span><span class="w">         </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">),</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">foreign</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="k">references</span><span class="w"> </span><span class="n">department</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>可以给一个缺省值<strong>e.g.</strong>　<code>default 0</code></p>
+<details class="example">
+<summary>Example</summary>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span><span class="n">ID</span><span class="w">                  </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="n">course_id</span><span class="w">       </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">sec_id</span><span class="w">            </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">semester</span><span class="w">        </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">year</span><span class="w">                </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">grade</span><span class="w">              </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">course_id</span><span class="p">,</span><span class="w"> </span><span class="n">sec_id</span><span class="p">,</span><span class="w"> </span><span class="n">semester</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="p">),</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">foreign</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">references</span><span class="w">  </span><span class="n">student</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">foreign</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">course_id</span><span class="p">,</span><span class="w"> </span><span class="n">sec_id</span><span class="p">,</span><span class="w"> </span><span class="n">semester</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="p">)</span><span class="w"> </span><span class="k">references</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="p">);</span>
+</code></pre></div>
+- <code>sec_id</code> can be dropped from primary key above, to ensure a student cannot be registered for two sections of the same course in the same semester</p>
+</details>
+<p>如果引用的表中有条目被删除，可能会破坏完整性约束条件。有下面的方法：  </p>
+<ul>
+<li><em>restrict</em>: 如果有条目是被引用的，那么不允许删除。</li>
+<li><em>cascade</em>: 引用的条目被删了之后，引用者也一并删除</li>
+<li><em>set null</em>: 引用者的指针设为 <code>null</code>. </li>
+<li><em>set default</em> : 引用者的对应<code>Attribute</code>值设置为缺省值 </li>
+</ul>
+<p>如果引用的表中有更新，也有类似上面的四种方法.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">course_id</span><span class="w">        </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">title</span><span class="w">            </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">dept_name</span><span class="w">        </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">credits</span><span class="w">          </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">foreign</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="k">references</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">));</span>
+</code></pre></div>
+- 可以直接将primary key写在后面</p>
+</div>
+<p>在 <code>create table</code> 中定义<br />
+* <code>on delete cascade  |set null |restrict |set default</code>
+* <code>on update cascade  |set null |restrict |set default</code></p>
+<p><strong>insert into</strong> <em>instructor</em> <strong>values</strong> (‘10211’, ’Smith’, ’Biology’, 66000);
+<strong>insert into</strong> <em>instructor</em> <strong>values</strong> (‘10211’, null, ’Biology’, 66000);</p>
+<h2 id="drop-and-alter-table-constructs">Drop and Alter Table Constructs<a class="headerlink" href="#drop-and-alter-table-constructs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>drop table student<ul>
+<li>Deletes the table and its contents</li>
+</ul>
+</li>
+<li>delete from student<ul>
+<li>Deletes all contents of table, but retains table</li>
+</ul>
+</li>
+<li>alter table<ul>
+<li>alter table r add A D<ul>
+<li>where A is the name of the attribute to be added to relation r  and D is the domain of A.</li>
+<li>All tuples in the relation are assigned null as the value for the new attribute.  </li>
+<li>alter table student add resume varchar(256);</li>
+</ul>
+</li>
+<li>alter table r drop A<ul>
+<li>where A is the name of an attribute of relation r</li>
+<li>Dropping of attributes not supported by many databases</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>drop比delete更强，后者保留关系，前者不保留</li>
+<li>alter可以给已有关系增加或减少属性</li>
+</ul>
+</div>
+<h2 id="sql-and-relational-algebra">SQL and Relational Algebra<a class="headerlink" href="#sql-and-relational-algebra" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">select</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span><span class="p">,</span><span class="w"> </span><span class="p">..</span><span class="w"> </span><span class="n">An</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">from</span><span class="w">   </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">rm</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">where</span><span class="w"> </span><span class="n">P</span>
+</code></pre></div>
+<p>is equivalent to the following expression in multiset relational algebra</p>
+<p><span class="arithmatex">\(\Pi_{A_1, .., A_n}(\sigma_P(r_1 \times r_2 \times .. \times r_m))\)</span></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">select</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">A3</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">from</span><span class="w">   </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">rm</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">where</span><span class="w"> </span><span class="n">P</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span>
+</code></pre></div>
+<p>is equivalent to the following expression in multiset relational algebra</p>
+<p><span class="arithmatex">\(A_1, A_2G_{sum(A3)} ( \sigma_P (r_1 \times r_2 \times .. \times r_m)))\)</span></p>
+<p>More generally, the non-aggregated attributes in the select clause may be a subset of the group by attributes, in which case the equivalence is as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">select</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">A3</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">from</span><span class="w">   </span><span class="n">r1</span><span class="p">,</span><span class="w"> </span><span class="n">r2</span><span class="p">,</span><span class="w"> </span><span class="err">…</span><span class="p">,</span><span class="w"> </span><span class="n">rm</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">where</span><span class="w"> </span><span class="n">P</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span>
+</code></pre></div>
+<p>is equivalent to the following expression in multiset relational algebra
+<span class="arithmatex">\(\Pi_{A1,sumA3}( A1,A2 G_{sum(A3) as sumA3}(\sigma_P (r_1 \times r_2  \times .. \times r_m)))\)</span></p>
+<h2 id="test-for-absence-of-duplicate-tuples">Test for Absence of Duplicate Tuples<a class="headerlink" href="#test-for-absence-of-duplicate-tuples" title="Permanent link">&para;</a></h2>
+<p>The unique construct tests whether a subquery has any duplicate tuples in its result.
+<strong>(Evaluates to “true” on an empty set)</strong>
+Find all courses that were offered at most once in 2009</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">  </span><span class="k">select</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">where</span><span class="w"> </span><span class="k">unique</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">course_id</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                          </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">R</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">                          </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">course_id</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<h2 id="basic-query-structure">Basic Query Structure<a class="headerlink" href="#basic-query-structure" title="Permanent link">&para;</a></h2>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>select用于列出查询结果中所需要的属性</li>
+<li>from用于列出在查询求值中应该访问的关系列表<ul>
+<li>from后面一个表是单关系查询，多个表是多关系查询</li>
+</ul>
+</li>
+<li>where是作用在from子句中关系的属性上的谓词</li>
+</ul>
+</div>
+<h3 id="the-select-clause">The <code>select</code> Clause<a class="headerlink" href="#the-select-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong><code>select</code></strong> clause list the attributes desired in the result of a query.  </li>
+<li>corresponds to the <strong>projection operation</strong> of the relational algebra</li>
+<li><u>SQL names are case insensitive</u>  大小写不敏感。（属性名字、表的名字等）</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Name <span class="arithmatex">\(≡\)</span> NAME <span class="arithmatex">\(≡\)</span> name</p>
+</div>
+<ul>
+<li>To force the elimination of duplicates, insert the keyword <strong><code>distinct</code></strong> after select.
+<strong><em>e.g.</em></strong> <code>select distinct dept_name from instructor</code><br />
+可以加 <strong>all</strong> 显式指明不去重</li>
+<li>An asterisk in the select clause denotes “all attributes”<br />
+<strong><em>e.g.</em></strong> <code>select * from instructor</code></li>
+<li>The select clause can contain arithmetic expressions involving the operation, +, –, <span class="arithmatex">\(\div\)</span>, and /, and operating on constants or attributes of tuples.<br />
+可以有加减乘除运算 <strong><em>e.g.</em></strong> <code>select ID, name, salary/12 from instructor</code></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">find the names of all instructors</p>
+<ul>
+<li>select name</li>
+<li>from instructor</li>
+</ul>
+</div>
+<h3 id="the-where-clause">The <code>where</code> Clause<a class="headerlink" href="#the-where-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong><code>where</code></strong> clause specifies conditions that the result must satisfy.</li>
+<li>Corresponds to the selection predicate of the relational algebra.  </li>
+<li>
+<p><u>where允许我们选出那些在from里满足特定关系的元组</u></p>
+</li>
+<li>
+<p>SQL includes a <strong><code>between</code></strong> comparison operator
+<strong><em>e.g.</em></strong> <code>select name from instructor where salary between 90000 and 100000</code></p>
+</li>
+<li>Tuple comparison<br />
+元组相等等价于各个元素都相等。
+<strong><em>e.g.</em></strong> <code>select name, course_id from instructor, teaches where (instructor.ID, dept_name) = (teaches.ID, ’Biology’);</code>  </li>
+</ul>
+<details class="example">
+<summary>To find all instructors in Comp. Sci. dept with salary &gt; 80000</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">Comp</span><span class="p">.</span><span class="w"> </span><span class="n">Sci</span><span class="p">.</span><span class="err">&#39;</span><span class="w">  </span><span class="k">and</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">80000</span>
+</code></pre></div>
+</details>
+<ul>
+<li>Comparison results can be combined using the logical connectives and, or, and not.(逻辑连词) </li>
+<li>Comparisons can be applied to results of arithmetic expressions.(算术表达式，比较运算符)</li>
+</ul>
+<h3 id="the-from-clause">The <code>from</code> clause<a class="headerlink" href="#the-from-clause" title="Permanent link">&para;</a></h3>
+<p>The <strong><code>from</code></strong> clause lists the relations involved in the query.<br />
+Corresponds to the <strong>Cartesian product</strong> operation of the relational algebra.  </p>
+<h3 id="natural-join">Natural Join<a class="headerlink" href="#natural-join" title="Permanent link">&para;</a></h3>
+<p><strong><em>e.g.</em></strong> <code>select * from instructor natural join teaches;</code></p>
+<p><strong><em>e.g.</em></strong> <code>select name, course_id from instructor, teaches where instructor.ID = teaches.ID;</code><br />
+<code>select name, course_id from instructor natural join teaches;</code> <br />
+上面两条语句是等价的。</p>
+<p><u><strong>Unrelated attributes with same name</strong> which get equated incorrectly!</u>  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>course(course_id,title, dept_name,credits）</code>, <code>teaches(ID, course_id,sec_id,semester, year)</code>, <code>instructor(ID, name, dept_name,salary）</code> 这里的 department 含义各有不同，不能直接自然连接。<br />
+可以写成 <code>select name, title from (instructor natural join teaches）join course using(course_id);</code> 即规定连接的属性，对应于 <span class="arithmatex">\(\sigma_\theta\)</span>   </p>
+<p>Find students who takes courses across his/her department.<br />
+可写作 </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">id</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="n">student</span><span class="w"> </span><span class="k">natural</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">takes</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">           </span><span class="k">join</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">course_id</span><span class="err">）</span><span class="w"> </span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">course</span><span class="p">.</span><span class="n">dept_name</span>
+</code></pre></div>
+</div>
+<h3 id="the-rename-operation">The Rename Operation<a class="headerlink" href="#the-rename-operation" title="Permanent link">&para;</a></h3>
+<p>The SQL allows renaming relations and attributes using the <strong><code>as</code></strong> clause.<br />
+<code>old-name as new-name</code></p>
+<p><strong><em>e.g.</em></strong> 
+<code>select distinct T. name from instructor as T, instructor as S where T.salary &gt; S.salary and S.dept_name = ‘Comp. Sci.’</code></p>
+<ul>
+<li>
+<p>S,T一般被称为表别名/相关名称/相关变量/元组变量</p>
+</li>
+<li>
+<p>Keyword <strong><code>as</code></strong> is optional and may be omitted.  </p>
+</li>
+</ul>
+<h3 id="string-operations">String Operations<a class="headerlink" href="#string-operations" title="Permanent link">&para;</a></h3>
+<p>SQL includes a <strong>string-matching operator</strong> for comparisons on character strings.  The operator <strong><code>like</code></strong> uses patterns that are described using two special characters. </p>
+<p>注意单引号表示字符串。</p>
+<ul>
+<li><strong>percent (%)</strong>.  The % character matches any substring.<br />
+<strong><em>e.g.</em></strong> <code>select name from instructor where name like '%dar%';</code>
+找名字里面含有 <code>dar</code> 的字符串。 </li>
+<li><strong>underscore (_)</strong>.  The _ character matches any character.  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Match the string</p>
+<p>匹配字符串 <code>'100 %'</code> 但是 <code>%</code> 符号被我们作为了通配符，这里我们需要用到转义符 <code>\</code>. <code>\%</code> 即将 <code>%</code> 作为正常字符匹配。<br />
+<code>\</code> 也可以是一个基本符号，我们需要在后面写出 <code>escape</code> 表示其在这里作为转义符。类似地我们还可以将转义符定义为 <code>#</code>. 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">like</span><span class="w"> </span><span class="err">‘</span><span class="mi">100</span><span class="w"> </span><span class="err">\</span><span class="o">%</span><span class="s1">&#39;  escape  &#39;</span><span class="err">\</span><span class="s1">&#39; </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="s1">like ‘100 \%&#39;</span><span class="w">  </span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">like</span><span class="w"> </span><span class="err">‘</span><span class="mi">100</span><span class="w">  </span><span class="o">#%</span><span class="s1">&#39;  escape  ‘#&#39;</span><span class="w"> </span>
+</code></pre></div></p>
+</div>
+<p>SQL supports a variety of string operations such as</p>
+<ul>
+<li>concatenation (using <code>||</code>)</li>
+<li>converting from upper to lower case (and vice versa)</li>
+<li>finding string length, extracting substrings, etc.  </li>
+</ul>
+<h3 id="ordering-the-display-of-tuples">Ordering the Display of Tuples<a class="headerlink" href="#ordering-the-display-of-tuples" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>关系是无序的，但我们可以规定显示出来的顺序。</p>
+</li>
+<li>
+<p>We may specify desc for <em>descending</em> order or asc for <em>ascending</em> order, for each attribute; ascending order is the default.<br />
+<strong><em>e.g.</em></strong> <code>order by name desc</code><br />
+可以排序的类型，如字符串、数字。</p>
+</li>
+<li>Can sort on multiple attributes<br />
+<strong><em>e.g.</em></strong> <code>order by  dept_name, name</code> 先按第一个排，如果第一个元素相同再按第二个排。</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">List in alphabetic order the names of all instructors</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">from</span><span class="w">   </span><span class="n">instructor</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">name</span>
+</code></pre></div>
+</div>
+<h3 id="the-limit-clause">The <code>limit</code> Clause<a class="headerlink" href="#the-limit-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong><code>limit</code></strong> clause can be used to constrain the number of rows returned by the select statement.（前几名）</li>
+<li>
+<p>limit clause takes one or two numeric arguments, which must both be nonnegative integer constants: </p>
+</li>
+<li>
+<p><code>limit offset, row_count</code></p>
+</li>
+<li><code>limit row_count == limit 0, row_count</code></li>
+</ul>
+<p><strong><em>e.g.</em></strong>  <code>select  name from instructor order by salary desc limit 3；   //  limit 0,3</code></p>
+<h3 id="set-operations">Set Operations<a class="headerlink" href="#set-operations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>union, intersect, except</code> 是严格的集合操作，会对结果去重.</li>
+<li><code>union all</code>, <code>intersect all</code> and <code>except all</code>. 保持多重集。</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/191c8625d2e347e8f4a565eeca9a26d.png" /></p>
+</details>
+<h3 id="null-values">Null Values<a class="headerlink" href="#null-values" title="Permanent link">&para;</a></h3>
+<p><strong>null</strong> signifies <em>an unknown value</em> or that <em>a value does not exist</em>.</p>
+<ul>
+<li>The result of any arithmetic expression involving null is null.<br />
+<strong><em>e.g.</em></strong> <code>5 + null</code> returns null</li>
+<li>The predicate is null can be used to check for null values.<br />
+<strong><em>e.g.</em></strong> Find all instructors whose salary is null. <br />
+<code>select name from instructor where salary is null</code></li>
+<li>
+<p>Comparisons with null values return the special truth value: <strong>unknown</strong>.<br />
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/427aa4c0c3683b28486c59020d5964c.png" /> </p>
+</li>
+<li>
+<p>Result of select predicate is treated as false if it evaluates to unknown</p>
+</li>
+</ul>
+<h3 id="aggregate-functions">Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/febd5a1720e50fd7ac88c46962f27d8.png" /></p>
+</details>
+<p>注意在 <code>select</code> 里出现的属性，除了统计函数以外，一定要是分组属性里出现过的。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>星号"*"可以用在select子句中表示“所有的属性，如<code>select *</code>或<code>select instructor.*</code></li>
+</ul>
+</div>
+<h4 id="having-clause">Having Clause<a class="headerlink" href="#having-clause" title="Permanent link">&para;</a></h4>
+<p>对分组后的组进行筛选。  </p>
+<p><strong><em>e.g.</em></strong> </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">cnt</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">where</span><span class="w">  </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;=</span><span class="mi">100000</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">having</span><span class="w">  </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
+</code></pre></div>
+<p>predicates in the <strong><code>having</code></strong> clause are applied <em>after the formation of groups</em> whereas predicates in the <strong><code>where</code></strong> clause are applied <em>before forming groups</em>.  </p>
+<h4 id="null-values-and-aggregates">Null Values and Aggregates<a class="headerlink" href="#null-values-and-aggregates" title="Permanent link">&para;</a></h4>
+<p><code>select sum (salary) from instructor</code>  </p>
+<ul>
+<li>Above statement ignores null amounts</li>
+<li>Result is null if there is no non-null amount</li>
+<li>All aggregate operations except <code>count(*)</code> ignore tuples with null values on the aggregated attributes</li>
+</ul>
+<details class="example">
+<summary>Arithmetric expression with Aggregate functions</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202303131130602.png" width = 60%/> </div>    </p>
+<p>第二个表示重名率小于千分之一的系。</p>
+</details>
+<h3 id="nested-subqueries">Nested Subqueries<a class="headerlink" href="#nested-subqueries" title="Permanent link">&para;</a></h3>
+<p>A <strong>subquery</strong> is a <strong>select-from-where</strong> expression that is nested within another query.</p>
+<h4 id="set-membership">Set Membership<a class="headerlink" href="#set-membership" title="Permanent link">&para;</a></h4>
+<p><code>in, not in</code></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/9a6c042a59e7ee7a232f8c18b977367.png" />  </p>
+</details>
+<p>除了单个元素外，元组也可以使用 <code>in, not in</code> </p>
+<p>Find the total number of (distinct) students who have taken course sections taught by the instructor with ID 10101</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="p">(</span><span class="k">distinct</span><span class="w"> </span><span class="n">ID</span><span class="p">)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">from</span><span class="w"> </span><span class="n">takes</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">course_id</span><span class="p">,</span><span class="w"> </span><span class="n">sec_id</span><span class="p">,</span><span class="w"> </span><span class="n">semester</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">        </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="p">,</span><span class="w"> </span><span class="n">sec_id</span><span class="p">,</span><span class="w"> </span><span class="n">semester</span><span class="p">,</span><span class="w"> </span><span class="k">year</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">                                 </span><span class="k">from</span><span class="w"> </span><span class="n">teaches</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">                                 </span><span class="k">where</span><span class="w"> </span><span class="n">teaches</span><span class="p">.</span><span class="n">ID</span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="mi">10101</span><span class="err">’</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="set-comparison">Set Comparison<a class="headerlink" href="#set-comparison" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>some</code> 某些成员   </li>
+<li><code>all</code> 所有成员</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>工资大于生物系中的某些老师的老师.<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">some</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">salary</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">                                    </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">                                    </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Biology</span><span class="err">’</span><span class="p">);</span>
+</code></pre></div></p>
+</div>
+<h4 id="scalar-subquery">Scalar Subquery<a class="headerlink" href="#scalar-subquery" title="Permanent link">&para;</a></h4>
+<p><strong>Scalar (标量) subquery</strong> is one which is used where a single value is expected.  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">where</span><span class="w">  </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">budget</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="w"> </span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">department</span><span class="p">.</span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">dept_name</span><span class="p">)</span>
+</code></pre></div>
+<p>这里 <code>dept_name</code> 是这个表的主键，只返回一个元组，这种情况下是可以不用 <code>some, all</code> 的。</p>
+</div>
+<p>Runtime error if subquery returns more than one result tuple.  </p>
+<h4 id="test-for-empty-relations">Test for Empty Relations<a class="headerlink" href="#test-for-empty-relations" title="Permanent link">&para;</a></h4>
+<p>The exists construct returns the value true if the argument subquery is nonempty.</p>
+<ul>
+<li><code>exists r</code> <span class="arithmatex">\(\Leftrightarrow r \neq \emptyset\)</span></li>
+<li><code>not exists r</code> <span class="arithmatex">\(\Leftrightarrow r = \emptyset\)</span></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>09FALL 开的课，而且 10SPRING 也开了课。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">select</span><span class="w"> </span><span class="n">course_id</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Fall</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="w"> </span><span class="k">and</span><span class="w">                </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">                            </span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="w">                      </span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Spring</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">course_id</span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="p">);</span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Find all students who have taken all courses offered in the Biology department.<br />
+SQL 语句往往需要逆向考虑，即找到这样的学生，不存在他没选过的生物系的课。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">from</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">where</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">                        </span><span class="k">from</span><span class="w"> </span><span class="n">course</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">                        </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">’</span><span class="n">Biology</span><span class="err">’</span><span class="p">)</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">                </span><span class="k">except</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">                    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">                        </span><span class="k">from</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">                        </span><span class="k">where</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">ID</span><span class="p">));</span>
+</code></pre></div></p>
+</div>
+<h4 id="test-for-absence-of-duplicate-tuples_1">Test for Absence of Duplicate Tuples<a class="headerlink" href="#test-for-absence-of-duplicate-tuples_1" title="Permanent link">&para;</a></h4>
+<p>The <strong><code>unique</code></strong> construct tests whether a subquery has any duplicate tuples in its result.<br />
+验证是否是一个集合，而非多重集。  </p>
+<ul>
+<li>Evaluates to “true” on an empty set. <br />
+可以将 unique 理解为 at most once. </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/cf63c652731db66c5ceedb97177e37d.png" />  </p>
+<ul>
+<li>如果不加 exist, 可能有没开过的课也被算进去。我们这里求得是恰好只开过一次的。</li>
+</ul>
+</div>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/427b5ec341b25c23098cbbf110afe55.png" />
+- 也可以用 <code>group by count(*) &gt; 1</code> 实现。</p>
+</details>
+<h3 id="with-clause">With Clause<a class="headerlink" href="#with-clause" title="Permanent link">&para;</a></h3>
+<p>The <strong><code>with</code></strong> clause provides a way of defining a temporary view whose definition is available only to the query in which the with clause occurs.<br />
+构造一个临时表(子查询找最值之类的) </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Find all departments with the maximum budget.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">with</span><span class="w"> </span><span class="n">max_budget</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">)</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">max_budget</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">where</span><span class="w"> </span><span class="n">department</span><span class="p">.</span><span class="n">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_budget</span><span class="p">.</span><span class="n">value</span><span class="p">;</span>
+</code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">两个临时表</p>
+<ul>
+<li>Complex Queries using With Clause
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">with</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="n">_total</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="o">//</span><span class="err">两个临时表</span><span class="w"> </span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">        </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">         </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">         </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span><span class="p">),</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="n">dept_total_avg</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">         </span><span class="k">from</span><span class="w"> </span><span class="n">dept_total</span><span class="p">)</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="k">from</span><span class="w"> </span><span class="n">dept_total</span><span class="p">,</span><span class="w"> </span><span class="n">dept_total_avg</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="k">where</span><span class="w"> </span><span class="n">dept_total</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">dept_total_avg</span><span class="p">.</span><span class="n">value</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+</div>
+<h2 id="modification-of-the-database">Modification of the Database(数据库的修改)<a class="headerlink" href="#modification-of-the-database" title="Permanent link">&para;</a></h2>
+<h3 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/5c936c3136433d47871045f2b03558e.png" /> </p>
+</details>
+<h3 id="insertion">Insertion<a class="headerlink" href="#insertion" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/6d23055f190db59ad0cdb68377b14ae.png" /> </p>
+<p>第二种写法，可以不用严格按照定义的元素顺序，只要和自己写的对应即可。</p>
+</details>
+<p>除了基本写法，我们还可以在 <code>insert</code> 后跟查询语句，把查询结果插入到表里去。</p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/0222d06914c1f458922bd1c59aae612.png" />  </p>
+</details>
+<h3 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h3>
+<p><code>update ... set ...</code></p>
+<p>The order is important. So it can be done better using the <strong><code>case</code></strong> statement.  </p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/de35aa4dff8ddefe3af350c6ddaf1c0.png" /></p>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月12日 00:08:22</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月12日 00:08:22</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 <a href="https://github.com/Thorin215"  target="_blank" rel="noopener">Thorin</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Thorin215/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+        <script src="https://gcore.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
