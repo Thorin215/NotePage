@@ -940,7 +940,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      运算符优先级
+      字符串
     </span>
   </a>
   
@@ -948,6 +948,24 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      转义字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符优先级
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       内置转换函数
     </span>
@@ -1674,7 +1692,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      运算符优先级
+      字符串
     </span>
   </a>
   
@@ -1682,6 +1700,24 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      转义字符
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符优先级
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       内置转换函数
     </span>
@@ -1752,7 +1788,64 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># 3 f-string</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;my name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, my age is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">, my height is </span><span class="si">{</span><span class="n">height</span><span class="si">:</span><span class="s2">.lf</span><span class="si">}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
 </code></pre></div>
-<h2 id="_2">运算符优先级<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">字符串<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/3bf34231dbb8f6baea4912b2a67143e.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>在python语言中,一般对于片段，引号后面的值都是取不到的。    </p>
+</div>
+<h2 id="_3">转义字符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">字符</th>
+<th style="text-align: center;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>\'</code></td>
+<td style="text-align: center;">单引号</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\"</code></td>
+<td style="text-align: center;">双引号</td>
+</tr>
+<tr>
+<td style="text-align: center;">\a</td>
+<td style="text-align: center;">响铃</td>
+</tr>
+<tr>
+<td style="text-align: center;">\b</td>
+<td style="text-align: center;">退格(Backspace)</td>
+</tr>
+<tr>
+<td style="text-align: center;">\n</td>
+<td style="text-align: center;">换行</td>
+</tr>
+<tr>
+<td style="text-align: center;">\v</td>
+<td style="text-align: center;">纵向制表符</td>
+</tr>
+<tr>
+<td style="text-align: center;">\t</td>
+<td style="text-align: center;">横向制表符</td>
+</tr>
+<tr>
+<td style="text-align: center;">\r</td>
+<td style="text-align: center;">回车</td>
+</tr>
+<tr>
+<td style="text-align: center;">\ooo</td>
+<td style="text-align: center;">最多三位 八进制，例如：\12代表换行</td>
+</tr>
+<tr>
+<td style="text-align: center;">\xyy</td>
+<td style="text-align: center;">十六进制数，yy代表的字符，例如：\x0a代表换</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">运算符优先级<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1813,7 +1906,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_3">内置转换函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_5">内置转换函数<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
