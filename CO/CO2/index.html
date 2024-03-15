@@ -579,7 +579,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    C++语言特性
   </span>
   
 
@@ -600,7 +600,7 @@
         
   
   <span class="md-ellipsis">
-    Class
+    类的基本性质
   </span>
   
 
@@ -1384,6 +1384,93 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ieee-floating-point-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE Floating-Point Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormal-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denormal Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fp-adder-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      FP Adder Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-point-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floating-Point Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallelism-and-computer-arithmetic-associativity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallelism and Computer Arithmetic: Associativity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fp-instructions-in-risc-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      FP Instructions in RISC-V
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2013,6 +2100,93 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    <span class="md-ellipsis">
+      Float
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Float">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ieee-floating-point-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE Floating-Point Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#denormal-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denormal Numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      addition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fp-adder-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      FP Adder Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#floating-point-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floating-Point Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallelism-and-computer-arithmetic-associativity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallelism and Computer Arithmetic: Associativity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fp-instructions-in-risc-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      FP Instructions in RISC-V
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2238,6 +2412,163 @@
 <li>Overflow and division-by-zero don’t produce errors<ul>
 <li>Just return defined results</li>
 <li>Faster for the common case of no error</li>
+</ul>
+</li>
+</ul>
+<h2 id="float">Float<a class="headerlink" href="#float" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Reasoning<ul>
+<li>Larger number range than integer rage</li>
+<li>Fractions</li>
+<li>Numbers like e (2.71828) and π(3.14159265....)</li>
+</ul>
+</li>
+<li>Representation for non-integral numbers <ul>
+<li>Including very small and very large numbers</li>
+</ul>
+</li>
+<li>Like scientific notation<ul>
+<li><span class="arithmatex">\(–2.34 × 10^{56}\)</span>规范的科学计数法</li>
+<li><span class="arithmatex">\(+0.002 × 10^{–4}\)</span>首位为0</li>
+<li><span class="arithmatex">\(+987.02 × 10^{9}\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="ieee-floating-point-format">IEEE Floating-Point Format<a class="headerlink" href="#ieee-floating-point-format" title="Permanent link">&para;</a></h3>
+<ul>
+<li>S: sign bit (0 <span class="arithmatex">\(\rightarrow\)</span> non-negative, 1 <span class="arithmatex">\(\rightarrow\)</span> negative)</li>
+<li>Normalize significand: <span class="arithmatex">\(1.0 ≤ |\textbf{significand}| &lt; 2.0\)</span><ul>
+<li>Always has a leading pre-binary-point 1 bit, so no need to represent it 
+explicitly (hidden bit)</li>
+<li>Significand is Fraction with the “1.” restored</li>
+</ul>
+</li>
+<li>Exponent: excess representation: actual exponent + Bias<ul>
+<li>Ensures exponent is unsigned</li>
+<li><strong>偏移量</strong>：Single: Bias = 127; Double: Bias = 1023</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/b19c30f16419cbe921b3901fd761066.png" /></p>
+<h3 id="range">Range<a class="headerlink" href="#range" title="Permanent link">&para;</a></h3>
+<ul>
+<li>单精度范围</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/02fb34e20c097699258d45e38f530b8.png" /></p>
+<ul>
+<li>双精度范围</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/bba8967e0598d3f6d12d92014da6e85.png" /></p>
+<ul>
+<li>Relative precision<ul>
+<li>all fraction bits are significant</li>
+<li>Single: approx <span class="arithmatex">\(2^{–23}\)</span><ul>
+<li>Equivalent to $23 × \log_{10}2 ≈ 23 × 0.3 ≈ 7 $decimal digits of precision</li>
+</ul>
+</li>
+<li>Double: approx 2–52<ul>
+<li>Equivalent to $52 × \log_{10}2 ≈ 52 × 0.3 ≈ 16 $decimal digits of precision</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="denormal-numbers">Denormal Numbers<a class="headerlink" href="#denormal-numbers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(Exponent=000\ldots 0\)</span> <br />
+非规格化数，让数在较小时能逐渐下溢出。  <br />
+<span class="arithmatex">\(x=(-1)^s\times((0+Fraction)\times 2^{1-Bias})\)</span><br />
+注意此时指数是 <span class="arithmatex">\(1-Bias=-126/-1022\)</span>.   <ul>
+<li>Denormal with <span class="arithmatex">\(Fraction = 000...0\)</span> we define <span class="arithmatex">\(x=0\)</span></li>
+</ul>
+</li>
+<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction=000\ldots 0\)</span> <br />
+表示 <span class="arithmatex">\(\pm \inf\)</span>  </li>
+<li><span class="arithmatex">\(Exponent=111\ldots 1, Fraction\neq 000\ldots 0\)</span> 
+表示 <em>NaN</em> (Not-a-Number)<br />
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/def0f48ed9e846e614fcea7c82258b8.png" /></li>
+</ul>
+<h3 id="addition">addition<a class="headerlink" href="#addition" title="Permanent link">&para;</a></h3>
+<p>将指数更小的浮点数的有效部分右移对齐(Truncation)</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/cc85b981778bd99bc0197775211c6d8.png" /></p>
+</div>
+<h3 id="fp-adder-hardware">FP Adder Hardware<a class="headerlink" href="#fp-adder-hardware" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/047bf24d7a828f7d3ec805b760dac80.png" /></p>
+<p><em>蓝色线为控制通路，黑色线为数据通路</em></p>
+<ul>
+<li>Much more complex than integer adder</li>
+<li>Doing it in one clock cycle would take too long<ul>
+<li>Much longer than integer operations</li>
+<li>Slower clock would penalize all instructions</li>
+</ul>
+</li>
+<li>FP adder usually takes several cycles<ul>
+<li>Can be pipelined</li>
+</ul>
+</li>
+</ul>
+<h3 id="floating-point-multiplication">Floating-Point Multiplication<a class="headerlink" href="#floating-point-multiplication" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\((s1\cdot 2^{e1}) \cdot (s2\cdot 2^{s2}) = (s1\cdot s2)\cdot 2^{e1+e2}\)</span></p>
+<ul>
+<li>Add exponents</li>
+<li>Multiply the significands</li>
+<li>Normalize</li>
+<li>Over/Underflow?<br />
+有的话要抛出异常，通过结果的指数判断。</li>
+<li>Rounding</li>
+<li>Sign</li>
+</ul>
+<p>注意 Exponet 中是有 Bias 的，两个数的 exp 部分相加后还要再减去 Bias. </p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/617685c5ea5dd3a9249ed9f86a25c15.png" /></p>
+</details>
+<p><strong>Data Flow</strong>
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240313201813.png" /></p>
+<ul>
+<li>右边往回的箭头: Rounding 后可能会进位。</li>
+<li>Incr 用于标准化结果，与右侧 Shift Right 配合。</li>
+</ul>
+<h3 id="parallelism-and-computer-arithmetic-associativity">Parallelism and Computer Arithmetic: Associativity<a class="headerlink" href="#parallelism-and-computer-arithmetic-associativity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>浮点数运算受运算顺序影响</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/99a0cc84c95beff3629711dd5878707.png" /></p>
+<h2 id="fp-instructions-in-risc-v">FP Instructions in RISC-V<a class="headerlink" href="#fp-instructions-in-risc-v" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Separate FP registers: f0, …, f31<ul>
+<li>double-precision</li>
+<li>single-precision values stored in the lower 32 bits</li>
+</ul>
+</li>
+<li>FP instructions operate only on FP registers <ul>
+<li>Programs generally don’t do integer ops on FP data, or vice versa</li>
+<li>More registers with minimal code-size impact</li>
+</ul>
+</li>
+<li>FP load and store instructions<ul>
+<li>flw, fld</li>
+<li>fsw, fsd</li>
+</ul>
+</li>
+<li>Single-precision arithmetic<ul>
+<li>fadd.s, fsub.s, fmul.s, fdiv.s, fsqrt.s<ul>
+<li>e.g., fadds.s f2, f4, f6</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Double-precision arithmetic<ul>
+<li>fadd.d, fsub.d, fmul.d, fdiv.d, fsqrt.d<ul>
+<li>e.g., fadd.d f2, f4, f6</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Single- and double-precision comparison<ul>
+<li></li>
 </ul>
 </li>
 </ul>

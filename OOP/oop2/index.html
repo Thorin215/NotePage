@@ -24,7 +24,7 @@
     
     
       
-        <title>Class - Thorin's Notebook</title>
+        <title>类的基本性质 - Thorin's Notebook</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-2-using-class" class="md-skip">
+        <a href="#chapter-2" class="md-skip">
           跳转至
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class
+              类的基本性质
             
           </span>
         </div>
@@ -586,7 +586,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    C++语言特性
   </span>
   
 
@@ -616,7 +616,7 @@
           
   
   <span class="md-ellipsis">
-    Class
+    类的基本性质
   </span>
   
 
@@ -627,7 +627,7 @@
         
   
   <span class="md-ellipsis">
-    Class
+    类的基本性质
   </span>
   
 
@@ -649,17 +649,227 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class(类)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class(类)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examplepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::resolver(预解析器)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="::resolver(预解析器)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-the-hidden-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      this: the hidden parameter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现成员函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实现成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor(构造函数)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructor(析构函数)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-pointerthis" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Pointer(this 指针)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象数组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      类作用域
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类作用域">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用域为类的常量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="作用域为类的常量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.声明一个枚举
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2static" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.使用关键字static
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用域内枚举
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#overload" class="md-nav__link">
     <span class="md-ellipsis">
       Overload(重载)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overload(重载)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       运算符重载限制
     </span>
@@ -1624,17 +1834,227 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class(类)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class(类)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examplepoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      ::resolver(预解析器)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="::resolver(预解析器)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#this-the-hidden-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      this: the hidden parameter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objects
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现成员函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实现成员函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor(构造函数)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructor(析构函数)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-pointerthis" class="md-nav__link">
+    <span class="md-ellipsis">
+      This Pointer(this 指针)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      对象数组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      类作用域
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类作用域">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用域为类的常量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="作用域为类的常量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.声明一个枚举
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2static" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.使用关键字static
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用域内枚举
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#overload" class="md-nav__link">
     <span class="md-ellipsis">
       Overload(重载)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overload(重载)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       运算符重载限制
     </span>
@@ -1665,7 +2085,418 @@
   
 
 
-<h1 id="chapter-2-using-class">Chapter 2 Using Class<a class="headerlink" href="#chapter-2-using-class" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-2">Chapter 2 类的基本性质<a class="headerlink" href="#chapter-2" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>抽象</li>
+<li>封装和数据隐藏</li>
+<li>多态</li>
+<li>继承</li>
+<li>代码的可重用性</li>
+<li>容器</li>
+</ul>
+</div>
+<h2 id="class">Class(类)<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
+<p>类是一种将抽象转化为用户定义类型的C++工具，他将数据类型和操纵数据的方法组合成一个整洁的包。</p>
+<p>这里如下是<code>CS61A</code>的<code>Account</code>以及对应的<code>C++</code>版本</p>
+<details class="bug">
+<summary>code-python</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">account_holder</span><span class="p">):</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">holder</span> <span class="o">=</span> <span class="n">account_holder</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+</span> <span class="n">amount</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="k">return</span> <span class="s1">&#39;Insufficient funds&#39;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-</span> <span class="n">amount</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+</code></pre></div>
+</details>
+<details class="bug">
+<summary>code-C++</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="cm">/* data */</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">Account</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;No name&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="cm">/*</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm">    Account();//default constructor(默认构造函数)</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="cm">    已经提供显示构造函数后，编译器不会再提供默认构造函数，所以这里会报错，只能手动提供默认构造函数</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="cm">    */</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">();</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">};</span><span class="w"> </span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Account::display</span><span class="p">()</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">{</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Account Number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">accountNumber</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Account Holder Name: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Balance: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">}</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">Account</span><span class="o">::</span><span class="n">Account</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="p">{</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">;</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="kt">void</span><span class="w"> </span><span class="n">Account</span><span class="o">::</span><span class="n">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="p">{</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">balance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Insufficient balance&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="k">else</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="n">balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="p">}</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="kt">void</span><span class="w"> </span><span class="n">Account</span><span class="o">::</span><span class="n">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="p">{</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="p">}</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="p">{</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="n">Account</span><span class="w"> </span><span class="n">a1</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//隐式调用</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="c1">//Account a1 = Account(101, &quot;John&quot;, 5000); 显式调用</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="examplepoint">Example:Point<a class="headerlink" href="#examplepoint" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span><span class="w"> </span><span class="n">Point</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Point</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">move</span><span class="p">(</span><span class="n">Point</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">dy</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">{</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dy</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">Point</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="n">move</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">}</span>
+</code></pre></div>
+<p>以上是 C 语言能做的，在 C++ 里我们可以把函数也放到结构里面。  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">point</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span><span class="w">       </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span><span class="n">Point</span><span class="p">;</span>
+</code></pre></div>
+<p>这里只是声明，并不会产生实际代码（包括结构里的变量也只是声明）。我们往结构里放了函数原型（即函数声明）  </p>
+<p>结构外面的 <code>print()</code> 称为自由函数，和任何类都没有关系，左为函数自身是独立的。 
+声明在结构内的函数不是独立的，从属于 <code>Point</code> 结构。还需要一个 body.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Point</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span><span class="w">       </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span><span class="n">Point</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Point::print</span><span class="p">()</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
+</code></pre></div>
+<p>C++ 中不需要 <code>typedef</code> 来声明结构体。<br />
+<code>a.print()</code> 即可调用结构体内成员函数。但是这个成员函数如何知道我们要输出的就是 <code>a.x a.y</code> ?  </p>
+<p><strong>我们在成员函数内 <code>cout &lt;&lt; this &lt;&lt; endl;</code> 发现 <code>this</code> 和 <code>&amp;a</code> 相同。</strong>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Point::init</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>这里必须加 <code>this</code>, 否则类似于局部变量会屏蔽全局变量，编译器会认为 <code>x = x</code> 什么也没做。</p>
+<h3 id="resolver"><code>::</code>resolver(预解析器)<a class="headerlink" href="#resolver" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&lt;Class Name&gt;::&lt;function name&gt;</code></li>
+<li><code>::&lt;function name&gt;</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">S::f</span><span class="p">(){</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">::</span><span class="n">f</span><span class="p">();</span><span class="w"> </span><span class="c1">// Would be recursive otherwise!</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">::</span><span class="n">a</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Select the global a  </span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">a</span><span class="o">--</span><span class="p">;</span><span class="w"> </span><span class="c1">// The a at class scope</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</code></pre></div>
+<details class="info">
+<summary>Info</summary>
+<p><code>Point</code> 是姓, <code>init</code> 是名，因此 <code>Point::init</code> 共同构成了成员函数的名字，因此 <code>void</code> 需要放在函数名前面，即 <code>void Point::init</code>. </p>
+</details>
+<h4 id="this-the-hidden-parameter">this: the hidden parameter<a class="headerlink" href="#this-the-hidden-parameter" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>this</strong> is a hidden parameter for all member functions, with the type of the struct</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Stash</span><span class="o">::</span><span class="n">initialize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sz</span><span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+<p><span class="arithmatex">\(➔\)</span> (can be regarded as) </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">Stash</span><span class="o">::</span><span class="n">initialize</span><span class="p">(</span><span class="n">Stash</span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sz</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>To call the function, you must specify a variable</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Stash</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">a</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<p><span class="arithmatex">\(➔\)</span> (can be regarded as)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Stash</span><span class="o">::</span><span class="n">initialize</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>Inside member functions, you can use this as the pointer to the variable that calls the function.</li>
+<li><strong>this</strong> is a natural local variable of all structs member functions that you can not define, but can use it directly.</li>
+</ul>
+<h3 id="container">Container<a class="headerlink" href="#container" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ul>
+<li>Container is an object that holds other objects.</li>
+<li>For most kinds of containers, the common interface is put() and get().</li>
+<li>Stash is a container that stores objects and can be expanded during running.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Stash</p>
+<ul>
+<li>Typeless container.</li>
+<li>Stores objects of the same type.<ul>
+<li>Initialized w/ the size of the type </li>
+<li>Doesn’t care the type but the size</li>
+</ul>
+</li>
+<li>add() and fetch() </li>
+<li>Expanded when needed</li>
+</ul>
+</div>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/150b266039a4abc7d72f87d70046def.png" /></p>
+<h3 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Objects = Attributes + Services</p>
+<ul>
+<li>Data: the properties or status </li>
+<li>Operations: the functions
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240314151609.png" /></li>
+</ul>
+</div>
+<details class="example">
+<summary>Ticket Machine</summary>
+<ul>
+<li>We make a program simulate the  procedure of buying tickets.  It works.  But there is no such machine. There's  nothing left for the further development.
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/0f72f241a55270245a7d05304b4613d.png" /></li>
+</ul>
+</details>
+<ul>
+<li>Objects(cat)<ul>
+<li>Represent things, events, or concepts</li>
+<li>Respond to messages at run-time</li>
+</ul>
+</li>
+<li>Classes(cat class)<ul>
+<li>Define properties of instances</li>
+<li>Act like types in C++</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/07eb00d636c08a9c3e340743fe513e5.png" /></p>
+<h3 id="_1">访问控制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>private</code>和<code>public</code>描述了对类成员的访问控制。使用类对象的程序都可以直接访问公有部分，但是私有对象只能通过公有成员函数(或友元函数)来访问。</p>
+</div>
+<ul>
+<li>无论类成员是数据成员还是成员函数，都可以在类的公有部分或私有部分中声明它。但由于隐藏数据是OOP主要目标之一，因此通常数据项放在<strong>私有部分</strong>而组成类接口放在<strong>公有部分</strong></li>
+<li>通常，使用私有函数来处理不属于公有接口的部分</li>
+</ul>
+<h3 id="_2">封装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>类设计尽可能将公有接口与实现细节分开。公有接口表示设计的抽象组件，将实现细节放在一起并将他们与抽象分开称之为<strong>封装</strong></li>
+<li>数据隐藏(将数据放在类的私有部分中)也是一种<strong>封装</strong>，将实现细节隐藏在私有部分(私有接口)也是<strong>封装</strong></li>
+</ul>
+<h3 id="_3">实现成员函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>类的描述的第二部分：为那些类声明的原型表示的成员函数提供代码
+- 定义成员函数时，使用作用域解析运算符<code>(::)</code>来标识函数所属的类
+- 类的方法可以访问类的<code>private</code>组件</p>
+</div>
+<h4 id="inline-function">Inline Function<a class="headerlink" href="#inline-function" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>在C语言中，如果一些函数被频繁调用，不断地有函数入栈，即函数栈，会造成栈空间或栈内存的大量消耗。为了解决这个问题，特别的引入了<code>inline</code>修饰符，表示为内联函数。(栈空间就是指放置程式的局部数据也就是函数内数据的内存空间，在系统下，栈空间是有限的，假如频繁大量的使用就会造成因栈空间不足所造成的程式出错的问题，函数的死循环递归调用的最终结果就是导致栈内存空间枯竭。)</p>
+</div>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_num</span><span class="p">(){</span><span class="n">number</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span><span class="c1">//Inline Function</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span><span class="err">；</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="cm">/*或者使用inline修饰符*/</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_num</span><span class="p">();</span><span class="c1">//Inline Function</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="p">}</span><span class="err">；</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set_num</span><span class="p">()</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<p>可以类比为<code>#define</code>,函数会在调用它的地方进行替换。(一般内联函数不建议超过十行)，还要确保内联函数对多文件程序中的所有文件都是可用的，最简便的方法是：将内联定义放在定义类的头文件里。</p>
+<h4 id="constructor">Constructor(构造函数)<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h4>
+<ul>
+<li>构造函数虽然没有返回值，但是没有被声明为<code>void</code>，实际上，构造函数没有声明类型。</li>
+<li>隐式调用构造函数</li>
+<li><code>Stock garment("Furry Mason", 50, 2.5);</code></li>
+<li>显式调用构造函数</li>
+<li><code>Stock gaement = Stock("Furry Mason", 50, 2.5);</code></li>
+<li>使用<code>new</code>动态分配内存</li>
+<li><code>Stock *pstock = new Stock("Furry Mason", 50, 2.5);</code></li>
+</ul>
+<p>!!! Info default constructor(隐式构造函数)
+    - 如果没有提供任何构造函数，则<code>C++</code>将自动提供默认构造函数，它是默认构造函数的隐式版本，不做任何工作
+    - 默认构造函数没有任何参数，因为声明中不包含
+    - 如果为类提供了非默认构造函数，而没有提供默认构造函数，则类似下面的声明将出错(禁止创建未初始化的对象)
+        - <code>Stock stock1;</code>
+    - 定义默认构造函数有两种方法
+      - 给已有构造函数提供所有参数默认值
+      - 函数重载来定义一个没有参数的构造函数 </p>
+<ul>
+<li><code>C++11</code>列表初始化(提供一个构造函数参数列表匹配的内容)：</li>
+<li><code>Stock stock1 = {"name", 2, 2.0};</code>  </li>
+<li><code>Stock stock1 {"name", 2, 2.0};</code></li>
+</ul>
+<h4 id="destructor">Destructor(析构函数)<a class="headerlink" href="#destructor" title="Permanent link">&para;</a></h4>
+<ul>
+<li>如果构造函数使用<code>new</code>来分配内存,则使用<code>delete</code>来释放空间</li>
+<li>
+<p>如果没有使用<code>new</code>,则会让编译器生成一个隐式析构函数</p>
+</li>
+<li>
+<p><code>C++</code>中对象<code>new</code>出来和直接声明的区别(类似malloc)</p>
+</li>
+<li>首先，最直观的，new出来的对象需要使用指针接收，而直接声明的不用。例如 A* a=new A() 与A a（）。</li>
+<li><code>new</code>出来的对象是直接使用堆空间，而局部声明一个对象是放在栈中。</li>
+<li><code>new</code>出来的对象类似于申请空间，因此需要delete销毁，而直接声明的对象则在使用完直接销毁。</li>
+<li><code>new</code>出来的对象的生命周期是具有全局性，譬如在一个函数块里new一个对象，可以将该对象的指针返回回去，该对象依旧存在。而声明的对象的生命周期只存在于声明了该对象的函数块中，如果返回该声明的对象，将会返回一个已经被销毁的对象。</li>
+<li><code>new</code>对象指针用途广泛，比如作为函数返回值、函数参数等</li>
+</ul>
+<h4 id="this-pointerthis">This Pointer(this 指针)<a class="headerlink" href="#this-pointerthis" title="Permanent link">&para;</a></h4>
+<p><code>this</code>指针指向用来调用成员函数的对象(this被作为隐藏参数传递给方法)
+如果要防止<code>this</code>被调用修改所指向的对象的值，则可以在函数声明后面加上<code>const</code></p>
+<details class="info">
+<summary>Info</summary>
+<p>最初的UNIX实现使用C++前端cfront将C++程序转化为C程序。会将限定符<code>ClassName::</code>转换为函数参数(指向对象的指针)</p>
+</details>
+<h2 id="_4">对象数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>在没有显式构造函数的情况下(或显式构造函数有默认值)的情况下，可以直接如下定义</li>
+<li><code>Stock mystuff[4];</code>或者可以寄希望于自动补足未初始化的对象</li>
+<li>否则要为每个元素调用构造函数</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">Stock</span><span class="w"> </span><span class="n">stocks</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">),</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">),</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">),</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">};</span>
+</code></pre></div>
+<h2 id="_5">类作用域<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">作用域为类的常量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>如果希望所有对象共享一个常量，这样做是错误的例子：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">months</span><span class="p">];</span><span class="w">   </span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>声明类只是描述了对象的形式，并没有创建对象。因此，在创建对象前，将没有用于存储值的空间。</p>
+</div>
+<h4 id="1">1.声明一个枚举<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p>在类声明中声明的枚举的作用域为整个类，因此可以用枚举为整型变量提供作用域为整个类的符号名称。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>同为这个<code>Bakrey</code>类
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">{</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="k">enum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">};</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">Months</span><span class="p">];</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
+</code></pre></div></p>
+</div>
+<p><strong>所有对象中都不包含枚举(枚举不会创建类数据成员)</strong>，作用域为整个域的代码遇到它时，会进行替换。</p>
+<h4 id="2static">2.使用关键字<code>static</code><a class="headerlink" href="#2static" title="Permanent link">&para;</a></h4>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>在<code>const</code>加上<code>static</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">months</span><span class="p">];</span><span class="w">   </span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
+</code></pre></div></p>
+</div>
+<p>这个<code>static</code>类型的变量会被与其他静态变量一起存储，而不是存储在对象中。</p>
+<h3 id="_7">作用域内枚举<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>传统的枚举存在一些问题，其中之一是两个枚举定义中的枚举量可能发生冲突。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>如下，<code>egg Small</code>和<code>t_shirt Small</code>位于相同的作用域中，他们将发生冲突。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">egg</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">t_shirt</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
+</code></pre></div></p>
+</div>
+<ul>
+<li><code>C++</code>提供了一种新枚举，作用域为类。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">egg</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
+</code></pre></div>
+<ul>
+<li><code>class</code>也可以替换为<code>struct</code></li>
+</ul>
+<p>但是作用域内枚举不能进行隐式类型转换，只能进行显式类型转换。</p>
+<h2 id="using-class">Using Class<a class="headerlink" href="#using-class" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
@@ -1674,12 +2505,10 @@
 <li>自动转换和强制类型转换</li>
 </ul>
 </div>
-<h2 id="overload">Overload(重载)<a class="headerlink" href="#overload" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">Overload(函数重载)</p>
-<p>默认参数让您能够使用不同数目的参数调用同一个函数，而函数多态(函数重载)让您能够使用多个同名的函数。函数重载的关键是<strong>函数特征标(function signature)</strong>:函数的参数列表。</p>
-</div>
-<h3 id="_1">运算符重载限制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="overload">Overload(重载)<a class="headerlink" href="#overload" title="Permanent link">&para;</a></h3>
+<p>!!! Info Overload(函数重载)
+    默认参数让您能够使用不同数目的参数调用同一个函数，而函数多态(函数重载)让您能够使用多个同名的函数。函数重载的关键是<strong>函数特征标(function signature)</strong>:函数的参数列表。</p>
+<h3 id="_8">运算符重载限制<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>1.重载后的运算符必须有一个操作数是用户定义的类型。(防止用户为标准类型重载运算符)
 2.不能违反原来的句法规则。
 3.不能创建新的运算符

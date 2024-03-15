@@ -24,7 +24,7 @@
     
     
       
-        <title>Introduction - Thorin's Notebook</title>
+        <title>C++语言特性 - Thorin's Notebook</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-introduction" class="md-skip">
+        <a href="#chapter-1-c" class="md-skip">
           跳转至
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              C++语言特性
             
           </span>
         </div>
@@ -595,7 +595,7 @@
           
   
   <span class="md-ellipsis">
-    Introduction
+    C++语言特性
   </span>
   
 
@@ -606,7 +606,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    C++语言特性
   </span>
   
 
@@ -628,81 +628,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
+  <a href="#the-first-c-program" class="md-nav__link">
     <span class="md-ellipsis">
-      Class(类)
+      The First C++ Program
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class(类)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      与C语言对比
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="String">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#assignment-for-string" class="md-nav__link">
     <span class="md-ellipsis">
-      访问控制
+      Assignment for string
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#concatenation-for-string" class="md-nav__link">
     <span class="md-ellipsis">
-      封装
+      Concatenation for string
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#ctors" class="md-nav__link">
     <span class="md-ellipsis">
-      实现成员函数
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="实现成员函数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inline-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inline Function
+      Ctors
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#alter-string" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor(构造函数)
+      alter string(不常考)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#destructor" class="md-nav__link">
+  <a href="#search-string" class="md-nav__link">
     <span class="md-ellipsis">
-      Destructor(析构函数)
+      search string
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#this-pointerthis" class="md-nav__link">
-    <span class="md-ellipsis">
-      This Pointer(this 指针)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -712,47 +715,125 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#file-io" class="md-nav__link">
     <span class="md-ellipsis">
-      对象数组
+      File I/O
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#stream" class="md-nav__link">
     <span class="md-ellipsis">
-      类作用域
+      Stream
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="类作用域">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vars" class="md-nav__link">
     <span class="md-ellipsis">
-      作用域为类的常量
+      Vars
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="作用域为类的常量">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#momery-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Momery Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointers-to-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointers to object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pointers to object">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#operators-with-pointers" class="md-nav__link">
     <span class="md-ellipsis">
-      1.声明一个枚举
+      Operators with Pointers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2static" class="md-nav__link">
+  <a href="#assignment" class="md-nav__link">
     <span class="md-ellipsis">
-      2.使用关键字static
+      Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-memory-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic memory allocation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References(引用)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    <span class="md-ellipsis">
+      const
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="const">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      constants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-time-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile time constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-time-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-time constants
     </span>
   </a>
   
@@ -764,9 +845,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#aggregates" class="md-nav__link">
     <span class="md-ellipsis">
-      作用域内枚举
+      Aggregates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pointers-and-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointers and const
     </span>
   </a>
   
@@ -797,7 +887,7 @@
         
   
   <span class="md-ellipsis">
-    Class
+    类的基本性质
   </span>
   
 
@@ -1750,81 +1840,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
+  <a href="#the-first-c-program" class="md-nav__link">
     <span class="md-ellipsis">
-      Class(类)
+      The First C++ Program
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Class(类)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#read-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      与C语言对比
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="String">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#assignment-for-string" class="md-nav__link">
     <span class="md-ellipsis">
-      访问控制
+      Assignment for string
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#concatenation-for-string" class="md-nav__link">
     <span class="md-ellipsis">
-      封装
+      Concatenation for string
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#ctors" class="md-nav__link">
     <span class="md-ellipsis">
-      实现成员函数
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="实现成员函数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inline-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inline Function
+      Ctors
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#alter-string" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor(构造函数)
+      alter string(不常考)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#destructor" class="md-nav__link">
+  <a href="#search-string" class="md-nav__link">
     <span class="md-ellipsis">
-      Destructor(析构函数)
+      search string
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#this-pointerthis" class="md-nav__link">
-    <span class="md-ellipsis">
-      This Pointer(this 指针)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1834,47 +1927,125 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#file-io" class="md-nav__link">
     <span class="md-ellipsis">
-      对象数组
+      File I/O
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#stream" class="md-nav__link">
     <span class="md-ellipsis">
-      类作用域
+      Stream
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="类作用域">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vars" class="md-nav__link">
     <span class="md-ellipsis">
-      作用域为类的常量
+      Vars
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="作用域为类的常量">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#momery-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Momery Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pointers-to-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointers to object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pointers to object">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#operators-with-pointers" class="md-nav__link">
     <span class="md-ellipsis">
-      1.声明一个枚举
+      Operators with Pointers
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2static" class="md-nav__link">
+  <a href="#assignment" class="md-nav__link">
     <span class="md-ellipsis">
-      2.使用关键字static
+      Assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-memory-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic memory allocation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References(引用)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    <span class="md-ellipsis">
+      const
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="const">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      constants
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="constants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compile-time-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compile time constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-time-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-time constants
     </span>
   </a>
   
@@ -1886,9 +2057,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#aggregates" class="md-nav__link">
     <span class="md-ellipsis">
-      作用域内枚举
+      Aggregates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pointers-and-const" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pointers and const
     </span>
   </a>
   
@@ -1917,283 +2097,319 @@
   
 
 
-<h1 id="chapter-1-introduction">Chapter 1 Introduction<a class="headerlink" href="#chapter-1-introduction" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-1-c">chapter 1 C++语言特性<a class="headerlink" href="#chapter-1-c" title="Permanent link">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li>抽象</li>
-<li>封装和数据隐藏</li>
-<li>多态</li>
-<li>继承</li>
-<li>代码的可重用性</li>
+<li>课上例程</li>
+<li>语法记录</li>
 </ul>
 </div>
-<h2 id="class">Class(类)<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
-<p>类是一种将抽象转化为用户定义类型的C++工具，他将数据类型和操纵数据的方法组合成一个整洁的包。</p>
-<p>这里如下是<code>CS61A</code>的<code>Account</code>以及对应的<code>C++</code>版本</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">account_holder</span><span class="p">):</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">holder</span> <span class="o">=</span> <span class="n">account_holder</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+</span> <span class="n">amount</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="k">return</span> <span class="s1">&#39;Insufficient funds&#39;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-</span> <span class="n">amount</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+<h2 id="the-first-c-program">The First C++ Program<a class="headerlink" href="#the-first-c-program" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div>
+<h2 id="read-input">Read Input<a class="headerlink" href="#read-input" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="cm">/* data */</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">Account</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;No name&quot;</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="cm">/*</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm">    Account();//default constructor(默认构造函数)</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="cm">    已经提供显示构造函数后，编译器不会再提供默认构造函数，所以这里会报错，只能手动提供默认构造函数</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="cm">    */</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">();</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">};</span><span class="w"> </span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Account::display</span><span class="p">()</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">{</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Account Number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">accountNumber</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Account Holder Name: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Balance: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">}</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="n">Account</span><span class="o">::</span><span class="n">Account</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="p">{</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">accountNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountNumber</span><span class="p">;</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">accountHolderName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountHolderName</span><span class="p">;</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="p">}</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="kt">void</span><span class="w"> </span><span class="n">Account</span><span class="o">::</span><span class="n">withdraw</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="p">{</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">balance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Insufficient balance&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="k">else</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">        </span><span class="n">balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="p">}</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="kt">void</span><span class="w"> </span><span class="n">Account</span><span class="o">::</span><span class="n">deposit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="p">{</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="n">balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="p">}</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="p">{</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">    </span><span class="n">Account</span><span class="w"> </span><span class="n">a1</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">);</span><span class="w"> </span><span class="c1">//隐式调用</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">    </span><span class="c1">//Account a1 = Account(101, &quot;John&quot;, 5000); 显式调用</span>
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">    </span><span class="n">a1</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="p">}</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="_1">访问控制<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><code>private</code>和<code>public</code>描述了对类成员的访问控制。使用类对象的程序都可以直接访问公有部分，但是私有对象只能通过公有成员函数(或友元函数)来访问。</p>
-</div>
+<h2 id="c">与C语言对比<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
 <ul>
-<li>无论类成员是数据成员还是成员函数，都可以在类的公有部分或私有部分中声明它。但由于隐藏数据是OOP主要目标之一，因此通常数据项放在<strong>私有部分</strong>而组成类接口放在<strong>公有部分</strong></li>
-<li>通常，使用私有函数来处理不属于公有接口的部分</li>
-</ul>
-<h3 id="_2">封装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>类设计尽可能将公有接口与实现细节分开。公有接口表示设计的抽象组件，将实现细节放在一起并将他们与抽象分开称之为<strong>封装</strong></li>
-<li>数据隐藏(将数据放在类的私有部分中)也是一种<strong>封装</strong>，将实现细节隐藏在私有部分(私有接口)也是<strong>封装</strong></li>
-</ul>
-<h3 id="_3">实现成员函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>类的描述的第二部分：为那些类声明的原型表示的成员函数提供代码
-- 定义成员函数时，使用作用域解析运算符<code>(::)</code>来标识函数所属的类
-- 类的方法可以访问类的<code>private</code>组件</p>
-</div>
-<h4 id="inline-function">Inline Function<a class="headerlink" href="#inline-function" title="Permanent link">&para;</a></h4>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>在C语言中，如果一些函数被频繁调用，不断地有函数入栈，即函数栈，会造成栈空间或栈内存的大量消耗。为了解决这个问题，特别的引入了<code>inline</code>修饰符，表示为内联函数。(栈空间就是指放置程式的局部数据也就是函数内数据的内存空间，在系统下，栈空间是有限的，假如频繁大量的使用就会造成因栈空间不足所造成的程式出错的问题，函数的死循环递归调用的最终结果就是导致栈内存空间枯竭。)</p>
-</div>
-<details class="example">
-<summary>Example</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_num</span><span class="p">(){</span><span class="n">number</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span><span class="c1">//Inline Function</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span><span class="err">；</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="cm">/*或者使用inline修饰符*/</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">Account</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_num</span><span class="p">();</span><span class="c1">//Inline Function</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span><span class="err">；</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">set_num</span><span class="p">()</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">{</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<p>可以类比为<code>#define</code>,函数会在调用它的地方进行替换。(一般内联函数不建议超过十行)，还要确保内联函数对多文件程序中的所有文件都是可用的，最简便的方法是：将内联定义放在定义类的头文件里。</p>
-<h4 id="constructor">Constructor(构造函数)<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h4>
-<ul>
-<li>构造函数虽然没有返回值，但是没有被声明为<code>void</code>，实际上，构造函数没有声明类型。</li>
-<li>隐式调用构造函数<ul>
-<li><code>Stock garment("Furry Mason", 50, 2.5);</code></li>
-</ul>
-</li>
-<li>显式调用构造函数<ul>
-<li><code>Stock gaement = Stock("Furry Mason", 50, 2.5);</code></li>
-</ul>
-</li>
-<li>使用<code>new</code>动态分配内存<ul>
-<li><code>Stock *pstock = new Stock("Furry Mason", 50, 2.5);</code></li>
-</ul>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">default constructor(隐式构造函数)</p>
-<ul>
-<li>如果没有提供任何构造函数，则<code>C++</code>将自动提供默认构造函数，它是默认构造函数的隐式版本，不做任何工作</li>
-<li>默认构造函数没有任何参数，因为声明中不包含</li>
-<li>如果为类提供了非默认构造函数，而没有提供默认构造函数，则类似下面的声明将出错(禁止创建未初始化的对象)<ul>
-<li><code>Stock stock1;</code></li>
-</ul>
-</li>
-<li>定义默认构造函数有两种方法<ul>
-<li>给已有构造函数提供所有参数默认值</li>
-<li>函数重载来定义一个没有参数的构造函数 </li>
-</ul>
-</li>
-</ul>
-</div>
-<ul>
-<li><code>C++11</code>列表初始化(提供一个构造函数参数列表匹配的内容)：<ul>
-<li><code>Stock stock1 = {"name", 2, 2.0};</code>  </li>
-<li><code>Stock stock1 {"name", 2, 2.0};</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="destructor">Destructor(析构函数)<a class="headerlink" href="#destructor" title="Permanent link">&para;</a></h4>
-<ul>
-<li>如果构造函数使用<code>new</code>来分配内存,则使用<code>delete</code>来释放空间</li>
+<li><strong>Strengths:</strong></li>
+<li>Efficient programs</li>
+<li>Direct access to machine</li>
 <li>
-<p>如果没有使用<code>new</code>,则会让编译器生成一个隐式析构函数</p>
+<p>Flexible</p>
 </li>
 <li>
-<p><code>C++</code>中对象<code>new</code>出来和直接声明的区别(类似malloc)</p>
-<ul>
-<li>首先，最直观的，new出来的对象需要使用指针接收，而直接声明的不用。例如 A* a=new A() 与A a（）。</li>
-<li><code>new</code>出来的对象是直接使用堆空间，而局部声明一个对象是放在栈中。</li>
-<li><code>new</code>出来的对象类似于申请空间，因此需要delete销毁，而直接声明的对象则在使用完直接销毁。</li>
-<li><code>new</code>出来的对象的生命周期是具有全局性，譬如在一个函数块里new一个对象，可以将该对象的指针返回回去，该对象依旧存在。而声明的对象的生命周期只存在于声明了该对象的函数块中，如果返回该声明的对象，将会返回一个已经被销毁的对象。</li>
-<li><code>new</code>对象指针用途广泛，比如作为函数返回值、函数参数等</li>
-</ul>
+<p><strong>Weakness:</strong></p>
 </li>
+<li>Insufficient type checking</li>
+<li>Poor support for programming-in-the-large</li>
+<li>TBD</li>
 </ul>
-<h4 id="this-pointerthis">This Pointer(this 指针)<a class="headerlink" href="#this-pointerthis" title="Permanent link">&para;</a></h4>
-<p><code>this</code>指针指向用来调用成员函数的对象(this被作为隐藏参数传递给方法)
-如果要防止<code>this</code>被调用修改所指向的对象的值，则可以在函数声明后面加上<code>const</code></p>
-<details class="info">
-<summary>Info</summary>
-<p>最初的UNIX实现使用C++前端cfront将C++程序转化为C程序。会将限定符<code>ClassName::</code>转换为函数参数(指向对象的指针)</p>
-</details>
-<h2 id="_4">对象数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="string">String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <ul>
-<li>在没有显式构造函数的情况下(或显式构造函数有默认值)的情况下，可以直接如下定义<ul>
-<li><code>Stock mystuff[4];</code>或者可以寄希望于自动补足未初始化的对象</li>
+<li><code>string</code> is a class in C++. (需要 <code>#include &lt;string&gt;</code>)  </li>
+<li>可以像定义其他类型一样定义变量。 <strong><em>e.g.</em></strong> <code>string str;</code></li>
+<li>可以对字符串初始化，用 <code>cin, cout</code> 输入输出。</li>
 </ul>
-</li>
-<li>否则要为每个元素调用构造函数</li>
+</div>
+<h3 id="assignment-for-string">Assignment for string<a class="headerlink" href="#assignment-for-string" title="Permanent link">&para;</a></h3>
+<ul>
+<li>与<code>char</code>数组对比</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">Stock</span><span class="w"> </span><span class="n">stocks</span><span class="p">[</span><span class="n">num</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">),</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">),</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">),</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">Stock</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">charr1</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">charr2</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ABC&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">string</span><span class="w"> </span><span class="n">str1</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">string</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ABC&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str2</span><span class="p">;</span><span class="w"> </span><span class="c1">//legal</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">charr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">charr2</span><span class="p">;</span><span class="w"> </span><span class="c1">//illegal</span>
 </code></pre></div>
-<h2 id="_5">类作用域<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="_6">作用域为类的常量<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>如果希望所有对象共享一个常量，这样做是错误的例子：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">months</span><span class="p">];</span><span class="w">   </span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
-</code></pre></div>
+<h3 id="concatenation-for-string">Concatenation for string<a class="headerlink" href="#concatenation-for-string" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>str3 = str1 + str2;</code></li>
+<li><code>str1 += str2;</code></li>
+<li><code>str1 += "ABC";</code></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>声明类只是描述了对象的形式，并没有创建对象。因此，在创建对象前，将没有用于存储值的空间。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;Johnson&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>这里 <code>name</code> 已经有确定值了，因为这里是一个 class 态，为空字符串。</p>
 </div>
-<h4 id="1">1.声明一个枚举<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
-<p>在类声明中声明的枚举的作用域为整个类，因此可以用枚举为整型变量提供作用域为整个类的符号名称。</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>同为这个<code>Bakrey</code>类
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="k">enum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">};</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">Months</span><span class="p">];</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
-</code></pre></div></p>
-</div>
-<p><strong>所有对象中都不包含枚举(枚举不会创建类数据成员)</strong>，作用域为整个域的代码遇到它时，会进行替换。</p>
-<h4 id="2static">2.使用关键字<code>static</code><a class="headerlink" href="#2static" title="Permanent link">&para;</a></h4>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>在<code>const</code>加上<code>static</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Bakery</span><span class="o">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">private</span><span class="o">:</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">months</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">costs</span><span class="p">[</span><span class="n">months</span><span class="p">];</span><span class="w">   </span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
-</code></pre></div></p>
-</div>
-<p>这个<code>static</code>类型的变量会被与其他静态变量一起存储，而不是存储在对象中。</p>
-<h3 id="_7">作用域内枚举<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>传统的枚举存在一些问题，其中之一是两个枚举定义中的枚举量可能发生冲突。</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>如下，<code>egg Small</code>和<code>t_shirt Small</code>位于相同的作用域中，他们将发生冲突。
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">egg</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">t_shirt</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
-</code></pre></div></p>
-</div>
+<h3 id="ctors">Ctors<a class="headerlink" href="#ctors" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>C++</code>提供了一种新枚举，作用域为类。</li>
+<li>string(const char*cp, int len);</li>
+<li>string(const string&amp; s2, int pos);</li>
+<li>string(const string&amp; s2, int pos, int len);</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">egg</span><span class="w"> </span><span class="p">{</span><span class="n">Small</span><span class="p">,</span><span class="w"> </span><span class="n">Medium</span><span class="p">,</span><span class="w"> </span><span class="n">Large</span><span class="p">,</span><span class="w"> </span><span class="n">Jumbo</span><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">str1</span><span class="p">,</span><span class="w"> </span><span class="n">str2</span><span class="p">(</span><span class="s">&quot;world&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
 </code></pre></div>
 <ul>
-<li><code>class</code>也可以替换为<code>struct</code></li>
+<li>可以使用<code>str.empty()</code>来判断是否为空</li>
 </ul>
-<p>但是作用域内枚举不能进行隐式类型转换，只能进行显式类型转换。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>要注意行为调用与函数调用的区别</p>
+</div>
+<h3 id="alter-string">alter string(不常考)<a class="headerlink" href="#alter-string" title="Permanent link">&para;</a></h3>
+<ul>
+<li>assign();</li>
+<li>insert(const string &amp;, int len);</li>
+<li>insert(int pos, const string &amp;s);</li>
+<li>erase();</li>
+<li>append();</li>
+<li>replace();</li>
+</ul>
+<h3 id="search-string">search string<a class="headerlink" href="#search-string" title="Permanent link">&para;</a></h3>
+<ul>
+<li>find()</li>
+</ul>
+<h2 id="file-io">File I/O<a class="headerlink" href="#file-io" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="cpf">&lt;ifstream&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="cpf">&lt;ofstream&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cm">/*现在合并为了&lt;fstream&gt;*/</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">ofstream</span><span class="w"> </span><span class="n">File1</span><span class="p">(</span><span class="s">&quot;C:</span><span class="se">\\</span><span class="s">test.txt&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">File1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">ofstream</span><span class="w"> </span><span class="n">File2</span><span class="p">(</span><span class="s">&quot;C:</span><span class="se">\\</span><span class="s">test.txt&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">File2</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="stream">Stream<a class="headerlink" href="#stream" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>iostream</code>处理控制台IO</li>
+<li><code>fstream</code>处理命名文件IO</li>
+<li><code>stringstream</code>完成内存<code>string</code>的IO</li>
+</ul>
+<h2 id="vars">Vars<a class="headerlink" href="#vars" title="Permanent link">&para;</a></h2>
+<ul>
+<li>global vars</li>
+<li>static global vars</li>
+<li>local vars</li>
+<li>static local vars</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">//global vars</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="c1">// static global vars</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">f</span><span class="p">(){</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="c1">// local vars</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="c1">//static local</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="momery-model">Momery Model<a class="headerlink" href="#momery-model" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/b5b7a84b9d41ebbb6a8061aec4f490c.png" /></p>
+<ul>
+<li>extern : 说明在外部定义(多文件工程)</li>
+<li>static global var inhibits access from outside the .ccp file(访问控制)</li>
+<li>static local var initialized at its first time(persistence) </li>
+</ul>
+<h2 id="pointers-to-object">Pointers to object<a class="headerlink" href="#pointers-to-object" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>string s = “hello”;(object itself)</li>
+<li>string* ps = &s;(a pointer to an object)</li>
+</ul>
+</div>
+<h3 id="operators-with-pointers">Operators with Pointers<a class="headerlink" href="#operators-with-pointers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>&amp;</code> : get address</li>
+<li><code>*</code> : get the object</li>
+<li><code>-&gt;</code> :call the function</li>
+</ul>
+<h3 id="assignment">Assignment<a class="headerlink" href="#assignment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>string s1, s2;</li>
+<li>s1 = s2;</li>
+<li>string <em>ps1, </em>ps2;</li>
+<li>ps1 = ps2;</li>
+</ul>
+<h3 id="dynamic-memory-allocation">Dynamic memory allocation<a class="headerlink" href="#dynamic-memory-allocation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>new(返回一个指针)</li>
+<li>new int;</li>
+<li>new Stash;</li>
+<li>new int[10];</li>
+<li>delete</li>
+<li>delete p;</li>
+<li>delete [] p;</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>int *psome = new int [10];</li>
+<li>delete [] psome;</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">The new-delete mech</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/6f4e49e874723dcdba9c39d1dddb274.png" />
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/57107efe80e3e6a55c9261397051f78.png" /></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Tips for new and delete</p>
+<ul>
+<li>Don't use delete to free memory that new didn't allocate.</li>
+<li>Don't use delete to free the same block of memory twice  in succession.</li>
+<li>Use delete [] if you used new [] to allocate an array.</li>
+<li>Use delete (no brackets) if you used new to allocate a  single entity.</li>
+<li>It's safe to apply delete to the null pointer (nothing  happens).</li>
+</ul>
+</div>
+<h2 id="references">References(引用)<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">References are a new data type in C++</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/62189c7c9a5de0b1249a8e7232c6dbb.png" /></p>
+</div>
+<p><strong>修改引用值也会导致原值发生改变，效果类似指针</strong></p>
+<ul>
+<li>int x = 3;</li>
+<li>int &amp;y = x;</li>
+<li>const int &amp;z = x; (z值不能修改)</li>
+</ul>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/03d8906ba044aaafe6dd301b1b1b545.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Rules of references</p>
+<ul>
+<li>References must be initialized when defined</li>
+<li>Initialization establishes a binding</li>
+<li>Bindings don’t change at run time, unlike pointers(binding可以理解为绑定)</li>
+<li>No references to references</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/8f469cce8a21c5f5ea010148716d810.png" /></p>
+</details>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Pointers vs. References</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/5b0f1e5abeb74d0fd8bb92b78bc05fb.png" />
+- ailas ：别名
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/0af3e3d4d166ef0e5d2072ee9c7d915.png" />
+- 指针可以拥有引用
+- 引用不能拥有指针</p>
+</div>
+<h2 id="const">const<a class="headerlink" href="#const" title="Permanent link">&para;</a></h2>
+<ul>
+<li>declares a variable to have a constant value</li>
+</ul>
+<div class="admonition bug">
+<p class="admonition-title">code</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/d52adada11be84ee51fccc93825e4a0.png" /></p>
+</div>
+<h3 id="constants">constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Constants are variables<ul>
+<li>Observe scoping rules</li>
+<li>Declared with “const” type modifier</li>
+</ul>
+</li>
+<li>A const in C++ defaults to internal linkage<ul>
+<li>the compiler tries to avoid creating storage for a const<ul>
+<li>holds the value in its symbol table.</li>
+</ul>
+</li>
+<li>extern forces storage to be allocated.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p><strong>编译期常量</strong>指的就是程序在编译时就能确定这个常量的具体值
+<strong>非编译期常量</strong>就是程序在<strong>运行时才能确定</strong>常量的值,因此也称为运行时常量</p>
+</div>
+<h4 id="compile-time-constants">Compile time constants<a class="headerlink" href="#compile-time-constants" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/6f32e2069b97b2f3ca6f60a8f5c37e5.png" /></p>
+<h4 id="run-time-constants">Run-time constants<a class="headerlink" href="#run-time-constants" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/7d26f5995a9e2ba5fe82bb837e2f65f.png" /></p>
+<h3 id="aggregates">Aggregates<a class="headerlink" href="#aggregates" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p>可以将const用于aggregates，但会分配存储空间。在这些情况下，const的意思是“不能更改的存储空间”。但是，该值不能在编译时使用，因为编译器在编译时不需要知道存储的内容。</p>
+</div>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/6deda12669f4dfb291b45a72e064738.png" /></p>
+<h3 id="pointers-and-const">Pointers and const<a class="headerlink" href="#pointers-and-const" title="Permanent link">&para;</a></h3>
+<p><strong>const跟谁近就修饰谁</strong></p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/16d435eb21f6ca1c2a96b3944fae658.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<ul>
+<li>string p1("fred");</li>
+<li>const string *p = &p1;</li>
+<li>string const *p = &p1;</li>
+<li>string *const p = &p1;</li>
+</ul>
+<details class="note">
+<summary>Answer</summary>
+<p>3与4意义一致 </p>
+</details>
+</div>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/1f628a9efbc82b68cc6c425691242df.png" /></p>
+<ul>
+<li>Can always treat a non-const value as const</li>
+<li>You cannot treat a constant object as non-constant without an explicit cast  (const_cast)可以将const改成varible</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Passing and returning addresses</p>
+<ul>
+<li>Passing a whole object may cost you a lot.    It is  better to pass by a pointer. But it’s possible for the  programmer to take it and modify the original value.
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/b02841d98c43e7de9a0bb623fbc4d2a.png" /></li>
+<li>In fact, whenever you’re passing an address into a  function, you should make it a const if at all  possible.
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/7bb3092bbf102447094ffcf275118ca.png" /></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">xww的编程建议</p>
+<ul>
+<li>建议传入指针或者引用，并加上const，可以使得代码运行的更快</li>
+</ul>
+</div>
+</div>
 
 
 
