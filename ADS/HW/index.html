@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://note.thorin215-wang.com/ADS/HW/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../ADS1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Problem - Thorin's Notebook</title>
+        <title>Homework Review - Thorin's Notebook</title>
       
     
     
@@ -124,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Problem
+              Homework Review
             
           </span>
         </div>
@@ -249,16 +253,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../OOP/" class="md-tabs__link">
           
   
@@ -486,8 +494,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -502,17 +512,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -523,7 +536,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -904,6 +917,8 @@
                 
   
   
+    
+  
   
   
     
@@ -917,17 +932,21 @@
       
         
       
+        
+      
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           
@@ -949,13 +968,83 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Advanced Data Structure and Algorithm
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Homework Review
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Homework Review
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#week1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
               
             
               
@@ -991,6 +1080,27 @@
   
   <span class="md-ellipsis">
     Red-Black Trees and B+ Trees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADS3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inverted File Index
   </span>
   
 
@@ -1601,6 +1711,73 @@
 
 <h1 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h1>
 <h2 id="week1">Week1<a class="headerlink" href="#week1" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>If the depth of an AVL tree is 6 (the depth of an empty tree is defined to be -1), then the minimum possible number of nodes in this tree is:</p>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>33</li>
+<li><span class="arithmatex">\(n_h = F_{h+3} - 1, for \quad h \leq -1\)</span></li>
+<li>斐波那契公式不一定要记忆，<del>数值不大可以现推</del></li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Insert 2, 1, 4, 5, 9, 3, 6, 7 into an initially empty AVL tree. Which one of the following statements is FALSE?
+A.4 is the root
+B.3 and 7 are siblings
+C.2 and 6 are siblings
+D.9 is the parent of 7</p>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>B</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>When doing amortized analysis, which one of the following statements is FALSE?
+A.Aggregate analysis shows that for all n, a sequence of n operations takes worst-case time <span class="arithmatex">\(T(n)\)</span> in total. Then the amortized cost per operation is therefore <span class="arithmatex">\(T(n)/n\)</span>
+B.For potential method, a good potential function should always assume its maximum at the start of the sequence
+C.For accounting method, when an operation's amortized cost exceeds its actual cost, we save the difference as credit to pay for later operations whose amortized cost is less than their actual cost
+D.The difference between aggregate analysis and accounting method is that the later one assumes that the amortized costs of the operations may differ from each other</p>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>B : 应该是minimum，初始势能最低</li>
+</ul>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Consider the following buffer management problem. Initially the buffer size (the number of blocks) is one. Each block can accommodate exactly one item. As soon as a new item arrives, check if there is an available block. If yes, put the item into the block, induced a cost of one. Otherwise, the buffer size is doubled, and then the item is able to put into. Moreover, the old items have to be moved into the new buffer so it costs <span class="arithmatex">\(k+1\)</span> to make this insertion, where <span class="arithmatex">\(k\)</span> is the number of old items. Clearly, if there are <span class="arithmatex">\(N\)</span> items, the worst-case cost for one insertion can be <span class="arithmatex">\(Ω(N)\)</span>. To show that the average cost is <span class="arithmatex">\(O(1)\)</span>, let us turn to the amortized analysis. To simplify the problem, assume that the buffer is full after all the <span class="arithmatex">\(N\)</span> items are placed. Which of the following potential functions works?</p>
+<p>A.The number of items currently in the buffer
+B.The opposite number of items currently in the buffer
+C.The number of available blocks currently in the buffer
+D.The opposite number of available blocks in the buffer</p>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<p>D </p>
+</div>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>For the result of accessing the keys 3, 9, 1, 5 in order in the splay tree in the following figure, which one of the following statements is FALSE?
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240317203802.png" />
+A.5 is the root
+B.1 and 9 are siblings
+C.6 and 10 are siblings
+D.3 is the parent of 4</p>
+<div class="admonition success">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>D</li>
+</ul>
+</div>
+</div>
 
 
 

@@ -16,7 +16,7 @@
         <link rel="prev" href="../ADS1/">
       
       
-        <link rel="next" href="../../CO/">
+        <link rel="next" href="../ADS3/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -932,6 +932,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -971,6 +975,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HW/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homework Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1149,6 +1174,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADS3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inverted File Index
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1933,22 +1979,19 @@
 <p>A B+ tree of order M is a tree with the following structural properties:</p>
 <ul>
 <li>The root is either a leaf or has between 2 and M children.</li>
-<li>All nonleaf nodes (except the root) have between $ \lceil M/2 \rceil$ and <span class="arithmatex">\(M\)</span> children.</li>
+<li>All nonleaf nodes (except the root) have between $ ⌈M/2⌉$ and <span class="arithmatex">\(M\)</span> children.</li>
 <li>All leaves are at the same depth.
-Assume each nonroot leaf also has between $ \lceil M/2 \rceil$ and <span class="arithmatex">\(M\)</span> children.</li>
+Assume each nonroot leaf also has between $ ⌈M/2⌉$ and <span class="arithmatex">\(M\)</span> children.</li>
 </ul>
 <details class="example">
 <summary>Example</summary>
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/cf3e34d29d8eb9b62b057f5ce0d46d5.png" /></p>
 </details>
 </div>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<ul>
-<li><a href="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html">一个演示网站</a></li>
-<li><a href="https://www.cnblogs.com/JayL-zxl/p/14304178.html">一个不错的blog</a></li>
-</ul>
-</div>
+<!-- !!! Quote
+    - [一个演示网站](https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
+    - [一个不错的blog](https://www.cnblogs.com/JayL-zxl/p/14304178.html) -->
+
 <h3 id="b-tree_1">B+ Tree的操作<a class="headerlink" href="#b-tree_1" title="Permanent link">&para;</a></h3>
 <h4 id="search">search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex">\(B+\)</span>树中的节点包含有多个键。假设需要查找的是<span class="arithmatex">\(k\)</span>，那么从根节点开始，从上到下递归的遍历树。在每一层上，搜索的范围被减小到包含了搜索值的子树中。子树值的范围被它的父节点的键确定。因为是从根节点开始的二分法查找，所以查找一个键的代码如下：</p>
