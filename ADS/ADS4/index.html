@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://note.thorin215-wang.com/ADS/ADS4/">
       
       
+        <link rel="prev" href="../ADS3/">
+      
+      
+        <link rel="next" href="../../CO/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>chapter 4 Leftist Heap & Skew Heap - Thorin's Notebook</title>
+        <title>Leftist Heaps and Skew Heaps - Thorin's Notebook</title>
       
     
     
@@ -124,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              chapter 4 Leftist Heap & Skew Heap
+              Leftist Heaps and Skew Heaps
             
           </span>
         </div>
@@ -249,16 +253,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../OOP/" class="md-tabs__link">
           
   
@@ -506,8 +514,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -522,17 +532,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -543,7 +556,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -924,6 +937,8 @@
                 
   
   
+    
+  
   
   
     
@@ -941,17 +956,19 @@
       
         
       
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           
@@ -973,7 +990,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Advanced Data Structure and Algorithm
@@ -1066,6 +1083,151 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Leftist Heaps and Skew Heaps
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Leftist Heaps and Skew Heaps
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leftist-heaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leftist Heaps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leftist Heaps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      递归实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skew-heaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skew Heaps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      摊还分析
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1142,6 +1304,8 @@
       
         
       
+        
+      
     
     
       
@@ -1181,6 +1345,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MISC/bit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hits 题解
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1244,6 +1429,8 @@
       
         
           
+        
+      
         
       
         
@@ -1347,6 +1534,27 @@
   
   <span class="md-ellipsis">
     SQL介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/DB4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中级SQL
   </span>
   
 
@@ -1705,6 +1913,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#declaration" class="md-nav__link">
     <span class="md-ellipsis">
       Declaration
@@ -1716,9 +1933,33 @@
           <li class="md-nav__item">
   <a href="#merge" class="md-nav__link">
     <span class="md-ellipsis">
-      merge
+      Merge
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Merge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      递归实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1737,9 +1978,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-target-any-m-consecutive-operations-take-at-most-om-log-n-time" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      - Target : Any M consecutive operations take at most \(O(M log N)\) time
+      摊还分析
     </span>
   </a>
   
@@ -1764,6 +2005,19 @@
 
 
 <h1 id="chapter-4-leftist-heap-skew-heap">chapter 4 Leftist Heap &amp; Skew Heap<a class="headerlink" href="#chapter-4-leftist-heap-skew-heap" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">本讲的难点在于理解对应的摊还分析</p>
+</div>
+<details class="note">
+<summary>Review of heap</summary>
+<ol>
+<li>Insert：我们直接插在完全二叉树的下一个空位上，然后 percolate up 找到它应当在的位置，显然最坏情况也与完全二叉树的高度成正比，即 <span class="arithmatex">\(O(\log n)\)</span>。</li>
+<li>FindMin：直接返回根结点即可，时间 <span class="arithmatex">\(O(1)\)</span>。</li>
+<li>DeleteMin：直接用完全二叉树的最后一个元素顶替根结点，然后 percolate down 找到新根结点的归宿，时间 <span class="arithmatex">\(O(\log n)\)</span></li>
+<li>Buildheap : 一般从最后的父节点开始维护</li>
+<li>merge:把一个接到另一个后面，完了按照build的过程处理</li>
+</ol>
+</details>
 <h2 id="leftist-heaps">Leftist Heaps<a class="headerlink" href="#leftist-heaps" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">definition</p>
@@ -1782,9 +2036,16 @@
 <li>Order Property – the same</li>
 <li>Structure Property – binary tree, but <strong><em>unbalanced</em></strong></li>
 </ul>
-<p>性质: 
-- A leftist tree with <span class="arithmatex">\(r\)</span> nodes on the right path must have at least <span class="arithmatex">\(2^r – 1\)</span> nodes(左倾堆的NPL等于右路径)
-- 右路径长度的渐进上界是<span class="arithmatex">\(O(\log N)\)</span></p>
+<h3 id="_1">性质:<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A leftist tree with <span class="arithmatex">\(r\)</span> nodes on the right path must have at least <span class="arithmatex">\(2^r – 1\)</span> nodes(左倾堆的NPL等于右路径)</li>
+<li>右路径长度的渐进上界是<span class="arithmatex">\(O(\log N)\)</span></li>
+<li>判断以下两个说法是否正确，若正确，请给出详细的证明；若不正确，请举出反例：<ol>
+<li>按顺序将含有键值<span class="arithmatex">\(1, 2, · · · , 2^k − 1\)</span>的结点从小到大依次插入左式堆，那么结果将形成一棵完全平衡的二叉树。</li>
+<li>按顺序将含有键值<span class="arithmatex">\(1, 2, · · · , 2^k − 1\)</span>的结点从小到大依次插入斜堆，那么结果将形成一棵完全平衡的二叉树。两个结果都是正确的，证明只需要找规律归纳即可，没有什么特殊性。除此之外，斜堆的 Delete和 DecreaseKey 操作我们一般不讨论。</li>
+</ol>
+</li>
+</ul>
 <h3 id="declaration">Declaration<a class="headerlink" href="#declaration" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">TreeNode</span><span class="w"> </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span><span class="w"> </span>
@@ -1794,12 +2055,71 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w">         </span><span class="n">Npl</span><span class="p">;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">};</span>
 </code></pre></div>
-<h3 id="merge">merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h3>
+<h3 id="merge">Merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h3>
+<h4 id="_2">递归实现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>如果两个堆中至少有一个是空的，那么直接返回另一个即可；</li>
+<li>如果两个堆都非空，我们比较两个堆的根结点 key 的大小，key 小的是 <span class="arithmatex">\(H_1\)</span>，key 大的是 <span class="arithmatex">\(H_2\)</span>；</li>
+<li>如果 <span class="arithmatex">\(H_1\)</span> 只有一个顶点（根据左式堆的定义，只要它没有左孩子就一定是单点），直接把 <span class="arithmatex">\(H_2\)</span> 放在 <span class="arithmatex">\(H_1\)</span> 的左子树就完成任务了（很容易验证这样得到的结构符合左式堆性质，此时 <span class="arithmatex">\(Npl\)</span> 也没有变化）；</li>
+<li>如果 <span class="arithmatex">\(H_1\)</span> 不只有一个顶点，则将 <span class="arithmatex">\(H1\)</span> 的右子树和 <span class="arithmatex">\(H_2\)</span> 合并（这是递归的体现，在 base case 设计良好，其它步骤也都合理的情况下你完全可以相信这一步递归帮你做对了），成为 <span class="arithmatex">\(H_1\)</span> 的新右子树；</li>
+<li>如果 <span class="arithmatex">\(H_1\)</span> 的 <span class="arithmatex">\(Npl\)</span> 性质被违反，则交换它的两个子树；</li>
+<li>更新 <span class="arithmatex">\(H_1\)</span> 的 <span class="arithmatex">\(Npl\)</span>，结束任务。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">复杂度分析</p>
+<ul>
+<li>在将递归过程展开之后，我们就可以很清楚地分析时间复杂度。我们首先分析递归的最大深度。我们发现，在<span class="arithmatex">\(1-5\)</span>步这样的递归过程中，产生的递归层数不会超过两个左式堆的右路径长度之和，因为每次递归都会使得两个堆的其中一个（根结点key更小的）向着右路径上下一个右孩子推进，并且直到其中一个推到了null结点就不再加深递归。注意加深一层的过程中的操作是常数的，因为只需要简单的大小比较和找孩子，加上右路径长度的限制，因此递归向下的过程是<span class="arithmatex">\(O(\log n)\)</span>的。这一点我们可以更严谨地展开：假设<span class="arithmatex">\(H_1\)</span>大小为<span class="arithmatex">\(N_1\)</span>，<span class="arithmatex">\(H_2\)</span>大小为<span class="arithmatex">\(N_2\)</span>，两者路径之和<span class="arithmatex">\(<span class="arithmatex">\(O(\log N_1 + \log N_2) = O(\log N_1N_2) = O(\log \sqrt{N_1N_2}) = O(\log(N1 + N2))\)</span>\)</span>,上面的推导用到了基本不等式 <span class="arithmatex">\(a + b ⩾ 2\sqrt{ab}\)</span>。总而言之，两个堆右路径长度之和仍然是两个堆大小的对数级别，因此递归层数是<span class="arithmatex">\(O(\log n)\)</span>的是准确的。接下来分析递归返回的操作，事实上每一层的操作也是常数的，因为只需要接上新的指针，判断、交换子树以及更新 Npl，所以也是<span class="arithmatex">\(O(\log n)\)</span>的，因此总的时间复杂度就是 <span class="arithmatex">\(O(\log n)\)</span>的。</li>
+</ul>
+</div>
+<div align=center> <img src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/1934a7080ab39a86199aeaadb821973.png" /> </div>
+
+<h4 id="_3">迭代实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>迭代事实上就是两个指针指向未被Merge的子树的根节点，做一个归并排序</p>
 <h2 id="skew-heaps">Skew Heaps<a class="headerlink" href="#skew-heaps" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">definition</p>
-<h2 id="-target-any-m-consecutive-operations-take-at-most-om-log-n-time">- Target : Any M consecutive operations take at most <span class="arithmatex">\(O(M log N)\)</span> time<a class="headerlink" href="#-target-any-m-consecutive-operations-take-at-most-om-log-n-time" title="Permanent link">&para;</a></h2>
+<p class="admonition-title">Definition</p>
+<ul>
+<li>Target : Any M consecutive operations take at most <span class="arithmatex">\(O(M \log N)\)</span> time</li>
+<li>Always swap the left and right children except that the largest of all the nodes on the right paths does not have its children swapped.  <strong>No Npl</strong>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/6f33793631c0f3f92d1104632f379ae.png" />
+- <a href="https://en.wikipedia.org/wiki/Skew_heap">详细过程</a></p>
 </div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Difference between skew heap and leftist heap</p>
+<ul>
+<li>在base case是处理<span class="arithmatex">\(H\)</span>与null连接的情况时，左式堆直接返回<span class="arithmatex">\(H\)</span>即可，但斜堆必须看<span class="arithmatex">\(H\)</span>的右路径，我们要求<span class="arithmatex">\(H\)</span>右路径上除了<strong>最大结点之外都必须交换其左右孩子</strong>。</li>
+<li>在非base case时，若<span class="arithmatex">\(H_1\)</span>的根结点小于<span class="arithmatex">\(H_2\)</span>，如果是左式堆，我们需要合并<span class="arithmatex">\(H_1\)</span>的右子树和 H2作为<span class="arithmatex">\(H_1\)</span>的新右子树，最后再判断这样是否违反性质决定是否交换左右孩子，斜堆直接无脑交换，也就是说每次这种情况都把<span class="arithmatex">\(H_1\)</span>的左孩子换到右孩子的位置，然后把新合并的插入在<span class="arithmatex">\(H_1\)</span>的左子树上。</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Skew heaps have the advantage that no extra space is required to maintain path lengths and no tests are required to determine when to swap children.</li>
+<li>It is an open problem to determine precisely the expected right path length of both leftist and skew heaps.</li>
+</ul>
+</div>
+<h2 id="_4">摊还分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>我们称一个结点 <span class="arithmatex">\(P\)</span> 是<strong>重的（heavy）</strong>，如果它的右子树结点个数至少是 <span class="arithmatex">\(P\)</span> 的所有后代的一半
+（后代包括 <span class="arithmatex">\(P\)</span> 自身）。反之称为<strong>轻结点（light node）</strong></li>
+<li>对于右路径上右 <span class="arithmatex">\(l\)</span> 个轻结点的斜堆，整个斜堆至少有 <span class="arithmatex">\(2^l − 1\)</span> 个结点，这意味着一个 <span class="arithmatex">\(n\)</span> 个结点的斜堆右路径上的轻结点个数为 <span class="arithmatex">\(O(\log n)\)</span></li>
+<li>若我们有两个斜堆 <span class="arithmatex">\(H_1\)</span> 和 <span class="arithmatex">\(H_2\)</span>，它们分别有 <span class="arithmatex">\(n_1\)</span> 和 <span class="arithmatex">\(n_2\)</span> 个结点，则合并 <span class="arithmatex">\(H_1\)</span> 和 <span class="arithmatex">\(H_2\)</span> 的摊还时间复杂度为<span class="arithmatex">\(O(\log n)\)</span>，其中 <span class="arithmatex">\(n = n1 + n2\)</span></li>
+</ul>
+<details class="tip">
+<summary>Proof</summary>
+<ul>
+<li>我们定义势函数 <span class="arithmatex">\(Φ(H_i)\)</span> 等于堆 <span class="arithmatex">\(H_i\)</span> 的重结点（heavy node）的个数，并令 <span class="arithmatex">\(H_3\)</span> 为合并后的新堆.我们设 <span class="arithmatex">\(H_i(i = 1, 2)\)</span> 的右路径上的轻结点数量为 <span class="arithmatex">\(l_i\)</span>，重结点数量为 <span class="arithmatex">\(h_i\)</span>，因此真实的合并操作最坏的时间复杂度为 <span class="arithmatex">\(c_i = l_1 + l_2 + h_1 + h_2\)</span>（所有操作都在右路径上完成）。因此根据摊还分析我们知道摊还时间复杂度为<span class="arithmatex">\(\hat{c_i} = c_i + Φ(H3) − (Φ(H1) + Φ(H2))\)</span>事实上，在 merge 前我们可以记<span class="arithmatex">\(Φ(H_1) + Φ(H_2) = h_1 + h_2 + h\)</span>其中 <span class="arithmatex">\(h\)</span> 表示不在右路径上的重结点个数。现在我们要考察合并后的情况，事实上我们有两个非常重要的观察：</li>
+</ul>
+<ol>
+<li>只有在 <span class="arithmatex">\(H_1\)</span> 和 <span class="arithmatex">\(H_2\)</span> 右路径上的结点才可能改变轻重状态，这是很显然的，因为其它结点合并前后子树是完全被复制的，所以不可能改变轻重状态；</li>
+<li><span class="arithmatex">\(H_1\)</span>和<span class="arithmatex">\(H_2\)</span>右路径上的重结点在合并后一定会变成轻结点，这是因为右路径上结点一定会交换左右子树，并且后续所有结点也都会继续插入在左子树上（这也表明轻结点不一定变为重结点）。结合以上两点，我们知道合并后原本不在右路径上的<span class="arithmatex">\(h\)</span>个重结点仍然是重结点，在右路径上的<span class="arithmatex">\(h_1 + h_2\)</span>个重结点全部变成轻结点，<span class="arithmatex">\(l_1 + l_2\)</span> 个轻结点不一定都变重，因此合并后我们有<span class="arithmatex">\(Φ(H_3) ⩽ l_1 + l_2 + h\)</span>,代入数据计算可得<span class="arithmatex">\(c_i ⩽ (l_1 + l_2 + h_1 + h_2) + (l_1 + l_2 + h) − (h_1 + h_2 + h) = 2(l_1 + l_2)\)</span>.根据前面的引理，<span class="arithmatex">\(l_1 + l_2 = O(\log n_1 + \log n_2) = O(\log(n_1 + n_2)) = O(\log n)\)</span>（这里的等号之前有完全一样的说明过），并且注意到初始（空堆）势函数一定为 <span class="arithmatex">\(0\)</span>。且之后总是非负的，所以这一势函数定义满足要求，因此我们的证明也就完成了。</li>
+</ol>
+<p><del>怎么感觉yy上课讲复杂了</del></p>
+</details>
 
 
 
@@ -1822,7 +2142,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月20日 15:53:32</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月20日 16:08:26</span>
   </span>
 
     
@@ -1832,7 +2152,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月20日 15:53:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">2024年3月20日 16:08:26</span>
   </span>
 
     
