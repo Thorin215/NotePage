@@ -821,6 +821,8 @@
       
         
       
+        
+      
     
     
       
@@ -916,6 +918,27 @@
   
   <span class="md-ellipsis">
     Basic Data Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Py3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Syntax
   </span>
   
 
@@ -1870,8 +1893,8 @@
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>Insert 2, 1, 4, 5, 9, 3, 6, 7 into an initially empty AVL tree. Which one of the following statements is FALSE?
-A.4 is the root
+<p>Insert 2, 1, 4, 5, 9, 3, 6, 7 into an initially empty AVL tree. Which one of the following statements is FALSE?</p>
+<p>A.4 is the root
 B.3 and 7 are siblings
 C.2 and 6 are siblings
 D.9 is the parent of 7</p>
@@ -1884,11 +1907,11 @@ D.9 is the parent of 7</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
-<p>When doing amortized analysis, which one of the following statements is FALSE?
-A.Aggregate analysis shows that for all n, a sequence of n operations takes worst-case time <span class="arithmatex">\(T(n)\)</span> in total. Then the amortized cost per operation is therefore <span class="arithmatex">\(T(n)/n\)</span>
-B.For potential method, a good potential function should always assume its maximum at the start of the sequence
-C.For accounting method, when an operation's amortized cost exceeds its actual cost, we save the difference as credit to pay for later operations whose amortized cost is less than their actual cost
-D.The difference between aggregate analysis and accounting method is that the later one assumes that the amortized costs of the operations may differ from each other</p>
+<p>When doing amortized analysis, which one of the following statements is FALSE?</p>
+<p>A.Aggregate analysis shows that for all n, a sequence of n operations takes worst-case time <span class="arithmatex">\(T(n)\)</span> in total. Then the amortized cost per operation is therefore <span class="arithmatex">\(T(n)/n\)</span></p>
+<p>B.For potential method, a good potential function should always assume its maximum at the start of the sequence</p>
+<p>C.For accounting method, when an operation's amortized cost exceeds its actual cost, we save the difference as credit to pay for later operations whose amortized cost is less than their actual cost</p>
+<p>D.The difference between aggregate analysis and accounting method is that the later one assumes that the amortized costs of the operations may differ from each other</p>
 <div class="admonition success">
 <p class="admonition-title">Answer</p>
 <ul>
@@ -1899,10 +1922,10 @@ D.The difference between aggregate analysis and accounting method is that the la
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>Consider the following buffer management problem. Initially the buffer size (the number of blocks) is one. Each block can accommodate exactly one item. As soon as a new item arrives, check if there is an available block. If yes, put the item into the block, induced a cost of one. Otherwise, the buffer size is doubled, and then the item is able to put into. Moreover, the old items have to be moved into the new buffer so it costs <span class="arithmatex">\(k+1\)</span> to make this insertion, where <span class="arithmatex">\(k\)</span> is the number of old items. Clearly, if there are <span class="arithmatex">\(N\)</span> items, the worst-case cost for one insertion can be <span class="arithmatex">\(Ω(N)\)</span>. To show that the average cost is <span class="arithmatex">\(O(1)\)</span>, let us turn to the amortized analysis. To simplify the problem, assume that the buffer is full after all the <span class="arithmatex">\(N\)</span> items are placed. Which of the following potential functions works?</p>
-<p>A.The number of items currently in the buffer
-B.The opposite number of items currently in the buffer
-C.The number of available blocks currently in the buffer
-D.The opposite number of available blocks in the buffer</p>
+<p>A.The number of items currently in the buffer</p>
+<p>B.The opposite number of items currently in the buffer</p>
+<p>C.The number of available blocks currently in the buffer</p>
+<p>D.The opposite number of available blocks in the buffer</p>
 <div class="admonition success">
 <p class="admonition-title">Answer</p>
 <p>D </p>
@@ -1911,11 +1934,11 @@ D.The opposite number of available blocks in the buffer</p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>For the result of accessing the keys 3, 9, 1, 5 in order in the splay tree in the following figure, which one of the following statements is FALSE?
-<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240317203802.png" />
-A.5 is the root
-B.1 and 9 are siblings
-C.6 and 10 are siblings
-D.3 is the parent of 4</p>
+<img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240317203802.png" /></p>
+<p>A.5 is the root</p>
+<p>B.1 and 9 are siblings</p>
+<p>C.6 and 10 are siblings</p>
+<p>D.3 is the parent of 4</p>
 <div class="admonition success">
 <p class="admonition-title">Answer</p>
 <ul>

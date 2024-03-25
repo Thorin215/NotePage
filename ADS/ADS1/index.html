@@ -821,6 +821,8 @@
       
         
       
+        
+      
     
     
       
@@ -916,6 +918,27 @@
   
   <span class="md-ellipsis">
     Basic Data Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Py3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Syntax
   </span>
   
 
@@ -1175,6 +1198,39 @@
       Splay树的摊还分析
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法导论上的例子
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="算法导论上的例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制计数器递增
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2035,6 +2091,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法导论上的例子
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="算法导论上的例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制计数器递增
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2130,7 +2219,7 @@
 <h2 id="amortized-analysis">Amortized Analysis(摊还分析)<a class="headerlink" href="#amortized-analysis" title="Permanent link">&para;</a></h2>
 <details class="abstract">
 <summary>Abstract</summary>
-<p>摊还分析的想法来源于我们希望估计一种数据结构经过一系列操作的平均花费时间。然而，平均时间非常难计算，因为每一步都有非常多的选择，连续m个操作，可能的操作路径是指数级别的。并且有时候平均涉及概率分布等，但我们并不知道确切的分布，因此比较难以计算。一种最简单的估计方法就是用最差情况分析作为平均情况的上界，例如Splay树，每个操作最差都是<span class="arithmatex">\(O(n)\)</span>（<span class="arithmatex">\(n\)</span>为树中结点个数）的，因此平均不会比最差情况差，所以也是<span class="arithmatex">\(O(n)\)</span>的。然而这样的估计显然是放得太宽了，我们对这个复杂度是非常不满意的，因此我们需要进行摊还分析。事实上，在最差情况的分析中，我们忽略了一件事情，就是有的序列是不可能出现的，例如直接在空的树上用$ O(n)$时间删除，摊还分析则是希望排除掉最差情况分析中把所有不管可能不可能的情况，最差的路径挑出来的这种无脑行为，转而分析所有可能的从空结构开始的操作路径中，最差的平均时间，那么这一时间一定比最差情况分析好，因为排除掉了一些不可能出现的所谓最差序列，但又会大于等于平均时间，因为取的是所有可能序列中最差的那一种。因此当我们算出摊还分析的时间复杂度，那么它也一定是平均时间的上界，同时这个上界会比最差情况分析好，这也是不等式worst-case bound  $ \geq $ amortized bound $ \geq $ average-case bound的内在含义。</p>
+<p>摊还分析的想法来源于我们希望估计一种数据结构经过一系列操作的平均花费时间。然而，平均时间非常难计算，因为每一步都有非常多的选择，连续m个操作，可能的操作路径是指数级别的。并且有时候平均涉及概率分布等，但我们并不知道确切的分布，因此比较难以计算。一种最简单的估计方法就是用最差情况分析作为平均情况的上界，例如Splay树，每个操作最差都是<span class="arithmatex">\(O(n)\)</span>（<span class="arithmatex">\(n\)</span>为树中结点个数）的，因此平均不会比最差情况差，所以也是<span class="arithmatex">\(O(n)\)</span>的。然而这样的估计显然是放得太宽了，我们对这个复杂度是非常不满意的，因此我们需要进行摊还分析。事实上，在最差情况的分析中，我们忽略了一件事情，就是有的序列是不可能出现的，例如直接在空的树上用<span class="arithmatex">\(O(n)\)</span>时间删除，摊还分析则是希望排除掉最差情况分析中把所有不管可能不可能的情况，最差的路径挑出来的这种无脑行为，转而分析所有可能的从空结构开始的操作路径中，最差的平均时间，那么这一时间一定比最差情况分析好，因为排除掉了一些不可能出现的所谓最差序列，但又会大于等于平均时间，因为取的是所有可能序列中最差的那一种。因此当我们算出摊还分析的时间复杂度，那么它也一定是平均时间的上界，同时这个上界会比最差情况分析好，这也是不等式worst-case bound  <span class="arithmatex">\(≥\)</span> amortized bound <span class="arithmatex">\(≥\)</span> average-case bound的内在含义。</p>
 </details>
 <div class="admonition danger">
 <p>接下来我们介绍三种方法：聚合分析、核算法以及势能法。聚合分析直接使用了我们上面提到的思想：“摊还分析是考虑可能出现的操作序列中的最差序列”（再次强调，这里的最差不是最差情况分析的最差，最差情况分析的最差会包括不可能出现的序列，但摊还分析要排除不可能的序列）</p>
@@ -2172,6 +2261,89 @@
 <p><img alt="" src="https://blog-pic-thorin.oss-cn-hangzhou.aliyuncs.com/20240303151808.png" /></p>
 <div class="arithmatex">\[
 \sum\limits_{i=1}^{n}\hat{c_i} \leq 1 + 3(R_{k+1}(X)-R_{k}(X)) + \sum\limits_{i=1}^{k}3(R_i(X)-R_{i-1}(X)) = 1 + 3(R_{k+1}(X) - R_0(X)) = O(logN) \]</div>
+<h3 id="_1">算法导论上的例子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="_2">栈操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">例子描述</p>
+<ul>
+<li>PUSH(S, x) : 将对象x压入栈S中</li>
+<li>POP(S) : 将栈S的栈顶对象弹出，并返回该对象，对空栈调用POP会产生一个错误</li>
+<li>MULTIPOP(S, k) : 将栈S的k个栈顶对象弹出</li>
+</ul>
+</div>
+<details class="tip">
+<summary>聚合分析</summary>
+<p>通过使用聚合分析，我们考虑整个序列的<span class="arithmatex">\(n\)</span>个操作，可以得到更好的上界。实际上，虽然一个单独的 MULTIPOP操作可能代价很高，但在一个空栈上执行<span class="arithmatex">\(n\)</span>个 PUSH、 POP和MULTIPOP的操作序列，代价至多是 <span class="arithmatex">\(O(n)\)</span>。这是为什么呢？当将一个对象压入栈后，我们至多将其弹出一次。因此，对一个非空的栈，可以执行的 POP操作的次数（包括了MULTIPOP中调用POP的次数）最多与PUSH操作的次数相当，即最多<span class="arithmatex">\(n\)</span>次。因此，对任意的 n值，任意一个由<span class="arithmatex">\(n\)</span>个 PUSH、 POP和 MULTIPOP组成的操作序列，最多花费 <span class="arithmatex">\(O(n)\)</span>时间。一个操作的平均时间为<span class="arithmatex">\(O(n)/n=O(l)\)</span>。在聚合分析中，我们将每个操作的摊还代价设定为平均代价。因此，在此例中，所有三种栈操作的摊还代价都是<span class="arithmatex">\(O(1)\)</span>。</p>
+</details>
+<details class="tip">
+<summary>核算法</summary>
+<p>为了说明摊还分析的核算法，我们回到栈的例子。回顾前面的内容，操作的实际代价为:</p>
+<ul>
+<li>PUSH : 1</li>
+<li>POP : 1</li>
+<li>
+<p>MULTIPOP : <span class="arithmatex">\(\min(k,s)\)</span> (其中<span class="arithmatex">\(k\)</span>是提供给MULTIPOP的参数，<span class="arithmatex">\(s\)</span>是调用时栈的规模)</p>
+</li>
+<li>
+<p>PUSH : 2</p>
+</li>
+<li>POP : 0</li>
+<li>
+<p>MULTIPOP : 0</p>
+</li>
+<li>
+<p>MULTIPOP的摊还代价是一个常数 (0),而其实际代价是变量。在此例中，所有三个摊还代价都是常数。一般来说，所考虑的操作的摊还代价可能各不相同，渐近性也可能不同。</p>
+</li>
+<li>
+<p>在PUSH每个盘子的时候，就为其POP存下一美元信用。</p>
+</li>
+<li>换句话说，由千栈中的每个盘子都存有 1美元的信用，而栈中的盘子数始终是非负的，因此可以保证信用值也总是非负的。因此，对任意 <span class="arithmatex">\(n\)</span>个 PUSH、 POP、MULTIPOP操作组成的序列，总摊还代价为总实际代价的上界。由千总摊还代价为 <span class="arithmatex">\(O(n)\)</span>,因此总实际代价也是。</li>
+</ul>
+</details>
+<details class="tip">
+<summary>势能法</summary>
+<ul>
+<li>我们将一个栈的势函数定义为其中的对象数量。对于初始的空栈<span class="arithmatex">\(D_0\)</span>,我们有 <span class="arithmatex">\(\Phi(D_0) =0\)</span>。由千栈中对象数目永远不可能为负，因此，第<span class="arithmatex">\(i\)</span>步操作得到的栈 <span class="arithmatex">\(D_i\)</span>;具有非负的势</li>
+<li>POP的摊还代价 ： 0</li>
+<li>PUSH的摊还代价 ：2</li>
+</ul>
+</details>
+<h4 id="_3">二进制计数器递增<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">例子描述</p>
+<ul>
+<li>我们来看一个<span class="arithmatex">\(K\)</span>位二进制计数器递增的问题，计数器的初值为<span class="arithmatex">\(0\)</span>。我们用一个位数组 <span class="arithmatex">\(A[0.. k—1]\)</span>作为计数器，其中 <span class="arithmatex">\(A.length=k\)</span>。当计数器中保存的二进制值为<span class="arithmatex">\(x\)</span>时，<span class="arithmatex">\(x\)</span>的最低位保存在 <span class="arithmatex">\(A[0]\)</span>中，而最高位保存在 <span class="arithmatex">\(A[k-1]\)</span>中，因此<span class="arithmatex">\(x= \sum\limits_{i=0}^{k-1}{A[i]}•2^i\)</span>。初始时 <span class="arithmatex">\(x=0\)</span>,因此对所有 <span class="arithmatex">\(i=0, 1, …, k-1, A[i]=0\)</span>。为了将 <span class="arithmatex">\(1\)</span>(模 <span class="arithmatex">\(2^k\)</span>)加到计数器的值上，我们使用如下过程：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">INCREMENT</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">.</span><span class="n">lenght</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span><span class="mi">1</span> <span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">A</span><span class="o">.</span><span class="n">lenght</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+<p>与上一个关于栈的例子类似，对此算法的运行时间进行粗略的分析会得到一个正确但不紧的界。最坏情况下 INCREMENT执行一次花费<span class="arithmatex">\(O(k)\)</span>时间，最坏情况当数组A所有位都为 1时发生。因此，对初值为 0的计数器执行 <span class="arithmatex">\(n\)</span>个INCREMENT操作最坏情况下花费 <span class="arithmatex">\(O(nk)\)</span>时间。</p>
+</div>
+<details class="tip">
+<summary>聚合分析</summary>
+<p>对于<span class="arithmatex">\(n\)</span>个 INCREMENT操作组成的序列，我们可以得到一个更紧的界（最坏情况下代价）为 <span class="arithmatex">\(O(n)\)</span>,因为不可能每次 INCREMENT操作都翻转所有的二进制位。每次调用INCREMENT时 <span class="arithmatex">\(A[0]\)</span>确实都会翻转。而下一位 <span class="arithmatex">\(A[1]\)</span>,则只是每两次调用翻转一次，这样，对一个初值为 <span class="arithmatex">\(0\)</span>的计数器执行一个<span class="arithmatex">\(n\)</span>个INCREMENT操作的序列，只会使<span class="arithmatex">\(A[1]\)</span>翻转 <span class="arithmatex">\([n/2]\)</span>次。类似地， <span class="arithmatex">\(A[2]\)</span>每4次调用才翻转一次，即执行一个<span class="arithmatex">\(n\)</span>个INCREMENT操作的序列的过程中翻转<span class="arithmatex">\([n/4]\)</span>次。一般地，对一个初值为<span class="arithmatex">\(0\)</span>的计数器，在执行一个由<span class="arithmatex">\(n\)</span>个INCREMENT操作组成的序列的过程中，<span class="arithmatex">\(A[i]\)</span>会翻转<span class="arithmatex">\([n/2^i]\)</span>次 <span class="arithmatex">\((i=0, 1, …， K-1)\)</span>。对 <span class="arithmatex">\(i ≥ k\)</span>, <span class="arithmatex">\(A[i]\)</span>不存在，因此也就不会翻转。因此，在执行 INCREMENT序列的过程中进行的翻转操作的总数为</p>
+<div class="arithmatex">\[\sum\limits_{i=0}^{k-1}{[\frac{n}{2^i}]} &lt; n\sum\limits_{i=1}^{\infty}{\frac{1}{2^i}} = 2n\]</div>
+<p>因此，对一个初值为<span class="arithmatex">\(0\)</span>的计数器，执行一个<span class="arithmatex">\(n\)</span>个 INCREMENT操作的序列的最坏情况时间为<span class="arithmatex">\(O(n)\)</span>。每个操作的平均代价，即摊还代价为<span class="arithmatex">\(O(n)/n=O(1)\)</span>。</p>
+</details>
+<details class="tip">
+<summary>核算法</summary>
+<p>我们分析在一个从<span class="arithmatex">\(0\)</span>开始的二进制计数器上执行 INCREMENT操作。如我们之前所观察到的，此操作的运行时间与翻转的位数成正比，因此对此例，可以将翻转的位数作为操作的代价。我们再次使用<span class="arithmatex">\(1\)</span>美元表示一个单位的代价（在此例中是翻转<span class="arithmatex">\(1\)</span>位）。在摊还分析中，对一次置位操作，我们设其摊还代价为<span class="arithmatex">\(2\)</span>美元。当进行置位时，用<span class="arithmatex">\(1\)</span>美元支付置位操作的实际代价，并将另外<span class="arithmatex">\(1\)</span>美元存为信用，用来支付将来复位操作的代价。在任何时刻，计数器中任何为<span class="arithmatex">\(1\)</span>的位都存有<span class="arithmatex">\(1\)</span>美元的信用，这样对千复位操作，我们就无需缴纳任何费用，使用存储的 1美元信用即可支付复位操作的代价。现在可以确定 INCREMENT的摊还代价。 while循环中复位操作的代价用该位储存的<span class="arithmatex">\(1\)</span>美元来支付。<strong>INCREMENT过程至多置位一次</strong>，因此，其摊还代价最多为<span class="arithmatex">\(2\)</span>美元。计数器中<span class="arithmatex">\(1\)</span>的个数永远不会为负，因此，任何时刻信用值都是非负的。所以，对于<span class="arithmatex">\(n\)</span>个INCREMENT操作，总摊还代价为<span class="arithmatex">\(O(n)\)</span>,为总实际代价的上界。</p>
+</details>
+<details class="tip">
+<summary>势能法</summary>
+<p>作为势能法的另一个例子，我们再次分析二进制计数器递增问题。这一次，我们将计数器执行<span class="arithmatex">\(i\)</span>次 INCREMENT操作后的势定义为<span class="arithmatex">\(b_i\)</span>(<span class="arithmatex">\(i\)</span>次操作后计数器中1的个数)。我们来计算 INCREMENT操作的摊还代价。假设第<span class="arithmatex">\(i\)</span>个INCREMENT操作将<span class="arithmatex">\(t_i\)</span>个位复位，则其实际代价至多为<span class="arithmatex">\(t_i + 1\)</span>,因为除了复位<span class="arithmatex">\(t_i\)</span>个位之外，还至多置位1位。如果 <span class="arithmatex">\(b_i=0\)</span>,则第<span class="arithmatex">\(i\)</span>个操作将所有<span class="arithmatex">\(K\)</span>位都复位了，因此 <span class="arithmatex">\(b_{i-1} =t_i=k\)</span>。如果 <span class="arithmatex">\(b_i&gt;0\)</span>,则 <span class="arithmatex">\(b_i=b_{i-1}-t_i+1\)</span>。无论哪种情况，<span class="arithmatex">\(b_i \leq b_{i-1}-1-t_i + 1\)</span>,势差为</p>
+<div class="arithmatex">\[\Phi(D_i) - \Phi(D_{i-1}) \leq (b_{i-1} - t_i + 1) - b_{i-1} = 1 - t_i\]</div>
+<p>因此，摊还代价为</p>
+<div class="arithmatex">\[\hat{c_i} = c_i + \Phi(D_i) - \Phi(D_{i-1}) \leq (t_1 + 1) + (1 - t_i) = 2\]</div>
+<p>如果计数器从<span class="arithmatex">\(0\)</span>开始，则<span class="arithmatex">\(\Phi(D_0) = 0\)</span>由于对所有i均有<span class="arithmatex">\(\Phi(D_i) \geq 0\)</span>, 因此，一个<span class="arithmatex">\(n\)</span>个INCREMENT操作的序列的总摊还代价是总实际代价的上界，所以 n个INCREMENT操作的最坏情况时间为<span class="arithmatex">\(O(n)\)</span>。势能法给出了分析计数器问题的一个简单方法，即使计数器不是从<span class="arithmatex">\(0\)</span>开始也可以分析。计数器初始时包含<span class="arithmatex">\(b_0\)</span>个1,经过n个INCREMENT操作后包含<span class="arithmatex">\(b_n\)</span>个1,其中<span class="arithmatex">\(0 \leq b_0, b_n \leq k\)</span></p>
+<div class="arithmatex">\[\sum\limits_{i=1}^{n}c_i = \sum\limits_{i=1}^{n}\hat{c_i} + \Phi(D_0) - \Phi(D_n)\]</div>
+<div class="arithmatex">\[\sum\limits_{i=1}^{n}c_i \leq \sum\limits_{i=1}^{n}2-b_n+b_0=2n-b_n+b_0\]</div>
+</details>
 
 
 
